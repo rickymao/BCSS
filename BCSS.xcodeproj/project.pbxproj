@@ -3,18 +3,80 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D901FC8B036EF7A8208E892 /* Pods_BCSSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1593508F82B02FEDA9CC823 /* Pods_BCSSUITests.framework */; };
+		4B309ED79A21C00D41CAC1C0 /* Pods_BCSSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3778E42D2B7CA3E77262B60A /* Pods_BCSSTests.framework */; };
+		A5ED66DE40452AA1955F1E2C /* Pods_BCSS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E89F2368BBF6C28219406AEC /* Pods_BCSS.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		DD62BE7C2176444800D730CA /* MyServiceHoursTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD62BE7B2176444800D730CA /* MyServiceHoursTableViewController.swift */; };
+		DD62BE7E217644FC00D730CA /* Volunteer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD62BE7D217644FC00D730CA /* Volunteer.swift */; };
+		DD62BE802177A26A00D730CA /* ServiceHoursInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD62BE7F2177A26A00D730CA /* ServiceHoursInfoTableViewController.swift */; };
+		DD62BE822177A27D00D730CA /* AddServiceHoursTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD62BE812177A27D00D730CA /* AddServiceHoursTableViewController.swift */; };
+		DD62BE85217C08EC00D730CA /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD62BE84217C08EC00D730CA /* Calendar.storyboard */; };
+		DD62BE87217C1F7700D730CA /* CalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD62BE86217C1F7700D730CA /* CalendarCell.swift */; };
+		DD62BE89217C274700D730CA /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD62BE88217C274700D730CA /* CalendarViewController.swift */; };
+		DD62BE8B2185038E00D730CA /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD62BE8A2185038E00D730CA /* Event.swift */; };
+		DD8B96D3216B112E00B4CBC4 /* MyClubInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8B96D2216B112E00B4CBC4 /* MyClubInfoTableViewController.swift */; };
+		DD8B96D5216BE2E600B4CBC4 /* MyTeamTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8B96D4216BE2E600B4CBC4 /* MyTeamTableViewController.swift */; };
+		DD8B96D7216BE35A00B4CBC4 /* MyTeamInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8B96D6216BE35A00B4CBC4 /* MyTeamInfoTableViewController.swift */; };
+		DDA00D1821460C1300FD9B6F /* InfoAssignmentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA00D1721460C1300FD9B6F /* InfoAssignmentTableViewController.swift */; };
+		DDA244462128B702003D63CD /* ClubTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA244452128B702003D63CD /* ClubTableViewController.swift */; };
+		DDA244482128BCDE003D63CD /* Clubs.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA244472128BCDE003D63CD /* Clubs.swift */; };
+		DDA2444A212921B2003D63CD /* InfoClubTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA24449212921B2003D63CD /* InfoClubTableViewController.swift */; };
+		DDA2444C212A97E8003D63CD /* Sports.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA2444B212A97E8003D63CD /* Sports.swift */; };
+		DDA2444E212A9959003D63CD /* SportsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA2444D212A9959003D63CD /* SportsTableViewController.swift */; };
+		DDA24450212BD2EA003D63CD /* InfoSportsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA2444F212BD2EA003D63CD /* InfoSportsTableViewController.swift */; };
+		DDA24452212D2F8A003D63CD /* Teacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA24451212D2F8A003D63CD /* Teacher.swift */; };
+		DDA24454212E6BF6003D63CD /* DepartmentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA24453212E6BF6003D63CD /* DepartmentTableViewController.swift */; };
+		DDA24456212E7FFA003D63CD /* TeacherContactTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA24455212E7FFA003D63CD /* TeacherContactTableViewController.swift */; };
+		DDA2445A212FEB92003D63CD /* CourseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA24459212FEB92003D63CD /* CourseTableViewController.swift */; };
+		DDA2445C21307F0E003D63CD /* GradeCourses.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA2445B21307F0E003D63CD /* GradeCourses.swift */; };
+		DDA2445E2131E710003D63CD /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA2445D2131E710003D63CD /* MenuViewController.swift */; };
+		DDA244602131EF30003D63CD /* BulletinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA2445F2131EF30003D63CD /* BulletinViewController.swift */; };
+		DDA244642133C7E1003D63CD /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA244632133C7E1003D63CD /* ProfileTableViewController.swift */; };
+		DDA244662133E912003D63CD /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA244652133E912003D63CD /* ScheduleViewController.swift */; };
+		DDA2446821366637003D63CD /* Classes.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA2446721366637003D63CD /* Classes.swift */; };
+		DDA2446A21367C6E003D63CD /* ClassTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA2446921367C6E003D63CD /* ClassTableViewCell.swift */; };
+		DDA2446C2137BA00003D63CD /* AddClassesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA2446B2137B9FF003D63CD /* AddClassesTableViewController.swift */; };
+		DDA6C3162143A3D900F421A0 /* AddAssignmentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA6C3152143A3D900F421A0 /* AddAssignmentTableViewController.swift */; };
+		DDA9AA9321B663230044E256 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDE2ED052121584C003C7E40 /* Main.storyboard */; };
+		DDA9AA9821B7C7D20044E256 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA9AA9721B7C7D20044E256 /* Notifications.swift */; };
+		DDA9AA9A21BC83D60044E256 /* BlockTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA9AA9921BC83D50044E256 /* BlockTableViewCell.swift */; };
+		DDA9AA9C21BC9F340044E256 /* Schedule2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA9AA9B21BC9F340044E256 /* Schedule2ViewController.swift */; };
+		DDA9AA9E21BC9FA40044E256 /* BlockTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA9AA9D21BC9FA40044E256 /* BlockTableViewController.swift */; };
+		DDA9AAA321BCD3220044E256 /* Blocks+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA9AAA121BCD3220044E256 /* Blocks+CoreDataClass.swift */; };
+		DDA9AAA421BCD3220044E256 /* Blocks+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA9AAA221BCD3220044E256 /* Blocks+CoreDataProperties.swift */; };
+		DDA9AAA621BCFEA00044E256 /* BlockInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA9AAA521BCFE9F0044E256 /* BlockInfoTableViewController.swift */; };
+		DDC0B4C7213F9FB50098C8B3 /* AssignmentsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC0B4C6213F9FB50098C8B3 /* AssignmentsTableViewController.swift */; };
+		DDC0B4CC213FA4C40098C8B3 /* AssignmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC0B4CB213FA4C40098C8B3 /* AssignmentTableViewCell.swift */; };
+		DDC2AF4121969EEB008D100A /* MyFeed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDC2AF4021969EEB008D100A /* MyFeed.storyboard */; };
+		DDC2AF432196ACC0008D100A /* MyFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC2AF422196ACC0008D100A /* MyFeedViewController.swift */; };
+		DDC2AF452197AA3F008D100A /* AssignmentModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC2AF442197AA3E008D100A /* AssignmentModuleViewController.swift */; };
+		DDC2AF472197AD3E008D100A /* ClubModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC2AF462197AD3E008D100A /* ClubModuleViewController.swift */; };
+		DDC2AF492197AD54008D100A /* ScheduleModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC2AF482197AD54008D100A /* ScheduleModuleViewController.swift */; };
+		DDC2AF4B2197ADE4008D100A /* EventsModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC2AF4A2197ADE4008D100A /* EventsModuleViewController.swift */; };
+		DDC2AF5A2197E1E2008D100A /* Schedule+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC2AF582197E1E2008D100A /* Schedule+CoreDataProperties.swift */; };
+		DDC2AF5B2197E1E2008D100A /* Schedule+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC2AF592197E1E2008D100A /* Schedule+CoreDataClass.swift */; };
+		DDC2AF622198C699008D100A /* Homework+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC2AF602198C699008D100A /* Homework+CoreDataClass.swift */; };
+		DDC2AF632198C699008D100A /* Homework+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC2AF612198C699008D100A /* Homework+CoreDataProperties.swift */; };
+		DDC2AF662198D11C008D100A /* Work+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC2AF642198D11B008D100A /* Work+CoreDataProperties.swift */; };
+		DDC2AF672198D11C008D100A /* Work+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC2AF652198D11B008D100A /* Work+CoreDataClass.swift */; };
+		DDC2AF6B21A00EFD008D100A /* AssignmentModuleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC2AF6A21A00EFD008D100A /* AssignmentModuleTableViewCell.swift */; };
 		DDE2ED022121584B003C7E40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE2ED012121584B003C7E40 /* AppDelegate.swift */; };
-		DDE2ED042121584C003C7E40 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE2ED032121584C003C7E40 /* ViewController.swift */; };
-		DDE2ED072121584C003C7E40 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDE2ED052121584C003C7E40 /* Main.storyboard */; };
 		DDE2ED0A2121584C003C7E40 /* BCSS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DDE2ED082121584C003C7E40 /* BCSS.xcdatamodeld */; };
 		DDE2ED0C2121584E003C7E40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDE2ED0B2121584E003C7E40 /* Assets.xcassets */; };
 		DDE2ED0F2121584E003C7E40 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDE2ED0D2121584E003C7E40 /* LaunchScreen.storyboard */; };
 		DDE2ED1A2121584E003C7E40 /* BCSSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE2ED192121584E003C7E40 /* BCSSTests.swift */; };
 		DDE2ED252121584E003C7E40 /* BCSSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE2ED242121584E003C7E40 /* BCSSUITests.swift */; };
+		DDE2ED3321256462003C7E40 /* StudentHubTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE2ED3221256462003C7E40 /* StudentHubTableViewController.swift */; };
+		DDF34111215B0D35007DA56A /* MyClubsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF34110215B0D35007DA56A /* MyClubsTableViewController.swift */; };
+		DDF341DC216ACCE9007DA56A /* Organization+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF341D6216ACCE9007DA56A /* Organization+CoreDataClass.swift */; };
+		DDF341DD216ACCE9007DA56A /* Organization+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF341D7216ACCE9007DA56A /* Organization+CoreDataProperties.swift */; };
+		DDF341DE216ACCE9007DA56A /* Team+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF341D8216ACCE9007DA56A /* Team+CoreDataClass.swift */; };
+		DDF341DF216ACCE9007DA56A /* Team+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF341D9216ACCE9007DA56A /* Team+CoreDataProperties.swift */; };
+		DDF341E3216ACE3B007DA56A /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF341E2216ACE3B007DA56A /* PersistenceManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,9 +97,69 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		142AC46FD592C4EBCE54A80D /* Pods-BCSS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BCSS.release.xcconfig"; path = "Pods/Target Support Files/Pods-BCSS/Pods-BCSS.release.xcconfig"; sourceTree = "<group>"; };
+		1C8451A5D64604901B50ED6A /* Pods-BCSSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BCSSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BCSSTests/Pods-BCSSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3068553544E048D42431946A /* Pods-BCSSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BCSSUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BCSSUITests/Pods-BCSSUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		35F8C001E27E36037A26CAE9 /* Pods-BCSS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BCSS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BCSS/Pods-BCSS.debug.xcconfig"; sourceTree = "<group>"; };
+		3778E42D2B7CA3E77262B60A /* Pods_BCSSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BCSSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		802172C84E2CEAE61054B252 /* Pods-BCSSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BCSSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BCSSTests/Pods-BCSSTests.release.xcconfig"; sourceTree = "<group>"; };
+		83C46BA2EA27E4B90D4823CE /* Pods-BCSSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BCSSUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BCSSUITests/Pods-BCSSUITests.release.xcconfig"; sourceTree = "<group>"; };
+		DD62BE7B2176444800D730CA /* MyServiceHoursTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyServiceHoursTableViewController.swift; sourceTree = "<group>"; };
+		DD62BE7D217644FC00D730CA /* Volunteer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Volunteer.swift; sourceTree = "<group>"; };
+		DD62BE7F2177A26A00D730CA /* ServiceHoursInfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceHoursInfoTableViewController.swift; sourceTree = "<group>"; };
+		DD62BE812177A27D00D730CA /* AddServiceHoursTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddServiceHoursTableViewController.swift; sourceTree = "<group>"; };
+		DD62BE84217C08EC00D730CA /* Calendar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Calendar.storyboard; sourceTree = "<group>"; };
+		DD62BE86217C1F7700D730CA /* CalendarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCell.swift; sourceTree = "<group>"; };
+		DD62BE88217C274700D730CA /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		DD62BE8A2185038E00D730CA /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		DD8B96D2216B112E00B4CBC4 /* MyClubInfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyClubInfoTableViewController.swift; sourceTree = "<group>"; };
+		DD8B96D4216BE2E600B4CBC4 /* MyTeamTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTeamTableViewController.swift; sourceTree = "<group>"; };
+		DD8B96D6216BE35A00B4CBC4 /* MyTeamInfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTeamInfoTableViewController.swift; sourceTree = "<group>"; };
+		DDA00D1721460C1300FD9B6F /* InfoAssignmentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoAssignmentTableViewController.swift; sourceTree = "<group>"; };
+		DDA244452128B702003D63CD /* ClubTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubTableViewController.swift; sourceTree = "<group>"; };
+		DDA244472128BCDE003D63CD /* Clubs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clubs.swift; sourceTree = "<group>"; };
+		DDA24449212921B2003D63CD /* InfoClubTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoClubTableViewController.swift; sourceTree = "<group>"; };
+		DDA2444B212A97E8003D63CD /* Sports.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sports.swift; sourceTree = "<group>"; };
+		DDA2444D212A9959003D63CD /* SportsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsTableViewController.swift; sourceTree = "<group>"; };
+		DDA2444F212BD2EA003D63CD /* InfoSportsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoSportsTableViewController.swift; sourceTree = "<group>"; };
+		DDA24451212D2F8A003D63CD /* Teacher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Teacher.swift; sourceTree = "<group>"; };
+		DDA24453212E6BF6003D63CD /* DepartmentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentTableViewController.swift; sourceTree = "<group>"; };
+		DDA24455212E7FFA003D63CD /* TeacherContactTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherContactTableViewController.swift; sourceTree = "<group>"; };
+		DDA24459212FEB92003D63CD /* CourseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseTableViewController.swift; sourceTree = "<group>"; };
+		DDA2445B21307F0E003D63CD /* GradeCourses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeCourses.swift; sourceTree = "<group>"; };
+		DDA2445D2131E710003D63CD /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		DDA2445F2131EF30003D63CD /* BulletinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletinViewController.swift; sourceTree = "<group>"; };
+		DDA244632133C7E1003D63CD /* ProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
+		DDA244652133E912003D63CD /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
+		DDA2446721366637003D63CD /* Classes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Classes.swift; sourceTree = "<group>"; };
+		DDA2446921367C6E003D63CD /* ClassTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassTableViewCell.swift; sourceTree = "<group>"; };
+		DDA2446B2137B9FF003D63CD /* AddClassesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddClassesTableViewController.swift; sourceTree = "<group>"; };
+		DDA6C3152143A3D900F421A0 /* AddAssignmentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAssignmentTableViewController.swift; sourceTree = "<group>"; };
+		DDA9AA9521B6632B0044E256 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		DDA9AA9721B7C7D20044E256 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		DDA9AA9921BC83D50044E256 /* BlockTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockTableViewCell.swift; sourceTree = "<group>"; };
+		DDA9AA9B21BC9F340044E256 /* Schedule2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule2ViewController.swift; sourceTree = "<group>"; };
+		DDA9AA9D21BC9FA40044E256 /* BlockTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockTableViewController.swift; sourceTree = "<group>"; };
+		DDA9AAA121BCD3220044E256 /* Blocks+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Blocks+CoreDataClass.swift"; path = "/Users/rickm/Desktop/BCSS/BCSS/Saved Data/Blocks+CoreDataClass.swift"; sourceTree = "<absolute>"; };
+		DDA9AAA221BCD3220044E256 /* Blocks+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Blocks+CoreDataProperties.swift"; path = "/Users/rickm/Desktop/BCSS/BCSS/Saved Data/Blocks+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
+		DDA9AAA521BCFE9F0044E256 /* BlockInfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockInfoTableViewController.swift; sourceTree = "<group>"; };
+		DDC0B4C6213F9FB50098C8B3 /* AssignmentsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentsTableViewController.swift; sourceTree = "<group>"; };
+		DDC0B4CB213FA4C40098C8B3 /* AssignmentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AssignmentTableViewCell.swift; path = "BCSS/My Assignments/AssignmentTableViewCell.swift"; sourceTree = SOURCE_ROOT; };
+		DDC2AF4021969EEB008D100A /* MyFeed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyFeed.storyboard; sourceTree = "<group>"; };
+		DDC2AF422196ACC0008D100A /* MyFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFeedViewController.swift; sourceTree = "<group>"; };
+		DDC2AF442197AA3E008D100A /* AssignmentModuleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentModuleViewController.swift; sourceTree = "<group>"; };
+		DDC2AF462197AD3E008D100A /* ClubModuleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubModuleViewController.swift; sourceTree = "<group>"; };
+		DDC2AF482197AD54008D100A /* ScheduleModuleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleModuleViewController.swift; sourceTree = "<group>"; };
+		DDC2AF4A2197ADE4008D100A /* EventsModuleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsModuleViewController.swift; sourceTree = "<group>"; };
+		DDC2AF582197E1E2008D100A /* Schedule+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Schedule+CoreDataProperties.swift"; path = "/Users/rickm/Desktop/BCSS/BCSS/Saved Data/Schedule+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
+		DDC2AF592197E1E2008D100A /* Schedule+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Schedule+CoreDataClass.swift"; path = "../../Schedule+CoreDataClass.swift"; sourceTree = "<group>"; };
+		DDC2AF602198C699008D100A /* Homework+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Homework+CoreDataClass.swift"; path = "../Homework+CoreDataClass.swift"; sourceTree = "<group>"; };
+		DDC2AF612198C699008D100A /* Homework+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Homework+CoreDataProperties.swift"; path = "../Homework+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		DDC2AF642198D11B008D100A /* Work+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Work+CoreDataProperties.swift"; path = "/Users/rickm/Desktop/BCSS/BCSS/Saved Data/Work+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
+		DDC2AF652198D11B008D100A /* Work+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Work+CoreDataClass.swift"; path = "/Users/rickm/Desktop/BCSS/BCSS/Saved Data/Work+CoreDataClass.swift"; sourceTree = "<absolute>"; };
+		DDC2AF6A21A00EFD008D100A /* AssignmentModuleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentModuleTableViewCell.swift; sourceTree = "<group>"; };
 		DDE2ECFE2121584B003C7E40 /* BCSS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BCSS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDE2ED012121584B003C7E40 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DDE2ED032121584C003C7E40 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DDE2ED062121584C003C7E40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DDE2ED092121584C003C7E40 /* BCSS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BCSS.xcdatamodel; sourceTree = "<group>"; };
 		DDE2ED0B2121584E003C7E40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +171,15 @@
 		DDE2ED202121584E003C7E40 /* BCSSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BCSSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDE2ED242121584E003C7E40 /* BCSSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BCSSUITests.swift; sourceTree = "<group>"; };
 		DDE2ED262121584E003C7E40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DDE2ED3221256462003C7E40 /* StudentHubTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentHubTableViewController.swift; sourceTree = "<group>"; };
+		DDF34110215B0D35007DA56A /* MyClubsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyClubsTableViewController.swift; sourceTree = "<group>"; };
+		DDF341D6216ACCE9007DA56A /* Organization+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Organization+CoreDataClass.swift"; sourceTree = "<group>"; };
+		DDF341D7216ACCE9007DA56A /* Organization+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Organization+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		DDF341D8216ACCE9007DA56A /* Team+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Team+CoreDataClass.swift"; sourceTree = "<group>"; };
+		DDF341D9216ACCE9007DA56A /* Team+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Team+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		DDF341E2216ACE3B007DA56A /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
+		E89F2368BBF6C28219406AEC /* Pods_BCSS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BCSS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1593508F82B02FEDA9CC823 /* Pods_BCSSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BCSSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +187,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5ED66DE40452AA1955F1E2C /* Pods_BCSS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +195,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B309ED79A21C00D41CAC1C0 /* Pods_BCSSTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +203,173 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D901FC8B036EF7A8208E892 /* Pods_BCSSUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		14F12391753FF3C5305888BA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E89F2368BBF6C28219406AEC /* Pods_BCSS.framework */,
+				3778E42D2B7CA3E77262B60A /* Pods_BCSSTests.framework */,
+				F1593508F82B02FEDA9CC823 /* Pods_BCSSUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		860E925FF8AE09458E086FBC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				35F8C001E27E36037A26CAE9 /* Pods-BCSS.debug.xcconfig */,
+				142AC46FD592C4EBCE54A80D /* Pods-BCSS.release.xcconfig */,
+				1C8451A5D64604901B50ED6A /* Pods-BCSSTests.debug.xcconfig */,
+				802172C84E2CEAE61054B252 /* Pods-BCSSTests.release.xcconfig */,
+				3068553544E048D42431946A /* Pods-BCSSUITests.debug.xcconfig */,
+				83C46BA2EA27E4B90D4823CE /* Pods-BCSSUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DD62BE7A217643AB00D730CA /* Service Hours */ = {
+			isa = PBXGroup;
+			children = (
+				DD62BE7B2176444800D730CA /* MyServiceHoursTableViewController.swift */,
+				DD62BE7D217644FC00D730CA /* Volunteer.swift */,
+				DD62BE7F2177A26A00D730CA /* ServiceHoursInfoTableViewController.swift */,
+				DD62BE812177A27D00D730CA /* AddServiceHoursTableViewController.swift */,
+			);
+			path = "Service Hours";
+			sourceTree = "<group>";
+		};
+		DD62BE83217BF9EB00D730CA /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				DD62BE86217C1F7700D730CA /* CalendarCell.swift */,
+				DD62BE88217C274700D730CA /* CalendarViewController.swift */,
+				DD62BE8A2185038E00D730CA /* Event.swift */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		DD8B96CF216AFDD100B4CBC4 /* My Teams */ = {
+			isa = PBXGroup;
+			children = (
+				DD8B96D4216BE2E600B4CBC4 /* MyTeamTableViewController.swift */,
+				DD8B96D6216BE35A00B4CBC4 /* MyTeamInfoTableViewController.swift */,
+			);
+			path = "My Teams";
+			sourceTree = "<group>";
+		};
+		DDA9AA9621B7BBA60044E256 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				DDA9AA9721B7C7D20044E256 /* Notifications.swift */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
+		DDC0B4BF213E64860098C8B3 /* My Schedule */ = {
+			isa = PBXGroup;
+			children = (
+				DDA2446921367C6E003D63CD /* ClassTableViewCell.swift */,
+				DDA244652133E912003D63CD /* ScheduleViewController.swift */,
+				DDA2446B2137B9FF003D63CD /* AddClassesTableViewController.swift */,
+				DDA2446721366637003D63CD /* Classes.swift */,
+				DDA9AA9921BC83D50044E256 /* BlockTableViewCell.swift */,
+				DDA9AA9B21BC9F340044E256 /* Schedule2ViewController.swift */,
+				DDA9AA9D21BC9FA40044E256 /* BlockTableViewController.swift */,
+				DDA9AAA521BCFE9F0044E256 /* BlockInfoTableViewController.swift */,
+			);
+			path = "My Schedule";
+			sourceTree = "<group>";
+		};
+		DDC0B4C0213E64A70098C8B3 /* Teacher Contact */ = {
+			isa = PBXGroup;
+			children = (
+				DDA24451212D2F8A003D63CD /* Teacher.swift */,
+				DDA24455212E7FFA003D63CD /* TeacherContactTableViewController.swift */,
+				DDA24453212E6BF6003D63CD /* DepartmentTableViewController.swift */,
+			);
+			path = "Teacher Contact";
+			sourceTree = "<group>";
+		};
+		DDC0B4C1213E64DF0098C8B3 /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				DDA244632133C7E1003D63CD /* ProfileTableViewController.swift */,
+				DDE2ED052121584C003C7E40 /* Main.storyboard */,
+				DDE2ED3221256462003C7E40 /* StudentHubTableViewController.swift */,
+				DDC2AF4021969EEB008D100A /* MyFeed.storyboard */,
+				DD62BE84217C08EC00D730CA /* Calendar.storyboard */,
+			);
+			path = "User Interface";
+			sourceTree = "<group>";
+		};
+		DDC0B4C2213E650C0098C8B3 /* Clubs */ = {
+			isa = PBXGroup;
+			children = (
+				DDA244472128BCDE003D63CD /* Clubs.swift */,
+				DDA244452128B702003D63CD /* ClubTableViewController.swift */,
+				DDA24449212921B2003D63CD /* InfoClubTableViewController.swift */,
+			);
+			path = Clubs;
+			sourceTree = "<group>";
+		};
+		DDC0B4C3213E654A0098C8B3 /* Sports */ = {
+			isa = PBXGroup;
+			children = (
+				DDA2444B212A97E8003D63CD /* Sports.swift */,
+				DDA2444D212A9959003D63CD /* SportsTableViewController.swift */,
+				DDA2444F212BD2EA003D63CD /* InfoSportsTableViewController.swift */,
+			);
+			path = Sports;
+			sourceTree = "<group>";
+		};
+		DDC0B4C4213E657A0098C8B3 /* Courses Available */ = {
+			isa = PBXGroup;
+			children = (
+				DDA24459212FEB92003D63CD /* CourseTableViewController.swift */,
+				DDA2445B21307F0E003D63CD /* GradeCourses.swift */,
+			);
+			path = "Courses Available";
+			sourceTree = "<group>";
+		};
+		DDC0B4C5213E65970098C8B3 /* Web Content */ = {
+			isa = PBXGroup;
+			children = (
+				DDA2445D2131E710003D63CD /* MenuViewController.swift */,
+				DDA2445F2131EF30003D63CD /* BulletinViewController.swift */,
+			);
+			path = "Web Content";
+			sourceTree = "<group>";
+		};
+		DDC0B4C8213F9FC10098C8B3 /* My Assignments */ = {
+			isa = PBXGroup;
+			children = (
+				DDC0B4C6213F9FB50098C8B3 /* AssignmentsTableViewController.swift */,
+				DDA00D1721460C1300FD9B6F /* InfoAssignmentTableViewController.swift */,
+				DDA6C3152143A3D900F421A0 /* AddAssignmentTableViewController.swift */,
+				DDC0B4CB213FA4C40098C8B3 /* AssignmentTableViewCell.swift */,
+			);
+			path = "My Assignments";
+			sourceTree = "<group>";
+		};
+		DDC2AF3F21969778008D100A /* My Feed */ = {
+			isa = PBXGroup;
+			children = (
+				DDC2AF6A21A00EFD008D100A /* AssignmentModuleTableViewCell.swift */,
+				DDC2AF422196ACC0008D100A /* MyFeedViewController.swift */,
+				DDC2AF442197AA3E008D100A /* AssignmentModuleViewController.swift */,
+				DDC2AF462197AD3E008D100A /* ClubModuleViewController.swift */,
+				DDC2AF482197AD54008D100A /* ScheduleModuleViewController.swift */,
+				DDC2AF4A2197ADE4008D100A /* EventsModuleViewController.swift */,
+			);
+			path = "My Feed";
+			sourceTree = "<group>";
+		};
 		DDE2ECF52121584B003C7E40 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +377,8 @@
 				DDE2ED182121584E003C7E40 /* BCSSTests */,
 				DDE2ED232121584E003C7E40 /* BCSSUITests */,
 				DDE2ECFF2121584B003C7E40 /* Products */,
+				860E925FF8AE09458E086FBC /* Pods */,
+				14F12391753FF3C5305888BA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,8 +396,21 @@
 			isa = PBXGroup;
 			children = (
 				DDE2ED012121584B003C7E40 /* AppDelegate.swift */,
-				DDE2ED032121584C003C7E40 /* ViewController.swift */,
-				DDE2ED052121584C003C7E40 /* Main.storyboard */,
+				DDA9AA9621B7BBA60044E256 /* Notification */,
+				DDC2AF3F21969778008D100A /* My Feed */,
+				DD62BE83217BF9EB00D730CA /* Calendar */,
+				DD62BE7A217643AB00D730CA /* Service Hours */,
+				DD8B96CF216AFDD100B4CBC4 /* My Teams */,
+				DDF34195216A8749007DA56A /* Saved Data */,
+				DDF3410F215B0C84007DA56A /* My Clubs */,
+				DDC0B4C8213F9FC10098C8B3 /* My Assignments */,
+				DDC0B4C5213E65970098C8B3 /* Web Content */,
+				DDC0B4C4213E657A0098C8B3 /* Courses Available */,
+				DDC0B4C3213E654A0098C8B3 /* Sports */,
+				DDC0B4C2213E650C0098C8B3 /* Clubs */,
+				DDC0B4C1213E64DF0098C8B3 /* User Interface */,
+				DDC0B4C0213E64A70098C8B3 /* Teacher Contact */,
+				DDC0B4BF213E64860098C8B3 /* My Schedule */,
 				DDE2ED0B2121584E003C7E40 /* Assets.xcassets */,
 				DDE2ED0D2121584E003C7E40 /* LaunchScreen.storyboard */,
 				DDE2ED102121584E003C7E40 /* Info.plist */,
@@ -128,6 +437,35 @@
 			path = BCSSUITests;
 			sourceTree = "<group>";
 		};
+		DDF3410F215B0C84007DA56A /* My Clubs */ = {
+			isa = PBXGroup;
+			children = (
+				DD8B96D2216B112E00B4CBC4 /* MyClubInfoTableViewController.swift */,
+				DDF34110215B0D35007DA56A /* MyClubsTableViewController.swift */,
+			);
+			path = "My Clubs";
+			sourceTree = "<group>";
+		};
+		DDF34195216A8749007DA56A /* Saved Data */ = {
+			isa = PBXGroup;
+			children = (
+				DDA9AAA121BCD3220044E256 /* Blocks+CoreDataClass.swift */,
+				DDA9AAA221BCD3220044E256 /* Blocks+CoreDataProperties.swift */,
+				DDC2AF652198D11B008D100A /* Work+CoreDataClass.swift */,
+				DDC2AF642198D11B008D100A /* Work+CoreDataProperties.swift */,
+				DDC2AF602198C699008D100A /* Homework+CoreDataClass.swift */,
+				DDC2AF612198C699008D100A /* Homework+CoreDataProperties.swift */,
+				DDC2AF592197E1E2008D100A /* Schedule+CoreDataClass.swift */,
+				DDC2AF582197E1E2008D100A /* Schedule+CoreDataProperties.swift */,
+				DDF341D6216ACCE9007DA56A /* Organization+CoreDataClass.swift */,
+				DDF341D7216ACCE9007DA56A /* Organization+CoreDataProperties.swift */,
+				DDF341D8216ACCE9007DA56A /* Team+CoreDataClass.swift */,
+				DDF341D9216ACCE9007DA56A /* Team+CoreDataProperties.swift */,
+				DDF341E2216ACE3B007DA56A /* PersistenceManager.swift */,
+			);
+			path = "Saved Data";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +473,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DDE2ED292121584E003C7E40 /* Build configuration list for PBXNativeTarget "BCSS" */;
 			buildPhases = (
+				B9D762EA84C77262AE8E1590 /* [CP] Check Pods Manifest.lock */,
 				DDE2ECFA2121584B003C7E40 /* Sources */,
 				DDE2ECFB2121584B003C7E40 /* Frameworks */,
 				DDE2ECFC2121584B003C7E40 /* Resources */,
+				7775B7728605578B9ACF7315 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +492,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DDE2ED2C2121584E003C7E40 /* Build configuration list for PBXNativeTarget "BCSSTests" */;
 			buildPhases = (
+				882E47494A3E4191570338A1 /* [CP] Check Pods Manifest.lock */,
 				DDE2ED112121584E003C7E40 /* Sources */,
 				DDE2ED122121584E003C7E40 /* Frameworks */,
 				DDE2ED132121584E003C7E40 /* Resources */,
@@ -170,6 +511,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DDE2ED2F2121584E003C7E40 /* Build configuration list for PBXNativeTarget "BCSSUITests" */;
 			buildPhases = (
+				F31985D0B426EF858157F5EE /* [CP] Check Pods Manifest.lock */,
 				DDE2ED1C2121584E003C7E40 /* Sources */,
 				DDE2ED1D2121584E003C7E40 /* Frameworks */,
 				DDE2ED1E2121584E003C7E40 /* Resources */,
@@ -196,19 +538,22 @@
 				TargetAttributes = {
 					DDE2ECFD2121584B003C7E40 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 					};
 					DDE2ED142121584E003C7E40 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 						TestTargetID = DDE2ECFD2121584B003C7E40;
 					};
 					DDE2ED1F2121584E003C7E40 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 						TestTargetID = DDE2ECFD2121584B003C7E40;
 					};
 				};
 			};
 			buildConfigurationList = DDE2ECF92121584B003C7E40 /* Build configuration list for PBXProject "BCSS" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -232,9 +577,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD62BE85217C08EC00D730CA /* Calendar.storyboard in Resources */,
+				DDA9AA9321B663230044E256 /* Main.storyboard in Resources */,
 				DDE2ED0F2121584E003C7E40 /* LaunchScreen.storyboard in Resources */,
 				DDE2ED0C2121584E003C7E40 /* Assets.xcassets in Resources */,
-				DDE2ED072121584C003C7E40 /* Main.storyboard in Resources */,
+				DDC2AF4121969EEB008D100A /* MyFeed.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,14 +601,162 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7775B7728605578B9ACF7315 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BCSS/Pods-BCSS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/JTAppleCalendar/JTAppleCalendar.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JTAppleCalendar.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BCSS/Pods-BCSS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		882E47494A3E4191570338A1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BCSSTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B9D762EA84C77262AE8E1590 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BCSS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F31985D0B426EF858157F5EE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BCSSUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DDE2ECFA2121584B003C7E40 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDA244602131EF30003D63CD /* BulletinViewController.swift in Sources */,
+				DD62BE8B2185038E00D730CA /* Event.swift in Sources */,
+				DDF341E3216ACE3B007DA56A /* PersistenceManager.swift in Sources */,
+				DDA24452212D2F8A003D63CD /* Teacher.swift in Sources */,
+				DDA6C3162143A3D900F421A0 /* AddAssignmentTableViewController.swift in Sources */,
+				DDF341DE216ACCE9007DA56A /* Team+CoreDataClass.swift in Sources */,
+				DDA24450212BD2EA003D63CD /* InfoSportsTableViewController.swift in Sources */,
+				DD8B96D5216BE2E600B4CBC4 /* MyTeamTableViewController.swift in Sources */,
+				DDF341DD216ACCE9007DA56A /* Organization+CoreDataProperties.swift in Sources */,
+				DDA9AA9A21BC83D60044E256 /* BlockTableViewCell.swift in Sources */,
+				DDA00D1821460C1300FD9B6F /* InfoAssignmentTableViewController.swift in Sources */,
+				DDA2445A212FEB92003D63CD /* CourseTableViewController.swift in Sources */,
 				DDE2ED0A2121584C003C7E40 /* BCSS.xcdatamodeld in Sources */,
-				DDE2ED042121584C003C7E40 /* ViewController.swift in Sources */,
+				DDC2AF5A2197E1E2008D100A /* Schedule+CoreDataProperties.swift in Sources */,
+				DDA2445C21307F0E003D63CD /* GradeCourses.swift in Sources */,
+				DDA9AAA421BCD3220044E256 /* Blocks+CoreDataProperties.swift in Sources */,
+				DD62BE89217C274700D730CA /* CalendarViewController.swift in Sources */,
+				DD62BE87217C1F7700D730CA /* CalendarCell.swift in Sources */,
 				DDE2ED022121584B003C7E40 /* AppDelegate.swift in Sources */,
+				DDF341DC216ACCE9007DA56A /* Organization+CoreDataClass.swift in Sources */,
+				DDA2445E2131E710003D63CD /* MenuViewController.swift in Sources */,
+				DD8B96D3216B112E00B4CBC4 /* MyClubInfoTableViewController.swift in Sources */,
+				DDC2AF672198D11C008D100A /* Work+CoreDataClass.swift in Sources */,
+				DDA244642133C7E1003D63CD /* ProfileTableViewController.swift in Sources */,
+				DD62BE7C2176444800D730CA /* MyServiceHoursTableViewController.swift in Sources */,
+				DD8B96D7216BE35A00B4CBC4 /* MyTeamInfoTableViewController.swift in Sources */,
+				DD62BE802177A26A00D730CA /* ServiceHoursInfoTableViewController.swift in Sources */,
+				DDA2444E212A9959003D63CD /* SportsTableViewController.swift in Sources */,
+				DDA2446A21367C6E003D63CD /* ClassTableViewCell.swift in Sources */,
+				DDC2AF662198D11C008D100A /* Work+CoreDataProperties.swift in Sources */,
+				DDC2AF622198C699008D100A /* Homework+CoreDataClass.swift in Sources */,
+				DDA244662133E912003D63CD /* ScheduleViewController.swift in Sources */,
+				DD62BE7E217644FC00D730CA /* Volunteer.swift in Sources */,
+				DDC2AF4B2197ADE4008D100A /* EventsModuleViewController.swift in Sources */,
+				DDA244482128BCDE003D63CD /* Clubs.swift in Sources */,
+				DDC2AF472197AD3E008D100A /* ClubModuleViewController.swift in Sources */,
+				DDA9AA9821B7C7D20044E256 /* Notifications.swift in Sources */,
+				DDE2ED3321256462003C7E40 /* StudentHubTableViewController.swift in Sources */,
+				DDA9AAA321BCD3220044E256 /* Blocks+CoreDataClass.swift in Sources */,
+				DDA9AA9C21BC9F340044E256 /* Schedule2ViewController.swift in Sources */,
+				DDA9AA9E21BC9FA40044E256 /* BlockTableViewController.swift in Sources */,
+				DDA24456212E7FFA003D63CD /* TeacherContactTableViewController.swift in Sources */,
+				DD62BE822177A27D00D730CA /* AddServiceHoursTableViewController.swift in Sources */,
+				DDC2AF5B2197E1E2008D100A /* Schedule+CoreDataClass.swift in Sources */,
+				DDC0B4CC213FA4C40098C8B3 /* AssignmentTableViewCell.swift in Sources */,
+				DDC2AF6B21A00EFD008D100A /* AssignmentModuleTableViewCell.swift in Sources */,
+				DDA9AAA621BCFEA00044E256 /* BlockInfoTableViewController.swift in Sources */,
+				DDA244462128B702003D63CD /* ClubTableViewController.swift in Sources */,
+				DDC0B4C7213F9FB50098C8B3 /* AssignmentsTableViewController.swift in Sources */,
+				DDF34111215B0D35007DA56A /* MyClubsTableViewController.swift in Sources */,
+				DDF341DF216ACCE9007DA56A /* Team+CoreDataProperties.swift in Sources */,
+				DDA2444C212A97E8003D63CD /* Sports.swift in Sources */,
+				DDC2AF632198C699008D100A /* Homework+CoreDataProperties.swift in Sources */,
+				DDC2AF492197AD54008D100A /* ScheduleModuleViewController.swift in Sources */,
+				DDA2444A212921B2003D63CD /* InfoClubTableViewController.swift in Sources */,
+				DDA2446821366637003D63CD /* Classes.swift in Sources */,
+				DDA2446C2137BA00003D63CD /* AddClassesTableViewController.swift in Sources */,
+				DDC2AF452197AA3F008D100A /* AssignmentModuleViewController.swift in Sources */,
+				DDC2AF432196ACC0008D100A /* MyFeedViewController.swift in Sources */,
+				DDA24454212E6BF6003D63CD /* DepartmentTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,6 +796,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				DDE2ED062121584C003C7E40 /* Base */,
+				DDA9AA9521B6632B0044E256 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -367,7 +863,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -421,8 +917,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -432,42 +929,51 @@
 		};
 		DDE2ED2A2121584E003C7E40 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35F8C001E27E36037A26CAE9 /* Pods-BCSS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GFMAPRX493;
 				INFOPLIST_FILE = BCSS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Treeline.BCSS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		DDE2ED2B2121584E003C7E40 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 142AC46FD592C4EBCE54A80D /* Pods-BCSS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GFMAPRX493;
 				INFOPLIST_FILE = BCSS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Treeline.BCSS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 		DDE2ED2D2121584E003C7E40 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C8451A5D64604901B50ED6A /* Pods-BCSSTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -481,7 +987,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Treeline.BCSSTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BCSS.app/BCSS";
 			};
@@ -489,6 +995,7 @@
 		};
 		DDE2ED2E2121584E003C7E40 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 802172C84E2CEAE61054B252 /* Pods-BCSSTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -502,7 +1009,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Treeline.BCSSTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BCSS.app/BCSS";
 			};
@@ -510,6 +1017,7 @@
 		};
 		DDE2ED302121584E003C7E40 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3068553544E048D42431946A /* Pods-BCSSUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -522,7 +1030,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Treeline.BCSSUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = BCSS;
 			};
@@ -530,6 +1038,7 @@
 		};
 		DDE2ED312121584E003C7E40 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83C46BA2EA27E4B90D4823CE /* Pods-BCSSUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -542,7 +1051,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Treeline.BCSSUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = BCSS;
 			};

@@ -8,15 +8,141 @@
 
 import UIKit
 import CoreData
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+   
+        unowned let userdefaults = UserDefaults.standard
+        unowned let persistenceManager = PersistenceManager.shared
+        let notificationDelegate = NotificationDelegate()
+        
+        if userdefaults.value(forKey: "isFirstLaunch") != nil {
+            
+            print("Not First Launch")
+            
+        } else {
+            
+            UNUserNotificationCenter.current().requestAuthorization(options: [.sound, .alert, .badge]) { granted, error in
+                
+            }
+
+            
+            let dateFormat = DateFormatter()
+            let events = Event.eventsList
+            
+            for event in events {
+                if event.title == "Collaboration Day" {
+                    
+                    //Content
+                    let notification = UNMutableNotificationContent()
+                    notification.title = "Collaboration Day Tomorrow"
+                    notification.body = "Make sure to bring some assignments to work on!"
+                    notification.badge = 1
+                    notification.sound = UNNotificationSound.default
+                    
+                    //Day before notification
+                    let calendar = Calendar.current
+                    dateFormat.dateFormat = "yyyy/MM/dd"
+                    
+                    if let date = dateFormat.date(from: event.date) {
+                        let collab = calendar.date(byAdding: .day, value: -1, to: date)
+                        var dateComponent = calendar.dateComponents([.year,.month,.day,.hour,.minute], from: collab!)
+                        dateComponent.hour = 20
+                        
+                        //trigger
+                        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponent, repeats: false)
+                        
+                        //Request notifications
+                        let request = UNNotificationRequest(identifier: UUID().uuidString, content: notification, trigger: trigger)
+                        
+                        UNUserNotificationCenter.current().add(request) { (Error) in
+                            
+                            if let error = Error {
+                                print(error)
+                            }
+                            
+                        }
+                        
+                    }
+                    
+                    
+                }
+              
+                
+                
+            }
+           
+            
+            
+            
+            
+            //Setup schedule
+            let blockXsem1 = Blocks(context: persistenceManager.context)
+            blockXsem1.blockX = true
+            blockXsem1.block = 0
+            blockXsem1.semester = 1
+            
+            let block1sem1 = Blocks(context: persistenceManager.context)
+            block1sem1.block = 1
+            block1sem1.semester = 1
+  
+            let block2sem1 = Blocks(context: persistenceManager.context)
+            block2sem1.block = 2
+            block2sem1.semester = 1
+            
+            let block3sem1 = Blocks(context: persistenceManager.context)
+            block3sem1.block = 3
+            block3sem1.semester = 1
+            
+            let block4sem1 = Blocks(context: persistenceManager.context)
+            block4sem1.block = 4
+            block4sem1.semester = 1
+            
+            let blockXsem2 = Blocks(context: persistenceManager.context)
+            blockXsem2.blockX = true
+            blockXsem2.block = 0
+            blockXsem2.semester = 2
+            
+            let block1sem2 = Blocks(context: persistenceManager.context)
+            block1sem2.block = 1
+            block1sem2.semester = 2
+            
+            let block2sem2 = Blocks(context: persistenceManager.context)
+            block2sem2.block = 2
+            block2sem2.semester = 2
+            
+            let block3sem2 = Blocks(context: persistenceManager.context)
+            block3sem2.block = 3
+            block3sem2.semester = 2
+            
+            let block4sem2 = Blocks(context: persistenceManager.context)
+            block4sem2.block = 4
+            block4sem2.semester = 2
+            
+            
+            
+            persistenceManager.save()
+             print("First Launch")
+            
+            userdefaults.set(true, forKey: "isFirstLaunch")
+ 
+        }
+        
+        
+        
+        //Temporary feature
+        UIApplication.shared.applicationIconBadgeNumber = 0
+        
+        UNUserNotificationCenter.current().removeAllDeliveredNotifications()
+        UNUserNotificationCenter.current().delegate = notificationDelegate
+        
+    
         return true
     }
 
@@ -32,6 +158,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillEnterForeground(_ application: UIApplication) {
         // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+        
+        //Temporary feature
+        UIApplication.shared.applicationIconBadgeNumber = 0
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
@@ -41,53 +170,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         // Saves changes in the application's managed object context before the application terminates.
-        self.saveContext()
     }
 
-    // MARK: - Core Data stack
 
-    lazy var persistentContainer: NSPersistentContainer = {
-        /*
-         The persistent container for the application. This implementation
-         creates and returns a container, having loaded the store for the
-         application to it. This property is optional since there are legitimate
-         error conditions that could cause the creation of the store to fail.
-        */
-        let container = NSPersistentContainer(name: "BCSS")
-        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
-            if let error = error as NSError? {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                 
-                /*
-                 Typical reasons for an error here include:
-                 * The parent directory does not exist, cannot be created, or disallows writing.
-                 * The persistent store is not accessible, due to permissions or data protection when the device is locked.
-                 * The device is out of space.
-                 * The store could not be migrated to the current model version.
-                 Check the error message to determine what the actual problem was.
-                 */
-                fatalError("Unresolved error \(error), \(error.userInfo)")
-            }
-        })
-        return container
-    }()
-
-    // MARK: - Core Data Saving support
-
-    func saveContext () {
-        let context = persistentContainer.viewContext
-        if context.hasChanges {
-            do {
-                try context.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nserror = error as NSError
-                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
-            }
-        }
-    }
 
 }
 

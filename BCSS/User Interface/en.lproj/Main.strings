@@ -1,0 +1,288 @@
+
+/* Class = "UILabel"; text = "Course"; ObjectID = "0ee-Ll-bWO"; */
+"0ee-Ll-bWO.text" = "Course";
+
+/* Class = "UILabel"; text = "Coaches"; ObjectID = "1ks-6n-je9"; */
+"1ks-6n-je9.text" = "Coaches";
+
+/* Class = "UITableViewController"; title = "Assignments and Tests"; ObjectID = "1qK-FE-YVe"; */
+"1qK-FE-YVe.title" = "Assignments and Tests";
+
+/* Class = "UINavigationItem"; title = "Student Hub"; ObjectID = "25u-Eg-Rn2"; */
+"25u-Eg-Rn2.title" = "Student Hub";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "3qJ-CM-T5W"; */
+"3qJ-CM-T5W.text" = "Title";
+
+/* Class = "UILabel"; text = "To join clubs go to Student Hub"; ObjectID = "4E8-13-wgm"; */
+"4E8-13-wgm.text" = "To join clubs go to Student Hub";
+
+/* Class = "UITableViewSection"; headerTitle = "Notes"; ObjectID = "6h3-m9-HmO"; */
+"6h3-m9-HmO.headerTitle" = "Notes";
+
+/* Class = "UILabel"; text = "Class:"; ObjectID = "77k-AE-Vwk"; */
+"77k-AE-Vwk.text" = "Class:";
+
+/* Class = "UILabel"; text = "Calendar"; ObjectID = "8N7-VG-ECj"; */
+"8N7-VG-ECj.text" = "Calendar";
+
+/* Class = "UILabel"; text = "Pravtice Time"; ObjectID = "97J-Vh-Ppt"; */
+"97J-Vh-Ppt.text" = "Pravtice Time";
+
+/* Class = "UILabel"; text = "Name of Club"; ObjectID = "AgQ-qS-Jgw"; */
+"AgQ-qS-Jgw.text" = "Name of Club";
+
+/* Class = "UILabel"; text = "Due Date"; ObjectID = "AnW-Hf-pUC"; */
+"AnW-Hf-pUC.text" = "Due Date";
+
+/* Class = "UILabel"; text = "You currently aren't in any clubs "; ObjectID = "COs-hv-aai"; */
+"COs-hv-aai.text" = "You currently aren't in any clubs ";
+
+/* Class = "UITableViewSection"; headerTitle = "Notes"; ObjectID = "CY2-jY-BnS"; */
+"CY2-jY-BnS.headerTitle" = "Notes";
+
+/* Class = "UIViewController"; title = "Bulletin"; ObjectID = "Cv5-mL-tAQ"; */
+"Cv5-mL-tAQ.title" = "Bulletin";
+
+/* Class = "UINavigationItem"; title = "My Profile"; ObjectID = "EE0-G9-TWv"; */
+"EE0-G9-TWv.title" = "My Profile";
+
+/* Class = "UINavigationItem"; title = "Clubs"; ObjectID = "ESb-Ml-JOZ"; */
+"ESb-Ml-JOZ.title" = "Clubs";
+
+/* Class = "UILabel"; text = "You have no assignments currently "; ObjectID = "Ehu-qD-jXD"; */
+"Ehu-qD-jXD.text" = "You have no assignments currently ";
+
+/* Class = "UILabel"; text = "Clubs"; ObjectID = "F8p-IG-Apg"; */
+"F8p-IG-Apg.text" = "Clubs";
+
+/* Class = "UILabel"; text = "Meeting Date"; ObjectID = "FAo-yL-xyZ"; */
+"FAo-yL-xyZ.text" = "Meeting Date";
+
+/* Class = "UITextField"; placeholder = "Hours"; ObjectID = "Gc4-1Q-vPC"; */
+"Gc4-1Q-vPC.placeholder" = "Hours";
+
+/* Class = "UILabel"; text = "Season"; ObjectID = "HIK-34-K3g"; */
+"HIK-34-K3g.text" = "Season";
+
+/* Class = "UILabel"; text = "Season"; ObjectID = "HNu-fa-H0g"; */
+"HNu-fa-H0g.text" = "Season";
+
+/* Class = "UINavigationItem"; title = "Sports"; ObjectID = "Hxd-Va-L84"; */
+"Hxd-Va-L84.title" = "Sports";
+
+/* Class = "UIButton"; normalTitle = "Join Team"; ObjectID = "IhF-2v-F2E"; */
+"IhF-2v-F2E.normalTitle" = "Join Team";
+
+/* Class = "UITableViewController"; title = "Add Classes"; ObjectID = "Jde-xn-bU4"; */
+"Jde-xn-bU4.title" = "Add Classes";
+
+/* Class = "UILabel"; text = "Department"; ObjectID = "Jl5-Ka-kZn"; */
+"Jl5-Ka-kZn.text" = "Department";
+
+/* Class = "UINavigationItem"; title = "Add Class"; ObjectID = "JtY-29-WrM"; */
+"JtY-29-WrM.title" = "Add Class";
+
+/* Class = "UITabBarItem"; title = "My Profile"; ObjectID = "K8I-w4-Jth"; */
+"K8I-w4-Jth.title" = "My Profile";
+
+/* Class = "UILabel"; text = "You have no courses currently "; ObjectID = "KGl-v8-inb"; */
+"KGl-v8-inb.text" = "You have no courses currently ";
+
+/* Class = "UILabel"; text = "Service Hours and Work Experience"; ObjectID = "LEB-Tq-GRe"; */
+"LEB-Tq-GRe.text" = "Service Hours and Work Experience";
+
+/* Class = "UILabel"; text = "Sponsor"; ObjectID = "LQu-wo-f82"; */
+"LQu-wo-f82.text" = "Sponsor";
+
+/* Class = "UILabel"; text = "Detail"; ObjectID = "Ld4-0n-LtU"; */
+"Ld4-0n-LtU.text" = "Detail";
+
+/* Class = "UILabel"; text = "Coach"; ObjectID = "LyO-va-wVa"; */
+"LyO-va-wVa.text" = "Coach";
+
+/* Class = "UILabel"; text = "Block:"; ObjectID = "NEC-Hi-7i7"; */
+"NEC-Hi-7i7.text" = "Block:";
+
+/* Class = "UILabel"; text = "Name of Sponsor Teacher"; ObjectID = "NQr-BO-zqD"; */
+"NQr-BO-zqD.text" = "Name of Sponsor Teacher";
+
+/* Class = "UILabel"; text = "Team Name"; ObjectID = "NeZ-jn-KEL"; */
+"NeZ-jn-KEL.text" = "Team Name";
+
+/* Class = "UILabel"; text = "Room:"; ObjectID = "NtN-A0-hf1"; */
+"NtN-A0-hf1.text" = "Room:";
+
+/* Class = "UITextField"; placeholder = "Name "; ObjectID = "OkK-zs-xvS"; */
+"OkK-zs-xvS.placeholder" = "Name ";
+
+/* Class = "UITableViewController"; title = "Add Assignments/Tests"; ObjectID = "SFw-zj-kha"; */
+"SFw-zj-kha.title" = "Add Assignments/Tests";
+
+/* Class = "UILabel"; text = "Name of President"; ObjectID = "UTk-oB-cno"; */
+"UTk-oB-cno.text" = "Name of President";
+
+/* Class = "UILabel"; text = "Meeting Date"; ObjectID = "UZb-yL-Paz"; */
+"UZb-yL-Paz.text" = "Meeting Date";
+
+/* Class = "UILabel"; text = "Student Bulletin"; ObjectID = "Uqm-6E-EPL"; */
+"Uqm-6E-EPL.text" = "Student Bulletin";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "W5p-mX-Ozq"; */
+"W5p-mX-Ozq.text" = "Title";
+
+/* Class = "UITabBarItem"; title = "Student Hub"; ObjectID = "WPj-4B-iU0"; */
+"WPj-4B-iU0.title" = "Student Hub";
+
+/* Class = "UILabel"; text = "You currently aren't in any teams"; ObjectID = "XIc-FV-4fy"; */
+"XIc-FV-4fy.text" = "You currently aren't in any teams";
+
+/* Class = "UILabel"; text = "Assignment Title"; ObjectID = "XbJ-hc-pnr"; */
+"XbJ-hc-pnr.text" = "Assignment Title";
+
+/* Class = "UILabel"; text = "You have no work experience hours currently "; ObjectID = "YeQ-0N-MdS"; */
+"YeQ-0N-MdS.text" = "You have no work experience hours currently ";
+
+/* Class = "UILabel"; text = "Sports"; ObjectID = "ZSt-B0-UoK"; */
+"ZSt-B0-UoK.text" = "Sports";
+
+/* Class = "UILabel"; text = "Team Name"; ObjectID = "ZWQ-p7-Ddl"; */
+"ZWQ-p7-Ddl.text" = "Team Name";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "cCK-6N-8af"; */
+"cCK-6N-8af.text" = "Title";
+
+/* Class = "UILabel"; text = "Class"; ObjectID = "cOA-6m-5xu"; */
+"cOA-6m-5xu.text" = "Class";
+
+/* Class = "UILabel"; text = "Name of Club"; ObjectID = "cab-0P-Mzp"; */
+"cab-0P-Mzp.text" = "Name of Club";
+
+/* Class = "UILabel"; text = "Grades"; ObjectID = "cfK-Wp-aJw"; */
+"cfK-Wp-aJw.text" = "Grades";
+
+/* Class = "UILabel"; text = "Cafeteria Menu"; ObjectID = "cfV-Jv-d8l"; */
+"cfV-Jv-d8l.text" = "Cafeteria Menu";
+
+/* Class = "UILabel"; text = "Name of President"; ObjectID = "dLE-hG-54l"; */
+"dLE-hG-54l.text" = "Name of President";
+
+/* Class = "UILabel"; text = "To join sports teams go to Student Hub"; ObjectID = "dcc-FR-mUq"; */
+"dcc-FR-mUq.text" = "To join sports teams go to Student Hub";
+
+/* Class = "UILabel"; text = "Teacher Contact"; ObjectID = "dr6-0d-5EF"; */
+"dr6-0d-5EF.text" = "Teacher Contact";
+
+/* Class = "UITableViewController"; title = "Departments"; ObjectID = "dtx-5a-ShJ"; */
+"dtx-5a-ShJ.title" = "Departments";
+
+/* Class = "UITableViewController"; title = "Teachers"; ObjectID = "e9P-aM-9RZ"; */
+"e9P-aM-9RZ.title" = "Teachers";
+
+/* Class = "UISegmentedControl"; ePi-ij-VZU.segmentTitles[0] = "1st Semester"; ObjectID = "ePi-ij-VZU"; */
+"ePi-ij-VZU.segmentTitles[0]" = "1st Semester";
+
+/* Class = "UISegmentedControl"; ePi-ij-VZU.segmentTitles[1] = "2nd Semester"; ObjectID = "ePi-ij-VZU"; */
+"ePi-ij-VZU.segmentTitles[1]" = "2nd Semester";
+
+/* Class = "UITableViewSection"; headerTitle = "Extra Info"; ObjectID = "f7G-l0-hK1"; */
+"f7G-l0-hK1.headerTitle" = "Extra Info";
+
+/* Class = "UITableViewSection"; headerTitle = "Extra Info"; ObjectID = "gGu-dP-eJl"; */
+"gGu-dP-eJl.headerTitle" = "Extra Info";
+
+/* Class = "UIViewController"; title = "Schedule"; ObjectID = "gSG-Cr-uzI"; */
+"gSG-Cr-uzI.title" = "Schedule";
+
+/* Class = "UITextField"; placeholder = "Date of Work/Volunteer"; ObjectID = "gtV-cZ-WvH"; */
+"gtV-cZ-WvH.placeholder" = "Date of Work/Volunteer";
+
+/* Class = "UITextField"; placeholder = "Title"; ObjectID = "hXG-Tq-5dD"; */
+"hXG-Tq-5dD.placeholder" = "Title";
+
+/* Class = "UILabel"; text = "Practice Times"; ObjectID = "hec-5U-Oyh"; */
+"hec-5U-Oyh.text" = "Practice Times";
+
+/* Class = "UIViewController"; title = "Menu"; ObjectID = "irg-mU-tCx"; */
+"irg-mU-tCx.title" = "Menu";
+
+/* Class = "UITextField"; placeholder = "Room Number"; ObjectID = "iuL-Ru-KcR"; */
+"iuL-Ru-KcR.placeholder" = "Room Number";
+
+/* Class = "UITextField"; placeholder = "Teacher Name"; ObjectID = "lBF-uE-tfp"; */
+"lBF-uE-tfp.placeholder" = "Teacher Name";
+
+/* Class = "UILabel"; text = "My Clubs"; ObjectID = "lNO-Hd-xHg"; */
+"lNO-Hd-xHg.text" = "My Clubs";
+
+/* Class = "UITextField"; placeholder = "Due Date"; ObjectID = "lRO-eq-uYG"; */
+"lRO-eq-uYG.placeholder" = "Due Date";
+
+/* Class = "UITabBarItem"; title = "My Feed"; ObjectID = "lVE-Jp-FkK"; */
+"lVE-Jp-FkK.title" = "My Feed";
+
+/* Class = "UITableViewController"; title = "Courses"; ObjectID = "lj8-fq-2gX"; */
+"lj8-fq-2gX.title" = "Courses";
+
+/* Class = "UITableViewController"; title = "My Hours"; ObjectID = "mLZ-R3-zz9"; */
+"mLZ-R3-zz9.title" = "My Hours";
+
+/* Class = "UILabel"; text = "My Assignments and Tests"; ObjectID = "mgt-69-yb7"; */
+"mgt-69-yb7.text" = "My Assignments and Tests";
+
+/* Class = "UILabel"; text = "Courses Available "; ObjectID = "n96-Pw-0T7"; */
+"n96-Pw-0T7.text" = "Courses Available ";
+
+/* Class = "UILabel"; text = "Room"; ObjectID = "nE3-sM-Dwz"; */
+"nE3-sM-Dwz.text" = "Room";
+
+/* Class = "UILabel"; text = "Sponsor"; ObjectID = "nJZ-Xm-pnb"; */
+"nJZ-Xm-pnb.text" = "Sponsor";
+
+/* Class = "UILabel"; text = "My Schedule"; ObjectID = "nVc-f6-umT"; */
+"nVc-f6-umT.text" = "My Schedule";
+
+/* Class = "UITextField"; placeholder = "Class"; ObjectID = "nzf-vy-PBr"; */
+"nzf-vy-PBr.placeholder" = "Class";
+
+/* Class = "UITextField"; placeholder = "Class Name"; ObjectID = "o9c-Jo-A7h"; */
+"o9c-Jo-A7h.placeholder" = "Class Name";
+
+/* Class = "UITableViewController"; title = "My Clubs"; ObjectID = "oFG-dP-3h2"; */
+"oFG-dP-3h2.title" = "My Clubs";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "pXd-HV-4on"; */
+"pXd-HV-4on.text" = "Title";
+
+/* Class = "UILabel"; text = "Grades"; ObjectID = "pbG-XT-vrW"; */
+"pbG-XT-vrW.text" = "Grades";
+
+/* Class = "UILabel"; text = "Room"; ObjectID = "rsm-Xi-lfZ"; */
+"rsm-Xi-lfZ.text" = "Room";
+
+/* Class = "UIButton"; normalTitle = "Join Club"; ObjectID = "t4o-KD-872"; */
+"t4o-KD-872.normalTitle" = "Join Club";
+
+/* Class = "UITableViewController"; title = "Add Hours"; ObjectID = "tVT-Yi-tyl"; */
+"tVT-Yi-tyl.title" = "Add Hours";
+
+/* Class = "UILabel"; text = "Teacher:"; ObjectID = "v6n-AO-SI7"; */
+"v6n-AO-SI7.text" = "Teacher:";
+
+/* Class = "UILabel"; text = "Name of Sponsor Teacher"; ObjectID = "vZj-k3-gui"; */
+"vZj-k3-gui.text" = "Name of Sponsor Teacher";
+
+/* Class = "UILabel"; text = "Hours"; ObjectID = "vpL-GF-At1"; */
+"vpL-GF-At1.text" = "Hours";
+
+/* Class = "UIButton"; normalTitle = "Contact Coach"; ObjectID = "vzl-x7-TQE"; */
+"vzl-x7-TQE.normalTitle" = "Contact Coach";
+
+/* Class = "UILabel"; text = "Date"; ObjectID = "wLK-sU-0UW"; */
+"wLK-sU-0UW.text" = "Date";
+
+/* Class = "UILabel"; text = "Due Date"; ObjectID = "wLg-mW-PtS"; */
+"wLg-mW-PtS.text" = "Due Date";
+
+/* Class = "UITableViewController"; title = "My Teams"; ObjectID = "z8C-jV-QUu"; */
+"z8C-jV-QUu.title" = "My Teams";
