@@ -51,6 +51,7 @@ class BlockInfoTableViewController: UITableViewController {
     @IBOutlet weak var roomNumber2: UITextField!
     @IBOutlet weak var teacherName2: UITextField!
     
+    @IBOutlet weak var sameAsDay1Button: UISwitch!
     
     // MARK: - Table view data source
 
@@ -85,43 +86,14 @@ class BlockInfoTableViewController: UITableViewController {
            var schedule = context
             
             schedule[0].setValue(className.text, forKey: "nameClass")
-            if let empty = className2.text?.isEmpty {
-                if empty {
-                    schedule[0].setValue("", forKey: "nameClass2")
-                    schedule[0].setValue("", forKey: "roomNumber2")
-                    schedule[0].setValue("", forKey: "nameTeacher2")
-                } else {
-                    schedule[0].setValue(className2.text, forKey: "nameClass2")
-                }
-                
-            } else {
-                schedule[0].setValue(className.text, forKey: "nameClass2")
-            }
+            schedule[0].setValue(className2.text, forKey: "nameClass2")
+            
             schedule[0].setValue(teacherName.text, forKey: "nameTeacher")
-            if let empty = teacherName2.text?.isEmpty {
-                if empty {
-                    schedule[0].setValue("", forKey: "nameTeacher2")
-                } else {
-                     schedule[0].setValue(teacherName2.text, forKey: "nameTeacher2")
-                }
-                
-            } else {
-               schedule[0].setValue(teacherName2.text, forKey: "nameTeacher2")
-            }
-           
+            schedule[0].setValue(teacherName2.text, forKey: "nameTeacher2")
+            
             schedule[0].setValue(roomNumber.text, forKey: "roomNumber")
-            
-            if let empty = roomNumber2.text?.isEmpty {
-                if empty {
-                    schedule[0].setValue("", forKey: "roomNumber2")
-                } else {
-                    schedule[0].setValue(roomNumber2.text, forKey: "roomNumber2")
-                }
-                
-            } else {
-                schedule[0].setValue(roomNumber2.text, forKey: "roomNumber2")
-            }
-            
+            schedule[0].setValue(roomNumber2.text, forKey: "roomNumber2")
+    
             
             persistenceManager.save()
             
@@ -138,6 +110,27 @@ class BlockInfoTableViewController: UITableViewController {
     
     @objc func endEditing(tap: UITapGestureRecognizer) {
         view.endEditing(true)
+    }
+    
+    
+    @IBAction func sameAsDay1Tapped(_ sender: Any) {
+        
+        if sameAsDay1Button.isOn {
+            
+            className2.text = className.text
+            teacherName2.text = teacherName.text
+            roomNumber2.text = roomNumber.text
+            
+        } else {
+            
+            className2.text = ""
+            teacherName2.text = ""
+            roomNumber2.text = ""
+            
+        }
+        
+        
+        
     }
     
     
