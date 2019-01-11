@@ -1067,7 +1067,7 @@
 				DDE2ED282121584E003C7E40 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		DDE2ED292121584E003C7E40 /* Build configuration list for PBXNativeTarget "BCSS" */ = {
 			isa = XCConfigurationList;
@@ -1076,7 +1076,7 @@
 				DDE2ED2B2121584E003C7E40 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		DDE2ED2C2121584E003C7E40 /* Build configuration list for PBXNativeTarget "BCSSTests" */ = {
 			isa = XCConfigurationList;
@@ -1085,7 +1085,7 @@
 				DDE2ED2E2121584E003C7E40 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		DDE2ED2F2121584E003C7E40 /* Build configuration list for PBXNativeTarget "BCSSUITests" */ = {
 			isa = XCConfigurationList;
@@ -1094,7 +1094,7 @@
 				DDE2ED312121584E003C7E40 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 

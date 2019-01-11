@@ -87,7 +87,9 @@ class BlockInfoTableViewController: UITableViewController {
             schedule[0].setValue(className.text, forKey: "nameClass")
             if let empty = className2.text?.isEmpty {
                 if empty {
-                    schedule[0].setValue(className.text, forKey: "nameClass2")
+                    schedule[0].setValue("", forKey: "nameClass2")
+                    schedule[0].setValue("", forKey: "roomNumber2")
+                    schedule[0].setValue("", forKey: "nameTeacher2")
                 } else {
                     schedule[0].setValue(className2.text, forKey: "nameClass2")
                 }
@@ -98,7 +100,7 @@ class BlockInfoTableViewController: UITableViewController {
             schedule[0].setValue(teacherName.text, forKey: "nameTeacher")
             if let empty = teacherName2.text?.isEmpty {
                 if empty {
-                    schedule[0].setValue(teacherName.text, forKey: "nameTeacher2")
+                    schedule[0].setValue("", forKey: "nameTeacher2")
                 } else {
                      schedule[0].setValue(teacherName2.text, forKey: "nameTeacher2")
                 }
@@ -111,7 +113,7 @@ class BlockInfoTableViewController: UITableViewController {
             
             if let empty = roomNumber2.text?.isEmpty {
                 if empty {
-                    schedule[0].setValue(roomNumber.text, forKey: "roomNumber2")
+                    schedule[0].setValue("", forKey: "roomNumber2")
                 } else {
                     schedule[0].setValue(roomNumber2.text, forKey: "roomNumber2")
                 }
