@@ -14,6 +14,7 @@ class MyFeedViewController: UIViewController {
         super.viewDidLoad()
         
        
+       
         navigationController?.navigationBar.barTintColor = UIColor.init(red:  0.612, green: 0.137, blue: 0.157, alpha: 100)
         
         
