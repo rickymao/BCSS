@@ -96,7 +96,7 @@ class InfoClubTableViewController: UITableViewController, MFMailComposeViewContr
     var roomTable: String = ""
     var dateTable: [Date] = []
     var descTable: String = ""
-    var emailTable: String?
+    var emailTable: [String]?
     
 
     @IBAction func contactTapped(_ sender: Any) {
@@ -107,18 +107,23 @@ class InfoClubTableViewController: UITableViewController, MFMailComposeViewContr
         
         } else {
             
-            let mail = configureMailController(email: emailTable!)
-            self.present(mail, animated: true, completion: nil)
+            if let email = emailTable {
+                
+                let mail = configureMailController(email: email)
+                self.present(mail, animated: true, completion: nil)
+                
+            }
+            
         }
         
     }
     
     //Setting up Email
-    func configureMailController(email: String) -> MFMailComposeViewController {
+    func configureMailController(email: [String]) -> MFMailComposeViewController {
         
         let composeVC = MFMailComposeViewController()
         composeVC.mailComposeDelegate = self
-        composeVC.setToRecipients([email])
+        composeVC.setToRecipients(email)
         
         return composeVC
         

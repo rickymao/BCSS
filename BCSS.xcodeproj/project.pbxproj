@@ -77,6 +77,7 @@
 		DDF341DE216ACCE9007DA56A /* Team+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF341D8216ACCE9007DA56A /* Team+CoreDataClass.swift */; };
 		DDF341DF216ACCE9007DA56A /* Team+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF341D9216ACCE9007DA56A /* Team+CoreDataProperties.swift */; };
 		DDF341E3216ACE3B007DA56A /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF341E2216ACE3B007DA56A /* PersistenceManager.swift */; };
+		DDF7262F2211F8B500C8D861 /* EventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF7262E2211F8B500C8D861 /* EventTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -178,6 +179,7 @@
 		DDF341D8216ACCE9007DA56A /* Team+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Team+CoreDataClass.swift"; sourceTree = "<group>"; };
 		DDF341D9216ACCE9007DA56A /* Team+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Team+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		DDF341E2216ACE3B007DA56A /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
+		DDF7262E2211F8B500C8D861 /* EventTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewController.swift; sourceTree = "<group>"; };
 		E89F2368BBF6C28219406AEC /* Pods_BCSS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BCSS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1593508F82B02FEDA9CC823 /* Pods_BCSSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BCSSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -250,6 +252,7 @@
 				DD62BE86217C1F7700D730CA /* CalendarCell.swift */,
 				DD62BE88217C274700D730CA /* CalendarViewController.swift */,
 				DD62BE8A2185038E00D730CA /* Event.swift */,
+				DDF7262E2211F8B500C8D861 /* EventTableViewController.swift */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
@@ -752,6 +755,7 @@
 				DDC2AF632198C699008D100A /* Homework+CoreDataProperties.swift in Sources */,
 				DDC2AF492197AD54008D100A /* ScheduleModuleViewController.swift in Sources */,
 				DDA2444A212921B2003D63CD /* InfoClubTableViewController.swift in Sources */,
+				DDF7262F2211F8B500C8D861 /* EventTableViewController.swift in Sources */,
 				DDA2446821366637003D63CD /* Classes.swift in Sources */,
 				DDA2446C2137BA00003D63CD /* AddClassesTableViewController.swift in Sources */,
 				DDC2AF452197AA3F008D100A /* AssignmentModuleViewController.swift in Sources */,

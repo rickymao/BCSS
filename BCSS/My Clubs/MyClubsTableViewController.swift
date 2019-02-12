@@ -161,5 +161,15 @@ class MyClubsTableViewController: UITableViewController {
         
     }
  
+    @IBAction func viewClubs(_ sender: Any) {
+        
+        if let vc = UIStoryboard(name: "main", bundle: nil).instantiateInitialViewController() as? ClubTableViewController {
+            if let navigate = navigationController {
+               navigate.pushViewController(vc, animated: true)
+            }
+            
+        }
+        
+    }
     
 }

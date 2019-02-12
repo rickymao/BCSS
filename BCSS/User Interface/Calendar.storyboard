@@ -296,10 +296,10 @@
             </objects>
             <point key="canvasLocation" x="186.5625" y="141.02112676056339"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Event Table View Controller-->
         <scene sceneID="w1L-NP-mpa">
             <objects>
-                <tableViewController id="Nbd-DE-mYl" sceneMemberID="viewController">
+                <tableViewController id="Nbd-DE-mYl" customClass="EventTableViewController" customModule="BCSS" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="V11-1h-pFt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -347,33 +347,16 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Location" id="Jpd-lM-TEV">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="Cng-aX-XKZ" style="IBUITableViewCellStyleDefault" id="Gga-X7-HE1">
-                                        <rect key="frame" x="0.0" y="255.33333333333337" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Gga-X7-HE1" id="seD-AH-VFw">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Cng-aX-XKZ">
-                                                    <rect key="frame" x="16" y="0.0" width="343" height="43.666666666666664"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
                         </sections>
                         <connections>
                             <outlet property="dataSource" destination="Nbd-DE-mYl" id="Czk-80-rHf"/>
                             <outlet property="delegate" destination="Nbd-DE-mYl" id="xhA-WF-v9O"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="eventDate" destination="41c-TK-6AC" id="Yl6-KW-EqV"/>
+                        <outlet property="eventName" destination="u0f-ao-eA1" id="bPB-Q1-Gtk"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FEB-6v-UVE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

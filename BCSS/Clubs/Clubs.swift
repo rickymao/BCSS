@@ -17,9 +17,9 @@ class Club {
     var description: String
     var meetingDates: [Date]
     var hasJoined: Bool?
-    var email: String
+    var email: [String]
     
-    init(name: String, teacher: String, meeting: [Date], room: String, owner: String, desc: String, email: String) {
+    init(name: String, teacher: String, meeting: [Date], room: String, owner: String, desc: String, email: [String]) {
         self.name = name
         self.teacher = teacher
         self.meetingDates = meeting
