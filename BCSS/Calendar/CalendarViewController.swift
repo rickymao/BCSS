@@ -61,6 +61,11 @@ class CalendarViewController: UIViewController {
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        guard let indexDeselect = eventsTable.indexPathForSelectedRow else {return}
+        eventsTable.deselectRow(at: indexDeselect, animated: true)
+    }
+    
     func setupCalendar() {
         calendarView.minimumLineSpacing = 0
         calendarView.minimumInteritemSpacing = 0
@@ -212,6 +217,8 @@ extension CalendarViewController: JTAppleCalendarViewDataSource {
 }
 
 extension CalendarViewController: UITableViewDelegate, UITableViewDataSource {
+   
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let eventCell = tableView.dequeueReusableCell(withIdentifier: "eventCell", for: indexPath)
         if let index = filtered?[indexPath.row] {
@@ -227,6 +234,26 @@ extension CalendarViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return filtered?.count ?? 0
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "eventSegue" {
+            
+            let eventInfoVC = segue.destination as! EventTableViewController
+            
+            guard let indexSelect = eventsTable.indexPathForSelectedRow?.row else {return}
+            if let selected = filtered?[indexSelect] {
+                eventInfoVC.eventNameString = selected.title
+                eventInfoVC.eventDateString = selected.date
+                
+            }
+            
+            
+      
+            
+        }
+        
     }
     
     

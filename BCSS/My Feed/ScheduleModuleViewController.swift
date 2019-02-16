@@ -127,6 +127,7 @@ class ScheduleModuleViewController: UIViewController {
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var dayLabel: UILabel!
     @IBOutlet weak var collabLabel: UILabel!
+    @IBOutlet weak var semesterLabel: UILabel!
     
 
     var blocks: [Blocks] = []
@@ -361,7 +362,7 @@ class ScheduleModuleViewController: UIViewController {
             
             classLabel.text = "Collab"
             teacherLabel.text = ""
-            timeLabel.text = "10:00 - 10:50"
+            timeLabel.text = "10:00 - 10:55"
             
         case 2:
             blocks = blocks.filter { (b) -> Bool in
@@ -548,12 +549,16 @@ class ScheduleModuleViewController: UIViewController {
                 b.semester == Int16(1)
             }
             
+            semesterLabel.text = "Semester 1"
             
         } else {
             
             blocks = getBlocks().filter { (b) -> Bool in
                 b.semester == Int16(2)
             }
+            
+            semesterLabel.text = "Semester 2"
+            
         }
         
       
