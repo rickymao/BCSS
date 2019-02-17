@@ -27,6 +27,13 @@ class CalendarViewController: UIViewController {
         super.viewDidLoad()
         setupCalendar()
         
+        //Back-Arrow
+        let backImage = UIImage(named: "back_arrow")
+        self.navigationController?.navigationBar.backIndicatorImage = backImage
+        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = backImage
+        self.navigationItem.backBarButtonItem = UIBarButtonItem.init(title: "", style: UIBarButtonItem.Style.plain, target: nil, action: nil)
+        
+        
          navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.init(red: 0.612, green: 0.137, blue: 0.157, alpha: 100)]
         
         //select current date
