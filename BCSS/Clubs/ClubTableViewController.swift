@@ -20,11 +20,11 @@ class ClubTableViewController: UITableViewController {
         clubs = [Club(name: "Coding", teacher: "Ms. Kim", meeting: [createDate(hours: 12, minutes: 0, dayOfTheWeek: 6)], room: "B314", owner: "Ricky Mao, Ritchie Xia",desc: "Coding Club meets up at lunch each week to learn about programming and computer science.  Students get to learn languages like Java, Swift, and more. We also explore the details of computer science from each lesson and activities. In the end, we strive to ensure each student is fluent in programming and the foundation of computer science, so they can utilize our skills in the real world.",email: ["maxbox8899@gmail.com"]),
                 
                      
-                 Club(name: "Track and Field", teacher: "Mr. Kamiya", meeting: [createDate(hours: 15, minutes: 0, dayOfTheWeek: 2), createDate(hours: 15, minutes: 0, dayOfTheWeek: 4), createDate(hours: 15, minutes: 0, dayOfTheWeek: 6)], room:"Field", owner: "Daniel Yu",desc: "Contact for more information", email: ["daniel2001yu@gmail.com"]),
+                 Club(name: "Track and Field", teacher: "Mr. Kamiya", meeting: [createDate(hours: 15, minutes: 0, dayOfTheWeek: 2), createDate(hours: 15, minutes: 0, dayOfTheWeek: 4), createDate(hours: 15, minutes: 0, dayOfTheWeek: 6)], room:"Field", owner: "Daniel Yu",desc: "This club currently has no description. ", email: ["daniel2001yu@gmail.com"]),
                      
-                 Club(name: "Yearbook Club", teacher: "N/A", meeting: [createDate(hours: 12, minutes: 0, dayOfTheWeek: 2)], room: "B203", owner: "Angie Soberanis", desc:"Contact for more information", email: ["anysoberanis5@gmail.com"]),
+                 Club(name: "Yearbook Club", teacher: "N/A", meeting: [createDate(hours: 12, minutes: 0, dayOfTheWeek: 2)], room: "B203", owner: "Angie Soberanis", desc:"This club currently has no description. ", email: ["anysoberanis5@gmail.com"]),
                      
-                 Club(name: "First Aid", teacher: "N/A", meeting: [createDate(hours: 15, minutes: 0, dayOfTheWeek: 2), createDate(hours: 15, minutes: 0, dayOfTheWeek: 5)], room: "B233", owner: "Catherine Hsu", desc:"Contact for more information", email: ["ctrhsu@gmail.com"]),
+                 Club(name: "First Aid", teacher: "N/A", meeting: [createDate(hours: 15, minutes: 0, dayOfTheWeek: 2), createDate(hours: 15, minutes: 0, dayOfTheWeek: 5)], room: "B233", owner: "Catherine Hsu", desc:"This club currently has no description. ", email: ["ctrhsu@gmail.com"]),
                      
                  Club(name: "Peace And Wellness Society (P.A.W.S.)", teacher: "N/A", meeting: [createDate(hours: 12, minutes: 0, dayOfTheWeek: 3)], room: "C232", owner: "Jasmine Kainth, James Iglesias", desc:"P.A.W.S. is a student led club dedicated to promoting healthy minds at Burnaby Central.Students work together to promote many different initiatives, such as: organizing and participating in intra-murals, guest speakers, yoga classes,  dance parties, work with assistance animals, etc. Our goal is to promote healthy living all year long.", email: ["jasminekainth2010@gmail.com"]),
                      
@@ -36,7 +36,7 @@ class ClubTableViewController: UITableViewController {
                      
                  Club(name: "Business Club", teacher: "Mr. Kamiya", meeting: [createDate(hours: 12, minutes: 0, dayOfTheWeek: 3)], room: "B206", owner: "Wasay Hayat", desc:" Central's Business Club is committed to engaging students in hands-on experiences in organizing sales and events throughout the year. Our goal is to allow everyone to take on a leadership role, gain more exposure to the business world, and learn how to make a tonne of money while having a tonne of fun.", email: ["bcssbusiness@gmail.com"]),
                      
-                 Club(name: "United Nations Connections Club", teacher: "N/A", meeting: [createDate(hours: 15, minutes: 0, dayOfTheWeek: 3)], room: "Library", owner: "Jem Zheng, Ruby Yang", desc:"Contact for more information", email: ["burnabyuncc@gmail.com, mettatonsneo@gmail.com"]),
+                 Club(name: "United Nations Connections Club", teacher: "N/A", meeting: [createDate(hours: 15, minutes: 0, dayOfTheWeek: 3)], room: "Library", owner: "Jem Zheng, Ruby Yang", desc:"This club currently has no description. ", email: ["burnabyuncc@gmail.com, mettatonsneo@gmail.com"]),
                      
                  Club(name: "BCSS Robotics Club", teacher: "N/A", meeting: [createDate(hours: 15, minutes: 0, dayOfTheWeek: 3), createDate(hours: 15, minutes: 0, dayOfTheWeek: 5)], room: "B127", owner: "Foysal Arian", desc:" In Robotics club, we learn about coding, software, and other parts of technology as we apply the technology side of STEM. We also build robots from the ground up and take them to competitions throughout the lower mainland.", email: ["foysal2002@gmail.com"]),
                      
@@ -48,11 +48,11 @@ class ClubTableViewController: UITableViewController {
                      
                  Club(name: "Beyond STEM", teacher: "N/A", meeting: [createDate(hours: 12, minutes: 0, dayOfTheWeek: 4)], room: "B306", owner: "Catherine Hsu", desc: "Beyond STEM is a team of determined students with the mission of influencing and encouraging youth to find their passions in STEM. From genome editors to quantitative analysts,we strive to introduce to the vast variety of occupations in these fields! We hold fairs and conferences throughout the academic year to spread the love for STEM.", email: ["beyondstem@gmail.com"]),
                      
-                     Club(name: "Kpop Club", teacher: "N/A", meeting: [createDate(hours: 15, minutes: 0, dayOfTheWeek: 4)], room: "Dance", owner: "Trang Lam, Grace Kan", desc:"Contact for more information", email: ["tranglam111@gmail.com"]),
+                     Club(name: "Kpop Club", teacher: "N/A", meeting: [createDate(hours: 15, minutes: 0, dayOfTheWeek: 4)], room: "Dance", owner: "Trang Lam, Grace Kan", desc:"This club currently has no description. ", email: ["tranglam111@gmail.com"]),
                      
-                     Club(name: "Cross Country", teacher: "N/A", meeting: [createDate(hours: 15, minutes: 0, dayOfTheWeek: 4)], room: "Field", owner: "Daniel Yu, Kate O’Shea, Tyler Chai", desc:"Contact for more information", email: ["katevoshea@gmail.com"]),
+                     Club(name: "Cross Country", teacher: "N/A", meeting: [createDate(hours: 15, minutes: 0, dayOfTheWeek: 4)], room: "Field", owner: "Daniel Yu, Kate O’Shea, Tyler Chai", desc:"This club currently has no description. ", email: ["katevoshea@gmail.com"]),
                      
-                     Club(name: "Senior Math Club", teacher: "N/A", meeting: [createDate(hours: 12, minutes: 0, dayOfTheWeek: 5)], room: "B302", owner: "Jason Shin, Mark Shin", desc:"Contact for more information", email: ["seokhoonshin@gmail.com"])
+                     Club(name: "Senior Math Club", teacher: "N/A", meeting: [createDate(hours: 12, minutes: 0, dayOfTheWeek: 5)], room: "B302", owner: "Jason Shin, Mark Shin", desc:"This club currently has no description. ", email: ["seokhoonshin@gmail.com"])
 ]
         
         

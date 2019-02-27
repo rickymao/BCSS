@@ -64,6 +64,9 @@
 		DDC2AF662198D11C008D100A /* Work+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC2AF642198D11B008D100A /* Work+CoreDataProperties.swift */; };
 		DDC2AF672198D11C008D100A /* Work+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC2AF652198D11B008D100A /* Work+CoreDataClass.swift */; };
 		DDC2AF6B21A00EFD008D100A /* AssignmentModuleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC2AF6A21A00EFD008D100A /* AssignmentModuleTableViewCell.swift */; };
+		DDD430B9221F410100E91424 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DDD430B8221F410100E91424 /* GoogleService-Info.plist */; };
+		DDD430BA221F410100E91424 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DDD430B8221F410100E91424 /* GoogleService-Info.plist */; };
+		DDD430BB221F410100E91424 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DDD430B8221F410100E91424 /* GoogleService-Info.plist */; };
 		DDE2ED022121584B003C7E40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE2ED012121584B003C7E40 /* AppDelegate.swift */; };
 		DDE2ED0A2121584C003C7E40 /* BCSS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DDE2ED082121584C003C7E40 /* BCSS.xcdatamodeld */; };
 		DDE2ED0C2121584E003C7E40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDE2ED0B2121584E003C7E40 /* Assets.xcassets */; };
@@ -159,6 +162,7 @@
 		DDC2AF642198D11B008D100A /* Work+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Work+CoreDataProperties.swift"; path = "/Users/rickm/Desktop/BCSS/BCSS/Saved Data/Work+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
 		DDC2AF652198D11B008D100A /* Work+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Work+CoreDataClass.swift"; path = "/Users/rickm/Desktop/BCSS/BCSS/Saved Data/Work+CoreDataClass.swift"; sourceTree = "<absolute>"; };
 		DDC2AF6A21A00EFD008D100A /* AssignmentModuleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentModuleTableViewCell.swift; sourceTree = "<group>"; };
+		DDD430B8221F410100E91424 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DDE2ECFE2121584B003C7E40 /* BCSS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BCSS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDE2ED012121584B003C7E40 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DDE2ED062121584C003C7E40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -416,6 +420,7 @@
 				DDC0B4BF213E64860098C8B3 /* My Schedule */,
 				DDE2ED0B2121584E003C7E40 /* Assets.xcassets */,
 				DDE2ED0D2121584E003C7E40 /* LaunchScreen.storyboard */,
+				DDD430B8221F410100E91424 /* GoogleService-Info.plist */,
 				DDE2ED102121584E003C7E40 /* Info.plist */,
 				DDE2ED082121584C003C7E40 /* BCSS.xcdatamodeld */,
 			);
@@ -585,6 +590,7 @@
 				DDE2ED0F2121584E003C7E40 /* LaunchScreen.storyboard in Resources */,
 				DDE2ED0C2121584E003C7E40 /* Assets.xcassets in Resources */,
 				DDC2AF4121969EEB008D100A /* MyFeed.storyboard in Resources */,
+				DDD430B9221F410100E91424 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -592,6 +598,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDD430BA221F410100E91424 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -599,6 +606,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDD430BB221F410100E91424 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -614,13 +622,19 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-BCSS/Pods-BCSS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/JTAppleCalendar/JTAppleCalendar.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JTAppleCalendar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

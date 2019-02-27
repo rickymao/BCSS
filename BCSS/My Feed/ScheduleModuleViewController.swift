@@ -290,7 +290,10 @@ class ScheduleModuleViewController: UIViewController {
             
             blocks = getBlocks().filter { (b) -> Bool in
                 b.semester == Int16(1)
+    
             }
+            
+             semesterLabel.text = "Semester 1"
             
             
         } else {
@@ -298,6 +301,8 @@ class ScheduleModuleViewController: UIViewController {
             blocks = getBlocks().filter { (b) -> Bool in
                 b.semester == Int16(2)
             }
+            
+            semesterLabel.text = "Semester 2"
         }
         
         

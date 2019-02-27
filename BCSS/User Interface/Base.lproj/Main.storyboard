@@ -1133,29 +1133,6 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="gjd-uC-i7b">
-                                        <rect key="frame" x="0.0" y="718" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gjd-uC-i7b" id="gaK-gI-Ozt">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UhO-2x-zzr">
-                                                    <rect key="frame" x="16" y="11" width="343" height="22"/>
-                                                    <state key="normal" title="Contact Club"/>
-                                                    <connections>
-                                                        <action selector="contactTapped:" destination="Yg7-bw-kmb" eventType="touchUpInside" id="KTZ-1D-bDU"/>
-                                                    </connections>
-                                                </button>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="UhO-2x-zzr" firstAttribute="trailing" secondItem="gaK-gI-Ozt" secondAttribute="trailingMargin" id="Lvj-d4-rna"/>
-                                                <constraint firstItem="UhO-2x-zzr" firstAttribute="top" secondItem="gaK-gI-Ozt" secondAttribute="topMargin" id="QAB-48-j64"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="UhO-2x-zzr" secondAttribute="bottom" id="UoY-Mh-TqM"/>
-                                                <constraint firstItem="UhO-2x-zzr" firstAttribute="leading" secondItem="gaK-gI-Ozt" secondAttribute="leadingMargin" id="hFE-85-f59"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                             <tableViewSection id="I6r-P4-CO4">
@@ -1819,6 +1796,7 @@
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="LbL-0z-xe4">
                                 <rect key="frame" x="0.0" y="88" width="375" height="29"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <segments>
                                     <segment title="Semester 1"/>
                                     <segment title="Semester 2"/>
@@ -1871,12 +1849,9 @@
                                     <constraint firstItem="NfR-TE-iAQ" firstAttribute="leading" secondItem="I88-io-m6L" secondAttribute="leading" constant="13" id="vnG-d3-ZSI"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cwk-Q0-ZTb">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="102" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="-1" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cwk-Q0-ZTb">
                                 <rect key="frame" x="0.0" y="161" width="375" height="651"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="651" id="gc0-5N-fb4"/>
-                                </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="blockCell" rowHeight="102" id="W8y-Wg-63u" customClass="BlockTableViewCell" customModule="BCSS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="102"/>
@@ -1985,6 +1960,13 @@
                                     <outlet property="delegate" destination="XUJ-Q5-gvI" id="QoR-3z-5G7"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VtY-mv-dUB">
+                                <rect key="frame" x="0.0" y="161" width="375" height="1"/>
+                                <color key="backgroundColor" white="0.75446810787671237" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="ijJ-8O-JOc"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -1997,9 +1979,13 @@
                             <constraint firstItem="cwk-Q0-ZTb" firstAttribute="leading" secondItem="dw6-9F-EBo" secondAttribute="leading" id="ILH-2b-mfh"/>
                             <constraint firstItem="LbL-0z-xe4" firstAttribute="leading" secondItem="dw6-9F-EBo" secondAttribute="leading" id="Lqu-wr-gPS"/>
                             <constraint firstItem="I88-io-m6L" firstAttribute="trailing" secondItem="dw6-9F-EBo" secondAttribute="trailing" id="Qtk-Ec-j2i"/>
+                            <constraint firstItem="VtY-mv-dUB" firstAttribute="leading" secondItem="Zbe-Cg-vHM" secondAttribute="leading" id="av2-Ki-bH5"/>
                             <constraint firstItem="LbL-0z-xe4" firstAttribute="trailing" secondItem="dw6-9F-EBo" secondAttribute="trailing" id="g6f-V8-tOn"/>
+                            <constraint firstItem="VtY-mv-dUB" firstAttribute="width" secondItem="I88-io-m6L" secondAttribute="width" id="hYC-qF-tqb"/>
                             <constraint firstItem="cwk-Q0-ZTb" firstAttribute="top" secondItem="I88-io-m6L" secondAttribute="bottom" id="j4U-d9-B7w"/>
-                            <constraint firstAttribute="bottom" secondItem="cwk-Q0-ZTb" secondAttribute="bottom" id="nAI-DP-sKy"/>
+                            <constraint firstItem="cwk-Q0-ZTb" firstAttribute="height" secondItem="Zbe-Cg-vHM" secondAttribute="height" multiplier="0.8" constant="1.3999999999999773" id="oPF-Nh-qTx"/>
+                            <constraint firstAttribute="trailing" secondItem="VtY-mv-dUB" secondAttribute="trailing" id="qvR-pF-XAl"/>
+                            <constraint firstItem="VtY-mv-dUB" firstAttribute="top" secondItem="I88-io-m6L" secondAttribute="bottom" id="x1h-d8-ceF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dw6-9F-EBo"/>
                     </view>
@@ -2011,13 +1997,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VdF-v2-PAf" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <view contentMode="scaleToFill" id="j1c-cv-5b0">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="900"/>
+                    <rect key="frame" x="0.0" y="0.0" width="379" height="20"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <viewLayoutGuide key="safeArea" id="LfA-4d-NTw"/>
                 </view>
             </objects>
-            <point key="canvasLocation" x="2276" y="2375.615763546798"/>
+            <point key="canvasLocation" x="2276" y="2374.8768472906404"/>
         </scene>
         <!--My Profile-->
         <scene sceneID="V5Z-o6-bi7">

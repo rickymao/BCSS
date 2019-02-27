@@ -8,14 +8,14 @@
 
 import UIKit
 
-class BlockTableViewController: UIViewController, UITabBarDelegate, UITableViewDataSource {
+class BlockTableViewController: UIViewController, UITabBarDelegate, UITableViewDataSource, UITableViewDelegate {
     
     let persistenceManager = PersistenceManager.shared
     @IBOutlet var footerView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        tableView.bounces = false
         //Back-Arrow
         let backImage = UIImage(named: "back_arrow")
         
@@ -38,6 +38,12 @@ class BlockTableViewController: UIViewController, UITabBarDelegate, UITableViewD
             
         
         
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if scrollView.contentOffset.y < 0 {
+            scrollView.contentOffset.y = 0
+        }
     }
     
     override func willMove(toParent parent: UIViewController?) {

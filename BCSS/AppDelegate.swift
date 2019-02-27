@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 import UserNotifications
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,10 +18,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        FirebaseApp.configure()
    
         unowned let userdefaults = UserDefaults.standard
         unowned let persistenceManager = PersistenceManager.shared
         let notificationDelegate = NotificationDelegate()
+        
+        
         
         if userdefaults.value(forKey: "isFirstLaunch") != nil {
             
