@@ -37,55 +37,55 @@ class SportsTableViewController: UITableViewController {
     
     //Sports
     let dateFormat = DateFormatter.init()
-    var sports: [Sports] = [Sports(name: "Badminton", coach: ["Mr.Collin Choi", "Kevin Chen", "Kayla Yu"], teacher: "Ms. Keon", season: "Spring", meeting: Date(), grade: "", email: "holly.keon@burnabyschools.ca"),
+    var sports: [Sports] = [Sports(name: "Badminton", coach: ["Mr. Choi", "Kevin Chen", "Kayla Yu"], teacher: "Ms. Keon", season: "Spring", meeting: Date(), grade: "", email: "holly.keon@burnabyschools.ca"),
         
-        Sports(name: "Ball Hockey", coach: ["Ask PE Department"], teacher: "Mr Anderson", season: "Spring", meeting: Date(), grade: "", email: "christian.anderson@burnabyschools.ca"),
+        Sports(name: "Ball Hockey", coach: ["Ask PE Department"], teacher: "Mr. Anderson", season: "Spring", meeting: Date(), grade: "", email: "christian.anderson@burnabyschools.ca"),
         
         Sports(name: "Grade 8 Boys Basketball", coach: ["Ask PE Department"], teacher: "Ask PE Department", season: "Winter", meeting: Date(), grade: "", email: "andrew.vagnarelli@burnabyschools.ca"),
         
-        Sports(name: "Grade 8 Girls Basketball", coach: ["Mr.R.MacLean", "Elva Yu", "Maneesha Dhaliwal"], teacher: "MR.R.MacLean", season: "Winter", meeting: Date(), grade: "", email: "ryan.maclean@burnabyschools.ca"),
+        Sports(name: "Grade 8 Girls Basketball", coach: ["Mr. R. MacLean", "Elva Yu", "Maneesha Dhaliwal"], teacher: "MR.R.MacLean", season: "Winter", meeting: Date(), grade: "", email: "ryan.maclean@burnabyschools.ca"),
         
-        Sports(name: "Grade 9 Boys Basketball", coach: ["Mr.Lawrence Stephens"], teacher: "Ask PE Department", season: "Winter", meeting: Date(), grade: "", email: "andrew.vagnarelli@burnabyschools.ca"),
+        Sports(name: "Grade 9 Boys Basketball", coach: ["Mr. Stephens"], teacher: "Ask PE Department", season: "Winter", meeting: Date(), grade: "", email: "andrew.vagnarelli@burnabyschools.ca"),
         
-        Sports(name: "Grade 10 Boys Basketball", coach: ["Mr.M.Levajac"], teacher: "Ask PE Department", season: "Winter", meeting: Date(), grade: "Grade 10 Boys", email: "milan.levajic16@gmail.com"),
+        Sports(name: "Grade 10 Boys Basketball", coach: ["Mr. M. Levajac"], teacher: "Ask PE Department", season: "Winter", meeting: Date(), grade: "Grade 10 Boys", email: "milan.levajic16@gmail.com"),
         
-        Sports(name: "Grade 9/10 Girls/Boys Basketball", coach: ["Mr.M.Magus"], teacher: "Ask PE Department", season: "Winter", meeting: Date(), grade: "Grade 9/10 Girls Boys", email: "exit33@shaw.ca"),
+        Sports(name: "Grade 9/10 Girls/Boys Basketball", coach: ["Mr. M. Magus"], teacher: "Ask PE Department", season: "Winter", meeting: Date(), grade: "Grade 9/10 Girls Boys", email: "exit33@shaw.ca"),
         
-        Sports(name: "Senior Boys Basketball", coach: ["Mr.D.Coleman"], teacher: "Ask PE Department", season: "Winter", meeting: Date(), grade: "", email: "doncoleman@shaw.ca"),
+        Sports(name: "Senior Boys Basketball", coach: ["Mr. D. Coleman"], teacher: "Ask PE Department", season: "Winter", meeting: Date(), grade: "", email: "doncoleman@shaw.ca"),
         
-        Sports(name: "Senior Girls Basketball", coach: ["Mr.P.VanDenHoogen", "Mr.C.Ducharme"], teacher: "Ask PE Department", season: "Winter", meeting: Date(), grade: "", email: "peter.vandenhoogen@sd41.bc.ca"),
+        Sports(name: "Senior Girls Basketball", coach: ["Mr. P. VanDenHoogen", "Mr. C. Ducharme"], teacher: "Ask PE Department", season: "Winter", meeting: Date(), grade: "", email: "peter.vandenhoogen@sd41.bc.ca"),
         
-        Sports(name: " Cross Country", coach: ["Mr.D.Eihnhorn"], teacher: "Mr.Einhorn", season: "Fall", meeting: Date(), grade: "", email: "danny.einhorn@burnabyschools.ca"),
+        Sports(name: "Cross Country", coach: ["Mr. D. Eihnhorn"], teacher: "Mr. Einhorn", season: "Fall", meeting: Date(), grade: "", email: "danny.einhorn@burnabyschools.ca"),
         
-        Sports(name: " Cricket", coach: ["Lovereet Chauhan"], teacher: "Ask PE Department", season: "Spring", meeting: Date(), grade: "", email: "Ask PE Department"),
+        Sports(name: "Cricket", coach: ["Lovereet Chauhan"], teacher: "Ask PE Department", season: "Spring", meeting: Date(), grade: "", email: "Ask PE Department"),
         
-        Sports(name: "Field Hockey", coach: ["Mrs. Erin deSousa"], teacher: "Ask PE Department", season: "Ask PE Department", meeting: Date(), grade: "", email: "Ask PE Department"),
+        Sports(name: "Field Hockey", coach: ["Mrs. deSousa"], teacher: "Ask PE Department", season: "Ask PE Department", meeting: Date(), grade: "", email: "Ask PE Department"),
         
-        Sports(name: "Golf", coach: ["Mr.K.Hendier", "MR.E.Byman"], teacher: "Mr.K.Herndier", season: "Spring", meeting: Date(), grade: "", email: "kevin.herndier@burnabyschools.ca"),
+        Sports(name: "Golf", coach: ["Mr. K. Hendier", "Mr. E. Byman"], teacher: "Mr. K. Herndier", season: "Spring", meeting: Date(), grade: "", email: "kevin.herndier@burnabyschools.ca"),
         
         Sports(name: "Netball", coach: ["F.Hoq", "Indigo Chow"], teacher: "Ask PE Department", season: "Spring", meeting: Date(), grade: "", email: "andrew.vagnarelli@burnabyschools.ca"),
         
-        Sports(name: "Grade 8/9 Boys Rugby", coach: ["Mr.A.Vagnarelli", "Mr.B.Dunse", "Mr.P.Kuhn"], teacher: "Mr.B.Dunse", season: "Fall", meeting: Date(), grade: "", email: "andrew.vagnarelli@burnabyschools.ca"),
+        Sports(name: "Grade 8/9 Boys Rugby", coach: ["Mr. A. Vagnarelli", "Mr. B. Dunse", "Mr. P. Kuhn"], teacher: "Mr. B. Dunse", season: "Fall", meeting: Date(), grade: "", email: "andrew.vagnarelli@burnabyschools.ca"),
         
-        Sports(name: "Junior/Senior Rugby", coach: ["Mr.A.Vagnarelli", "Mr.B.Dunse"], teacher: "Mr.B.Dunse", season: "Spring", meeting: Date(), grade: "", email: "brian.dunse@burnabyschools.ca"),
+        Sports(name: "Junior/Senior Rugby", coach: ["Mr. A. Vagnarelli", "Mr. B. Dunse"], teacher: "Mr. B. Dunse", season: "Spring", meeting: Date(), grade: "", email: "brian.dunse@burnabyschools.ca"),
         
-        Sports(name: "Junior Boys Soccer", coach: ["Mr.A.Steko"], teacher: "Mr.A.Steko", season: "Fall", meeting: Date(), grade: "", email: "anto.steko@burnabyschools.ca"),
+        Sports(name: "Junior Boys Soccer", coach: ["Mr. A. Steko"], teacher: "Mr. A. Steko", season: "Fall", meeting: Date(), grade: "", email: "anto.steko@burnabyschools.ca"),
         
-        Sports(name: "Junior Girls Soccer", coach: ["Mr.A.Steko"], teacher: "Mr.A.Steko", season: "Spring", meeting: Date(), grade: "", email: "anto.steko@burnabyschools.ca"),
+        Sports(name: "Junior Girls Soccer", coach: ["Mr. A. Steko"], teacher: "Mr. A. Steko", season: "Spring", meeting: Date(), grade: "", email: "anto.steko@burnabyschools.ca"),
         
-        Sports(name: "Senior Boys Soccer", coach: ["Mr.A.Steko", "Mr.I.Adamu"], teacher: "Mr.A.Steko", season: "Fall", meeting: Date(), grade: "", email: "anto.steko@burnabyschools.ca"),
+        Sports(name: "Senior Boys Soccer", coach: ["Mr. A. Steko", "Mr. I. Adamu"], teacher: "Mr. A. Steko", season: "Fall", meeting: Date(), grade: "", email: "anto.steko@burnabyschools.ca"),
         
-        Sports(name: "Senior Girls Soccer", coach: ["Mr.A.Steko"], teacher: "Mr.A.Steko", season: "Spring", meeting: Date(), grade: "", email: "anto.steko@burnabyschools.ca"),
+        Sports(name: "Senior Girls Soccer", coach: ["Mr. A. Steko"], teacher: "Mr. A. Steko", season: "Spring", meeting: Date(), grade: "", email: "anto.steko@burnabyschools.ca"),
         
-        Sports(name: "Swim", coach: ["Mrs.E.Lin"], teacher: "Ask PE Department", season: "Fall", meeting: Date(), grade: "", email: "ericalin1314@gmail.com"),
+        Sports(name: "Swim", coach: ["Mrs. E. Lin"], teacher: "Ask PE Department", season: "Fall", meeting: Date(), grade: "", email: "ericalin1314@gmail.com"),
         
-        Sports(name: "Track & Field", coach: ["Mr.Kamiya"], teacher: "Mr.Kamiya", season: "Spring", meeting: Date(), grade: "", email: "randy.kamiya@burnabyschools.ca"),
+        Sports(name: "Track & Field", coach: ["Mr. Kamiya"], teacher: "Mr. Kamiya", season: "Spring", meeting: Date(), grade: "", email: "randy.kamiya@burnabyschools.ca"),
         
-        Sports(name: "Ultimate", coach: ["Ms.M.Wright"], teacher: "Ask PE Department", season: "Spring", meeting: Date(), grade: "", email: "morganw@sfu.ca"),
+        Sports(name: "Ultimate", coach: ["Ms. M. Wright"], teacher: "Ask PE Department", season: "Spring", meeting: Date(), grade: "", email: "morganw@sfu.ca"),
         
-        Sports(name: "Wrestling", coach: ["Mr.G.Buono", "Mr.D.Einhorn"], teacher: "Mr.G.Buono", season: "Winter", meeting: Date(), grade: "", email: "gianni.buono@burnabyschools.ca"),
+        Sports(name: "Wrestling", coach: ["Mr. G. Buono", "Mr. D. Einhorn"], teacher: "Mr.G.Buono", season: "Winter", meeting: Date(), grade: "", email: "gianni.buono@burnabyschools.ca"),
         
-        Sports(name: "Grade 8 Boys Volleyball", coach: ["Mr.Hendry", "Emily Wong", "Alysha Sidhu", "Denise Wong", "Anna Yang", "Leah Fernandes"], teacher: "Mr.Hendry", season: "Spring", meeting: Date(), grade: "", email: "graham.hendry@burnabyschools.ca"),
+        Sports(name: "Grade 8 Boys Volleyball", coach: ["Mr. Hendry", "Emily Wong", "Alysha Sidhu", "Denise Wong", "Anna Yang", "Leah Fernandes"], teacher: "Mr. Hendry", season: "Spring", meeting: Date(), grade: "", email: "graham.hendry@burnabyschools.ca"),
         
         Sports(name: "Grade 9 Boys Volleyball", coach: ["Ask PE Department"], teacher: "Ask PE Department", season: "Spring", meeting: Date(), grade: "", email: "andrew.vagnarelli@burnabyschools.ca"),
         
