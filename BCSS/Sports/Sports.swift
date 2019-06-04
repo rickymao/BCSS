@@ -11,21 +11,17 @@ import Foundation
 class Sports {
     
     var name: String
-    var coach: [String]
+    var coach: String
     var teacher: String
     var season: String
-    var meeting: Date
-    var grade: String
     var email: String
     
-    init(name: String, coach: [String], teacher: String, season: String, meeting: Date, grade: String, email: String) {
+    init(name: String, coach: String, teacher: String, season: String, email: String) {
         
         self.name = name
         self.coach = coach
         self.season = season
-        self.meeting = meeting
         self.teacher = teacher
-        self.grade = grade
         self.email = email
     }
     

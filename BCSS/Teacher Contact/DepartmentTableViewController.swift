@@ -37,7 +37,7 @@ class DepartmentTableViewController: UITableViewController {
     }
     
     //departments listing
-    var departments: [Department] = [.Mathematics, .Sciences, .AppliedSkills, .Athletics, .ELL, .English, .LearningSupport, .Languages, .Socials, .Services, .Arts]
+    var departments: [Department] = [.Mathematics, .Sciences, .AppliedSkills, .Athletics, .ELL, .English, .LearningSupport, .Languages, .SocialStudies, .StudentServices, .Arts, .Administration]
     
     
 
@@ -68,9 +68,10 @@ class DepartmentTableViewController: UITableViewController {
         case .English: cell.textLabel?.text = "English"
         case .LearningSupport: cell.textLabel?.text = "Learning Support"
         case .Languages: cell.textLabel?.text = "Languages"
-        case .Socials: cell.textLabel?.text = "Social Studies"
-        case .Services: cell.textLabel?.text = "Student Services"
+        case .SocialStudies: cell.textLabel?.text = "Social Studies"
+        case .StudentServices: cell.textLabel?.text = "Student Services and Counsellors"
         case .Arts: cell.textLabel?.text = "Visual and Performing Arts"
+        case .Administration: cell.textLabel?.text = "Administration"
             
         }
         

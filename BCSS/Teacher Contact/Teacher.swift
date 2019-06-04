@@ -32,8 +32,9 @@ enum Department {
     case English
     case LearningSupport
     case Languages
-    case Socials
-    case Services
+    case SocialStudies
+    case StudentServices
     case Arts
+    case Administration
     
 }

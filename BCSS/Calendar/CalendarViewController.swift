@@ -8,10 +8,11 @@
 
 import UIKit
 import JTAppleCalendar
+import FirebaseDatabase
 
 class CalendarViewController: UIViewController {
     
-    var events: [Event] = Event.eventsList
+    var events: [Event] = []
     var filtered: [Event]?
 
     let formatter = DateFormatter()
@@ -20,12 +21,15 @@ class CalendarViewController: UIViewController {
     @IBOutlet weak var monthLabel: UILabel!
     @IBOutlet weak var eventsTable: UITableView!
     @IBOutlet weak var selectedDateLabel: UILabel!
-
+    @IBOutlet var footerView: UIView!
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCalendar()
+        eventsTable.tableFooterView = footerView
+       
         
         //Back-Arrow
         let backImage = UIImage(named: "back_arrow")
@@ -41,7 +45,8 @@ class CalendarViewController: UIViewController {
         calendarView.selectDates([Date()])
         
         
-        
+        //Retrieve Data
+        getDatabase()
     
         
         //setting first month
@@ -53,6 +58,49 @@ class CalendarViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    //Retrieving Data
+    func getDatabase() {
+        
+        let ref = Database.database().reference()
+        
+        
+        ref.child("calendarKeyed").observe(.value) { (snapshots) in
+            
+            var location: String
+            
+            for snapshot in snapshots.children {
+                
+                if let snapshotJSON = snapshot as? DataSnapshot {
+                    
+                   let title = snapshotJSON.childSnapshot(forPath: "Title").value as! String
+                    print(title)
+                   let date = snapshotJSON.childSnapshot(forPath: "Date").value as! String
+                    
+                    if snapshotJSON.childSnapshot(forPath: "Location").exists() {
+                        location = snapshotJSON.childSnapshot(forPath: "Location").value as! String
+                    } else {
+                        location = "School"
+                    }
+                   
+                   let description = snapshotJSON.childSnapshot(forPath: "Description").value as? String
+                   let time = snapshotJSON.childSnapshot(forPath: "Time").value as? String
+                    
+                    
+                    self.events.append(Event(title: title, date: date, location: location, description: description, time: time))
+                    
+                    
+                }
+                
+                
+            }
+            self.eventsTable.reloadData()
+        }
+        
+        
+        
+    }
+    
+    //Refreshing UI
     override func willMove(toParent parent: UIViewController?) {
         
         if let vcs = self.navigationController?.viewControllers {
@@ -73,6 +121,7 @@ class CalendarViewController: UIViewController {
         eventsTable.deselectRow(at: indexDeselect, animated: true)
     }
     
+    //UI Setup
     func setupCalendar() {
         calendarView.minimumLineSpacing = 0
         calendarView.minimumInteritemSpacing = 0
@@ -128,6 +177,7 @@ class CalendarViewController: UIViewController {
 
 extension CalendarViewController: JTAppleCalendarViewDelegate {
     
+    //Setting up calendar
     func configureCalendar(_ calendar: JTAppleCalendarView) -> ConfigurationParameters {
         
         //Setup Dates
@@ -224,7 +274,14 @@ extension CalendarViewController: JTAppleCalendarViewDataSource {
 }
 
 extension CalendarViewController: UITableViewDelegate, UITableViewDataSource {
-   
+    
+    
+
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if scrollView.contentOffset.y < 0 {
+            scrollView.contentOffset.y = 0
+        }
+    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let eventCell = tableView.dequeueReusableCell(withIdentifier: "eventCell", for: indexPath)
@@ -243,7 +300,10 @@ extension CalendarViewController: UITableViewDelegate, UITableViewDataSource {
         return filtered?.count ?? 0
     }
     
+    //Sends data to info viewcontroller
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let dateFormat = DateFormatter()
         
         if segue.identifier == "eventSegue" {
             
@@ -251,8 +311,23 @@ extension CalendarViewController: UITableViewDelegate, UITableViewDataSource {
             
             guard let indexSelect = eventsTable.indexPathForSelectedRow?.row else {return}
             if let selected = filtered?[indexSelect] {
+                
+                var convertedDate: String = String()
+                
                 eventInfoVC.eventNameString = selected.title
-                eventInfoVC.eventDateString = selected.date
+                
+                eventInfoVC.eventDescString = selected.description
+                eventInfoVC.eventTimeString = selected.time
+                eventInfoVC.eventLocationString = selected.location
+                
+                dateFormat.dateFormat = "yyyy mm dd"
+                if let date = dateFormat.date(from: selected.date) {
+                    dateFormat.dateFormat = "EEEE, MMM d, yyyy"
+                    convertedDate = dateFormat.string(from: date)
+               
+                }
+                
+                eventInfoVC.eventDateString = convertedDate
                 
             }
             
@@ -263,9 +338,6 @@ extension CalendarViewController: UITableViewDelegate, UITableViewDataSource {
         
     }
     
-    
-    
-    
+
     
 }
-

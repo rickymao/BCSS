@@ -18,7 +18,7 @@ class InfoSportsTableViewController: UITableViewController, MFMailComposeViewCon
         super.viewDidLoad()
         
         self.title = "Team"
-        
+        contactButton.setTitle("Contact Team", for: .normal)
          navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.init(red: 0.612, green: 0.137, blue: 0.157, alpha: 100)]
         
         //Setting up text

@@ -31,12 +31,8 @@ class BlockTableViewController: UIViewController, UITabBarDelegate, UITableViewD
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        
+
         setupBlocks()
-        
-        
-            
-        
         
     }
     
