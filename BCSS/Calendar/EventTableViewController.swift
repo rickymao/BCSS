@@ -15,14 +15,12 @@ class EventTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print(eventLocationString)
 
         tableView.bounces = true
         eventName.text = eventNameString
         eventDate.text = eventDateString
-        if let eventLocalStr = eventLocationString {
-            
-            eventLocation.text = eventLocalStr
-        }
+        eventLocation.text = eventLocationString
         if let eventTimeStr = eventTimeString {
             
             eventTime.text = eventTimeStr
@@ -41,7 +39,7 @@ class EventTableViewController: UITableViewController {
     var eventTimeString: String?
     var eventNameString: String?
     var eventDateString: String?
-    var eventLocationString: String?
+    var eventLocationString: String!
     
     // MARK: - Table view data source
 

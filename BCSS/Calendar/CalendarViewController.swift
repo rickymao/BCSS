@@ -314,11 +314,26 @@ extension CalendarViewController: UITableViewDelegate, UITableViewDataSource {
                 
                 var convertedDate: String = String()
                 
+                
                 eventInfoVC.eventNameString = selected.title
                 
-                eventInfoVC.eventDescString = selected.description
-                eventInfoVC.eventTimeString = selected.time
-                eventInfoVC.eventLocationString = selected.location
+                if let time = selected.time {
+                    
+                    eventInfoVC.eventLocationString = time
+                }
+                if let location = selected.location {
+                  
+                    eventInfoVC.eventLocationString = location
+
+                }
+                if let desc = selected.description {
+                
+                    eventInfoVC.eventDescString = desc
+                    
+                }
+                
+          
+                
                 
                 dateFormat.dateFormat = "yyyy mm dd"
                 if let date = dateFormat.date(from: selected.date) {
