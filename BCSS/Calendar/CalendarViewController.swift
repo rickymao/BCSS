@@ -24,9 +24,10 @@ class CalendarViewController: UIViewController {
     @IBOutlet var footerView: UIView!
     
     
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        eventsTable.reloadData()
         setupCalendar()
         eventsTable.tableFooterView = footerView
        
@@ -66,25 +67,40 @@ class CalendarViewController: UIViewController {
         
         ref.child("calendarKeyed").observe(.value) { (snapshots) in
             
-            var location: String
+            
             
             for snapshot in snapshots.children {
                 
                 if let snapshotJSON = snapshot as? DataSnapshot {
                     
-                   let title = snapshotJSON.childSnapshot(forPath: "Title").value as! String
-                    print(title)
-                   let date = snapshotJSON.childSnapshot(forPath: "Date").value as! String
+                   var title: String
+                   var date: String
+                   var location: String
+                   var description: String
+                   var time: String
+                    
+                   title = snapshotJSON.childSnapshot(forPath: "Title").value as! String
+                  
+                   date = snapshotJSON.childSnapshot(forPath: "Date").value as! String
                     
                     if snapshotJSON.childSnapshot(forPath: "Location").exists() {
                         location = snapshotJSON.childSnapshot(forPath: "Location").value as! String
                     } else {
                         location = "School"
                     }
-                   
-                   let description = snapshotJSON.childSnapshot(forPath: "Description").value as? String
-                   let time = snapshotJSON.childSnapshot(forPath: "Time").value as? String
                     
+                    if snapshotJSON.childSnapshot(forPath: "Description").exists() {
+                        description = snapshotJSON.childSnapshot(forPath: "Description").value as! String
+                    } else {
+                        description = "There is currently no extra information."
+                    }
+                    
+                    if snapshotJSON.childSnapshot(forPath: "Time").exists() {
+                        time = snapshotJSON.childSnapshot(forPath: "Time").value as! String
+                    } else {
+                        time = "N/A"
+                    }
+
                     
                     self.events.append(Event(title: title, date: date, location: location, description: description, time: time))
                     
@@ -307,33 +323,25 @@ extension CalendarViewController: UITableViewDelegate, UITableViewDataSource {
         
         if segue.identifier == "eventSegue" {
             
+            
             let eventInfoVC = segue.destination as! EventTableViewController
             
             guard let indexSelect = eventsTable.indexPathForSelectedRow?.row else {return}
+            
+            
+            
             if let selected = filtered?[indexSelect] {
                 
+                
                 var convertedDate: String = String()
-                
-                
+      
                 eventInfoVC.eventNameString = selected.title
-                
-                if let time = selected.time {
-                    
-                    eventInfoVC.eventLocationString = time
-                }
-                if let location = selected.location {
-                  
-                    eventInfoVC.eventLocationString = location
-
-                }
-                if let desc = selected.description {
-                
-                    eventInfoVC.eventDescString = desc
-                    
-                }
+                eventInfoVC.eventTimeString = selected.time
+                eventInfoVC.eventLocationString = selected.location
+                eventInfoVC.eventDescString = selected.description
                 
           
-                
+            
                 
                 dateFormat.dateFormat = "yyyy mm dd"
                 if let date = dateFormat.date(from: selected.date) {
@@ -341,9 +349,11 @@ extension CalendarViewController: UITableViewDelegate, UITableViewDataSource {
                     convertedDate = dateFormat.string(from: date)
                
                 }
+            
                 
                 eventInfoVC.eventDateString = convertedDate
                 
+              }
             }
             
             
@@ -351,7 +361,7 @@ extension CalendarViewController: UITableViewDelegate, UITableViewDataSource {
             
         }
         
-    }
+    
     
 
     

@@ -19,6 +19,8 @@ class Club {
     var hasJoined: Bool?
     var email: [String]
     
+    static var clubs: [Club] = []
+    
     init(name: String, teacher: String, meeting: [Date], room: String, owner: String, desc: String, email: [String]) {
         self.name = name
         self.teacher = teacher

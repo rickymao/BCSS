@@ -16,6 +16,8 @@ class Sports {
     var season: String
     var email: String
     
+    static var sports: [Sports] = []
+    
     init(name: String, coach: String, teacher: String, season: String, email: String) {
         
         self.name = name

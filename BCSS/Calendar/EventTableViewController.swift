@@ -14,31 +14,26 @@ class EventTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print(eventLocationString)
 
         tableView.bounces = true
-        eventName.text = eventNameString
-        eventDate.text = eventDateString
-        eventLocation.text = eventLocationString
-        if let eventTimeStr = eventTimeString {
-            
-            eventTime.text = eventTimeStr
-        }
-        eventDesc.text = eventDescString
+        eventName?.text = eventNameString
+        eventDate?.text = eventDateString
+        eventLocation?.text = eventLocationString
+        eventTime?.text = eventTimeString
+        eventDesc?.text = eventDescString
         
     }
 
-    @IBOutlet weak var eventName: UILabel!
-    @IBOutlet weak var eventDate: UILabel!
-    @IBOutlet weak var eventDesc: UITextView!
-    @IBOutlet weak var eventTime: UILabel!
-    @IBOutlet weak var eventLocation: UILabel!
+    @IBOutlet weak var eventName: UILabel?
+    @IBOutlet weak var eventDate: UILabel?
+    @IBOutlet weak var eventDesc: UITextView?
+    @IBOutlet weak var eventTime: UILabel?
+    @IBOutlet weak var eventLocation: UILabel?
     
-    var eventDescString: String?
-    var eventTimeString: String?
-    var eventNameString: String?
-    var eventDateString: String?
+    var eventDescString: String!
+    var eventTimeString: String!
+    var eventNameString: String!
+    var eventDateString: String!
     var eventLocationString: String!
     
     // MARK: - Table view data source

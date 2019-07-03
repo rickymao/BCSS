@@ -75,6 +75,8 @@
 		DDE2ED1A2121584E003C7E40 /* BCSSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE2ED192121584E003C7E40 /* BCSSTests.swift */; };
 		DDE2ED252121584E003C7E40 /* BCSSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE2ED242121584E003C7E40 /* BCSSUITests.swift */; };
 		DDE2ED3321256462003C7E40 /* StudentHubTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE2ED3221256462003C7E40 /* StudentHubTableViewController.swift */; };
+		DDEA109122C418F80075093B /* onboardScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDEA109022C418F80075093B /* onboardScreen.storyboard */; };
+		DDEA109422C5EB7D0075093B /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEA109322C5EB7D0075093B /* OnboardingViewController.swift */; };
 		DDF34111215B0D35007DA56A /* MyClubsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF34110215B0D35007DA56A /* MyClubsTableViewController.swift */; };
 		DDF341DC216ACCE9007DA56A /* Organization+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF341D6216ACCE9007DA56A /* Organization+CoreDataClass.swift */; };
 		DDF341DD216ACCE9007DA56A /* Organization+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF341D7216ACCE9007DA56A /* Organization+CoreDataProperties.swift */; };
@@ -179,6 +181,8 @@
 		DDE2ED242121584E003C7E40 /* BCSSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BCSSUITests.swift; sourceTree = "<group>"; };
 		DDE2ED262121584E003C7E40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DDE2ED3221256462003C7E40 /* StudentHubTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentHubTableViewController.swift; sourceTree = "<group>"; };
+		DDEA109022C418F80075093B /* onboardScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = onboardScreen.storyboard; sourceTree = "<group>"; };
+		DDEA109322C5EB7D0075093B /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		DDF34110215B0D35007DA56A /* MyClubsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyClubsTableViewController.swift; sourceTree = "<group>"; };
 		DDF341D6216ACCE9007DA56A /* Organization+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Organization+CoreDataClass.swift"; sourceTree = "<group>"; };
 		DDF341D7216ACCE9007DA56A /* Organization+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Organization+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -314,6 +318,7 @@
 				DDE2ED3221256462003C7E40 /* StudentHubTableViewController.swift */,
 				DDC2AF4021969EEB008D100A /* MyFeed.storyboard */,
 				DD62BE84217C08EC00D730CA /* Calendar.storyboard */,
+				DDEA109022C418F80075093B /* onboardScreen.storyboard */,
 			);
 			path = "User Interface";
 			sourceTree = "<group>";
@@ -406,6 +411,7 @@
 			isa = PBXGroup;
 			children = (
 				DDE2ED012121584B003C7E40 /* AppDelegate.swift */,
+				DDEA109222C5E53F0075093B /* Onboarding */,
 				DDA9AA9621B7BBA60044E256 /* Notification */,
 				DDC2AF3F21969778008D100A /* My Feed */,
 				DD62BE83217BF9EB00D730CA /* Calendar */,
@@ -446,6 +452,14 @@
 				DDE2ED262121584E003C7E40 /* Info.plist */,
 			);
 			path = BCSSUITests;
+			sourceTree = "<group>";
+		};
+		DDEA109222C5E53F0075093B /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				DDEA109322C5EB7D0075093B /* OnboardingViewController.swift */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 		DDF3410F215B0C84007DA56A /* My Clubs */ = {
@@ -549,16 +563,16 @@
 				TargetAttributes = {
 					DDE2ECFD2121584B003C7E40 = {
 						CreatedOnToolsVersion = 9.4.1;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1020;
 					};
 					DDE2ED142121584E003C7E40 = {
 						CreatedOnToolsVersion = 9.4.1;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1020;
 						TestTargetID = DDE2ECFD2121584B003C7E40;
 					};
 					DDE2ED1F2121584E003C7E40 = {
 						CreatedOnToolsVersion = 9.4.1;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1020;
 						TestTargetID = DDE2ECFD2121584B003C7E40;
 					};
 				};
@@ -592,6 +606,7 @@
 				DDA9AA9321B663230044E256 /* Main.storyboard in Resources */,
 				DDE2ED0F2121584E003C7E40 /* LaunchScreen.storyboard in Resources */,
 				DDE2ED0C2121584E003C7E40 /* Assets.xcassets in Resources */,
+				DDEA109122C418F80075093B /* onboardScreen.storyboard in Resources */,
 				DDC2AF4121969EEB008D100A /* MyFeed.storyboard in Resources */,
 				DDD430B9221F410100E91424 /* GoogleService-Info.plist in Resources */,
 			);
@@ -742,6 +757,7 @@
 				DD8B96D3216B112E00B4CBC4 /* MyClubInfoTableViewController.swift in Sources */,
 				DDC2AF672198D11C008D100A /* Work+CoreDataClass.swift in Sources */,
 				DDA244642133C7E1003D63CD /* ProfileTableViewController.swift in Sources */,
+				DDEA109422C5EB7D0075093B /* OnboardingViewController.swift in Sources */,
 				DD62BE7C2176444800D730CA /* MyServiceHoursTableViewController.swift in Sources */,
 				DD8B96D7216BE35A00B4CBC4 /* MyTeamInfoTableViewController.swift in Sources */,
 				DD62BE802177A26A00D730CA /* ServiceHoursInfoTableViewController.swift in Sources */,
@@ -931,6 +947,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -966,7 +983,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Treeline.BCSS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -988,7 +1005,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Treeline.BCSS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -1009,7 +1026,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Treeline.BCSSTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BCSS.app/BCSS";
 			};
@@ -1031,7 +1048,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Treeline.BCSSTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BCSS.app/BCSS";
 			};
@@ -1052,7 +1069,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Treeline.BCSSUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = BCSS;
 			};
@@ -1073,7 +1090,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Treeline.BCSSUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = BCSS;
 			};

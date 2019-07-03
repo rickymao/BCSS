@@ -48,7 +48,7 @@ class TeacherContactTableViewController: UITableViewController, MFMailComposeVie
             getDatabase(department: "Fine Arts")
             getDatabase(department: "Performing Arts")
         }
-        else if getDepartment(department: currentDepartment) == "Administration and Secretaries" {
+        else if getDepartment(department: currentDepartment) == "Administration" {
             
             getAdministrators(type: "Administrator")
             getAdministrators(type: "Secretary")
@@ -135,9 +135,9 @@ class TeacherContactTableViewController: UITableViewController, MFMailComposeVie
                     let lastName = snapshotJSON.childSnapshot(forPath: "LegalLast").value as! String
                     let firstName = snapshotJSON.childSnapshot(forPath: "LegalFirst").value as! String
                      let email = snapshotJSON.childSnapshot(forPath: "Email").value as! String
-                    let fullName = firstName + lastName
-                    //Add to array
+                    let fullName = firstName + " " + lastName
                     
+                    //Add to array
                     self.currentTeachers.append(Teacher(name: fullName, email: email))
                     
                 }
