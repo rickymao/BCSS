@@ -7,17 +7,18 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class DepartmentTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        refTeacher.keepSynced(true)
+        
+        
          navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.init(red: 0.612, green: 0.137, blue: 0.157, alpha: 100)]
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-        
         //Back-Arrow
         let backImage = UIImage(named: "back_arrow")
         self.navigationController?.navigationBar.backIndicatorImage = backImage
@@ -25,10 +26,17 @@ class DepartmentTableViewController: UITableViewController {
         self.navigationItem.backBarButtonItem = UIBarButtonItem.init(title: "", style: UIBarButtonItem.Style.plain, target: nil, action: nil)
         
         self.navigationController?.navigationBar.tintColor = UIColor.init(red: 0.820, green: 0.114, blue: 0.165, alpha: 100)
-
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+    }
+    var teacherLoaded: [Teacher] = []
+    let refTeacher = Database.database().reference(withPath: "teacherKeyed")
+    
+    override func viewDidAppear(_ animated: Bool) {
+       
+       //Refresh data
+       teacherLoaded = []
+       getDatabase()
+       
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,6 +47,37 @@ class DepartmentTableViewController: UITableViewController {
     //departments listing
     var departments: [Department] = [.Mathematics, .Sciences, .AppliedSkills, .Athletics, .ELL, .English, .LearningSupport, .Languages, .SocialStudies, .StudentServices, .Arts, .Administration]
     
+    func getDatabase() {
+        
+        let ref = Database.database().reference()
+        
+        ref.child("teacherKeyed").observeSingleEvent(of: .value) { (snapshot) in
+            
+            //Collecting all filtered snapshots
+            for filteredSnapshot in snapshot.children {
+                if let snapshotJSON = filteredSnapshot as? DataSnapshot {
+                    
+                    //Extracting values
+                    let lastName = snapshotJSON.childSnapshot(forPath: "LegalLast").value as! String
+                    let firstName = snapshotJSON.childSnapshot(forPath: "LegalFirst").value as! String
+                    let email = snapshotJSON.childSnapshot(forPath: "Email").value as! String
+                    let department = snapshotJSON.childSnapshot(forPath: "Department").value as? String
+                    let type = snapshotJSON.childSnapshot(forPath: "Type").value as! String
+                    let homeroom = snapshotJSON.childSnapshot(forPath: "homeroom").value as? String
+                    let fullName = firstName + " " + lastName
+                    
+                    
+            self.teacherLoaded.append(Teacher(name: fullName, email: email, department: department, type: type, homeroom: homeroom))
+                    
+            
+            
+        }
+        
+      }
+            
+    }
+        
+   }
     
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -86,6 +125,7 @@ class DepartmentTableViewController: UITableViewController {
         if let index = tableView.indexPathForSelectedRow?.row {
             contactController.currentDepartment = departments[index]
         }
+        contactController.teachers = teacherLoaded
         
     }
     

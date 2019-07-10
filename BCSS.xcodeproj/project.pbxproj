@@ -10,7 +10,6 @@
 		2D901FC8B036EF7A8208E892 /* Pods_BCSSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1593508F82B02FEDA9CC823 /* Pods_BCSSUITests.framework */; };
 		4B309ED79A21C00D41CAC1C0 /* Pods_BCSSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3778E42D2B7CA3E77262B60A /* Pods_BCSSTests.framework */; };
 		A5ED66DE40452AA1955F1E2C /* Pods_BCSS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E89F2368BBF6C28219406AEC /* Pods_BCSS.framework */; settings = {ATTRIBUTES = (Required, ); }; };
-		DD04C9A0225DCA2E0010E784 /* TeacherTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD04C99F225DCA2E0010E784 /* TeacherTableViewController.swift */; };
 		DD62BE7C2176444800D730CA /* MyServiceHoursTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD62BE7B2176444800D730CA /* MyServiceHoursTableViewController.swift */; };
 		DD62BE7E217644FC00D730CA /* Volunteer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD62BE7D217644FC00D730CA /* Volunteer.swift */; };
 		DD62BE802177A26A00D730CA /* ServiceHoursInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD62BE7F2177A26A00D730CA /* ServiceHoursInfoTableViewController.swift */; };
@@ -111,7 +110,6 @@
 		3778E42D2B7CA3E77262B60A /* Pods_BCSSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BCSSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		802172C84E2CEAE61054B252 /* Pods-BCSSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BCSSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BCSSTests/Pods-BCSSTests.release.xcconfig"; sourceTree = "<group>"; };
 		83C46BA2EA27E4B90D4823CE /* Pods-BCSSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BCSSUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BCSSUITests/Pods-BCSSUITests.release.xcconfig"; sourceTree = "<group>"; };
-		DD04C99F225DCA2E0010E784 /* TeacherTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherTableViewController.swift; sourceTree = "<group>"; };
 		DD62BE7B2176444800D730CA /* MyServiceHoursTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyServiceHoursTableViewController.swift; sourceTree = "<group>"; };
 		DD62BE7D217644FC00D730CA /* Volunteer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Volunteer.swift; sourceTree = "<group>"; };
 		DD62BE7F2177A26A00D730CA /* ServiceHoursInfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceHoursInfoTableViewController.swift; sourceTree = "<group>"; };
@@ -305,7 +303,6 @@
 				DDA24451212D2F8A003D63CD /* Teacher.swift */,
 				DDA24455212E7FFA003D63CD /* TeacherContactTableViewController.swift */,
 				DDA24453212E6BF6003D63CD /* DepartmentTableViewController.swift */,
-				DD04C99F225DCA2E0010E784 /* TeacherTableViewController.swift */,
 			);
 			path = "Teacher Contact";
 			sourceTree = "<group>";
@@ -750,7 +747,6 @@
 				DDA9AAA421BCD3220044E256 /* Blocks+CoreDataProperties.swift in Sources */,
 				DD62BE89217C274700D730CA /* CalendarViewController.swift in Sources */,
 				DD62BE87217C1F7700D730CA /* CalendarCell.swift in Sources */,
-				DD04C9A0225DCA2E0010E784 /* TeacherTableViewController.swift in Sources */,
 				DDE2ED022121584B003C7E40 /* AppDelegate.swift in Sources */,
 				DDF341DC216ACCE9007DA56A /* Organization+CoreDataClass.swift in Sources */,
 				DDA2445E2131E710003D63CD /* MenuViewController.swift in Sources */,
