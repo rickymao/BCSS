@@ -16,19 +16,27 @@ class ClubTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //Setting up club array
-        clubs = Club.clubs
+
         
         //Back-Arrow
         let backImage = UIImage(named: "back_arrow")
         self.navigationController?.navigationBar.backIndicatorImage = backImage
         self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = backImage
         self.navigationItem.backBarButtonItem = UIBarButtonItem.init(title: "", style: UIBarButtonItem.Style.plain, target: nil, action: nil)
-    
-        //Retrieve Data
-        getDatabase()
 
+        //Retrieve data
+        getDatabase()
+        
+        
+        //Sync data
+        refClub.keepSynced(true)
+
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        //Retrieve Data
+        clubs = []
+        getDatabase()
     }
     
 
@@ -62,6 +70,8 @@ class ClubTableViewController: UITableViewController {
     var dateFormat = DateFormatter()
     var clubs: [Club] = []
     
+    let refClub = Database.database().reference(withPath: "clubKeyed")
+    
     func createDate(hours: Int, minutes: Int, dayOfTheWeek: Int) -> Date {
         
         //Reminder - The week starts at 1 to 7 (Sunday to Saturday)
@@ -73,7 +83,6 @@ class ClubTableViewController: UITableViewController {
         
         let next = calendar.nextDate(after: Date(), matching: date, matchingPolicy: .strict)
 
-        print(DateFormatter.localizedString(from: next!, dateStyle: .short, timeStyle: .short))
         return next!
         
         
@@ -84,7 +93,7 @@ class ClubTableViewController: UITableViewController {
         
         let ref = Database.database().reference()
         
-        ref.child("clubKeyed").observe(.value) { (snapshot) in
+        ref.child("clubKeyed").observeSingleEvent(of: .value) { (snapshot) in
             
             for filteredSnapshot in snapshot.children {
                 if let snapshotJSON = filteredSnapshot as? DataSnapshot {
@@ -105,18 +114,11 @@ class ClubTableViewController: UITableViewController {
                         let newClub = Club(name: club, teacher: teacher, meeting: [self.createDate(hours: hoursInt, minutes: minutesInt, dayOfTheWeek: dayOfWeekInt)], room: room, owner: owner, desc: description, email: [email])
                         
                         
-                        if  Club.clubs.contains(where: { (Club) -> Bool in
-                            Club.name == newClub.name
-                       }) {
-                        
-                        return
-                        
-                        } else {
                             //Adding to array
                             self.clubs.append(newClub)
-                        }
-             
-              
+                    
+                    
+                        
                     }
                     
                     
@@ -126,9 +128,14 @@ class ClubTableViewController: UITableViewController {
                 
             }
             self.tableView.reloadData()
-            
         }
         
+        
+    }
+    
+    func update() {
+        
+
         
     }
 

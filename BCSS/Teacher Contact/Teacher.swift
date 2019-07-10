@@ -12,11 +12,20 @@ class Teacher {
     
     var teacherName: String
     var teacherEmail: String
+    var department: String?
+    var type: String
+    var homeroom: String?
     
+    static var teachers: [Teacher] = []
     
-    init(name: String, email: String) {
+    init(name: String, email: String, department: String?, type: String, homeroom: String?) {
+        
         self.teacherName = name
         self.teacherEmail = email
+        self.department = department
+        self.type = type
+        self.homeroom = homeroom
+        
     }
     
     

@@ -16,9 +16,7 @@ class SportsTableViewController: UITableViewController {
         
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.init(red: 0.612, green: 0.137, blue: 0.157, alpha: 100)]
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-        
+
         //Back-Arrow
         let backImage = UIImage(named: "back_arrow")
         self.navigationController?.navigationBar.backIndicatorImage = backImage
@@ -26,9 +24,22 @@ class SportsTableViewController: UITableViewController {
         self.navigationItem.backBarButtonItem = UIBarButtonItem.init(title: "", style: UIBarButtonItem.Style.plain, target: nil, action: nil)
         
         self.navigationController?.navigationBar.tintColor = UIColor.init(red: 0.820, green: 0.114, blue: 0.165, alpha: 100)
-
-        //Retrieve Data
+        
+        //Retrieve data
         getDatabase()
+        
+        //Sync data
+        refSports.keepSynced(true)
+
+
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        //Retrieve data
+        sports = []
+        getDatabase()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,11 +51,14 @@ class SportsTableViewController: UITableViewController {
     let dateFormat = DateFormatter.init()
     var sports: [Sports] = []
     
+    let refSports = Database.database().reference(withPath: "sportKeyed")
+    
     func getDatabase() {
         
         let ref = Database.database().reference()
         
-        ref.child("sportKeyed").observe(.value) { (snapshot) in
+        ref.child("sportKeyed").observeSingleEvent(of: .value) { (snapshot) in
+            
             
             for filteredSnapshot in snapshot.children {
                 if let snapshotJSON = filteredSnapshot as? DataSnapshot {
@@ -55,9 +69,9 @@ class SportsTableViewController: UITableViewController {
                     let teacher = snapshotJSON.childSnapshot(forPath: "Teacher").value as! String
                     let season = snapshotJSON.childSnapshot(forPath: "Season").value as! String
                     let email = snapshotJSON.childSnapshot(forPath: "Email").value as! String
-
-                        //Adding to array
-                        self.sports.append(Sports(name: name, coach: coach, teacher: teacher, season: season, email: email))
+                    
+                    //Adding to array
+                    self.sports.append(Sports(name: name, coach: coach, teacher: teacher, season: season, email: email))
                     
                 }
                 
@@ -66,6 +80,7 @@ class SportsTableViewController: UITableViewController {
             self.tableView.reloadData()
             
         }
+        
         
         
     }

@@ -15,6 +15,7 @@ class TeacherContactTableViewController: UITableViewController, MFMailComposeVie
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         //Navigation Bar
          navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.init(red: 0.612, green: 0.137, blue: 0.157, alpha: 100)]
 
@@ -31,47 +32,40 @@ class TeacherContactTableViewController: UITableViewController, MFMailComposeVie
         
         //Sort and choose data
         if getDepartment(department: currentDepartment) == "Applied Skills" {
-            getDatabase(department: "Business Education")
-            getDatabase(department: "Career Programs")
-            getDatabase(department: "Home Economics")
-            getDatabase(department: "Technology Education")
+            getTeacher(department: "Business Education")
+            getTeacher(department: "Career Programs")
+            getTeacher(department: "Home Economics")
+            getTeacher(department: "Technology Education")
         }
         else if getDepartment(department: currentDepartment) == "Student Services and Counsellors" {
-            
-            getDatabase(department: "Support Services")
-            
+
+            getTeacher(department: "Support Services")
+
         }
         else if getDepartment(department: currentDepartment) == "Learning Support" {
-            getDatabase(department: "LSS")
+            getTeacher(department: "LSS")
         }
         else if getDepartment(department: currentDepartment) == "Arts" {
-            getDatabase(department: "Fine Arts")
-            getDatabase(department: "Performing Arts")
+            getTeacher(department: "Fine Arts")
+            getTeacher(department: "Performing Arts")
         }
         else if getDepartment(department: currentDepartment) == "Administration" {
-            
-            getAdministrators(type: "Administrator")
-            getAdministrators(type: "Secretary")
-            getAdministrators(type: "District")
-            
-        }
-       
-        else if getDepartment(department: currentDepartment) == "Athletics" {
-            getDatabase(department: "Physical Education")
-        
-        } else {
-            
-            //Retrieve data
-            getDatabase(department: getDepartment(department: currentDepartment))
-            
+
+            getTeacher(type: "Administrator")
+            getTeacher(type: "Secretary")
+            getTeacher(type: "District")
+
         }
 
-        
-        
-        
-        
-        
-        
+        else if getDepartment(department: currentDepartment) == "Athletics" {
+            getTeacher(department: "Physical Education")
+
+        } else {
+
+            //Retrieve data
+            getTeacher(department: getDepartment(department: currentDepartment))
+
+        }
 
     }
 
@@ -83,7 +77,8 @@ class TeacherContactTableViewController: UITableViewController, MFMailComposeVie
     
     //chosen department
     var currentDepartment: Department!
-    var currentTeachers: [Teacher] = []
+    var teachers: [Teacher] = []
+    var sortedTeachers: [Teacher] = []
     
     //Get teachers depending on department
     func getDepartment(department: Department) -> String {
@@ -120,67 +115,32 @@ class TeacherContactTableViewController: UITableViewController, MFMailComposeVie
         
     }
     
-    func getAdministrators(type: String) {
-        
-        let ref = Database.database().reference()
+    func getTeacher(type: String) {
         
         
-        ref.child("teacherKeyed").queryOrdered(byChild: "Type").queryEqual(toValue: type).observe(.value) { (snapshot) in
+        for teacher in teachers {
             
-            //Collecting all filtered snapshots
-            for filteredSnapshot in snapshot.children {
-                if let snapshotJSON = filteredSnapshot as? DataSnapshot {
-                    
-                    //Extracting values
-                    let lastName = snapshotJSON.childSnapshot(forPath: "LegalLast").value as! String
-                    let firstName = snapshotJSON.childSnapshot(forPath: "LegalFirst").value as! String
-                     let email = snapshotJSON.childSnapshot(forPath: "Email").value as! String
-                    let fullName = firstName + " " + lastName
-                    
-                    //Add to array
-                    self.currentTeachers.append(Teacher(name: fullName, email: email))
-                    
-                }
-                
+            if teacher.type == type {
+                sortedTeachers.append(teacher)
                 
             }
-            
-            self.tableView.reloadData()
-        }
         
+        }
+      
         
     }
     
+    func getTeacher(department: String) {
+        
     
-    func getDatabase(department: String) {
-
-        let ref = Database.database().reference()
-        
-        
-        
-        ref.child("teacherKeyed").queryOrdered(byChild: "Department").queryEqual(toValue: department).observe(.value) { (snapshot) in
-        
-            //Collecting all filtered snapshots
-            for filteredSnapshot in snapshot.children {
-                if let snapshotJSON = filteredSnapshot as? DataSnapshot {
-                    
-                    print(snapshotJSON)
-                    //Extracting values
-                    let lastName = snapshotJSON.childSnapshot(forPath: "LegalLast").value as! String
-                    let firstName = snapshotJSON.childSnapshot(forPath: "LegalFirst").value as! String
-                    let email = snapshotJSON.childSnapshot(forPath: "Email").value as! String
-                    let fullName = firstName + " " + lastName
-                    //Add to array
-                 
-                    self.currentTeachers.append(Teacher(name: fullName, email: email))
-                    
-                }
-           
-                
+        for teacher in teachers {
+            
+            if teacher.department == department {
+                sortedTeachers.append(teacher)
             }
-        
-            self.tableView.reloadData()
+            
         }
+        
     }
 
     // MARK: - Table view data source
@@ -194,14 +154,14 @@ class TeacherContactTableViewController: UITableViewController, MFMailComposeVie
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         
-        return currentTeachers.count
+        return sortedTeachers.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "teacherCell", for: indexPath)
         let index = indexPath.row
-        cell.textLabel?.text = currentTeachers[index].teacherName
+        cell.textLabel?.text = sortedTeachers[index].teacherName
         
         
 
@@ -220,7 +180,7 @@ class TeacherContactTableViewController: UITableViewController, MFMailComposeVie
             tableView.deselectRow(at: indexPath, animated: true)
         } else {
         
-            let mail = configureMailController(email: currentTeachers[indexPath.row].teacherEmail)
+            let mail = configureMailController(email: sortedTeachers[indexPath.row].teacherEmail)
             self.present(mail, animated: true, completion: nil)
         }
         

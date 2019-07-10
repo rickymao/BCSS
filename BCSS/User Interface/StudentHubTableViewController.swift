@@ -12,10 +12,7 @@ class StudentHubTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        tableView.cellForRow(at: IndexPath(row: 1, section: 2))?.textLabel?.text = "Student Calendar"
-        
-            
+
         //Setup navigation bar
         navigationController?.navigationBar.barTintColor = UIColor.init(displayP3Red: 1, green: 1, blue: 1, alpha: 90)
         
