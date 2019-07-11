@@ -1,0 +1,6 @@
+framework module Pods_BCSSUITests {
+  umbrella header "Pods-BCSSUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

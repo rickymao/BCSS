@@ -70,8 +70,6 @@
 		DDC3DB1222D704EB0009B608 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDC3DB1122D704EB0009B608 /* UIKit.framework */; };
 		DDC3DB1422D704F90009B608 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDC3DB1322D704F90009B608 /* Foundation.framework */; };
 		DDC3DB1622D705030009B608 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDC3DB1522D705030009B608 /* CoreGraphics.framework */; };
-		DDC3DB1722D70BCB0009B608 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD62BE8A2185038E00D730CA /* Event.swift */; };
-		DDC3DB1822D70BD00009B608 /* Schedule+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC2AF582197E1E2008D100A /* Schedule+CoreDataProperties.swift */; };
 		DDD430B9221F410100E91424 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DDD430B8221F410100E91424 /* GoogleService-Info.plist */; };
 		DDD430BA221F410100E91424 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DDD430B8221F410100E91424 /* GoogleService-Info.plist */; };
 		DDD430BB221F410100E91424 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DDD430B8221F410100E91424 /* GoogleService-Info.plist */; };
@@ -126,7 +124,6 @@
 		DD62BE84217C08EC00D730CA /* Calendar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Calendar.storyboard; sourceTree = "<group>"; };
 		DD62BE86217C1F7700D730CA /* CalendarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCell.swift; sourceTree = "<group>"; };
 		DD62BE88217C274700D730CA /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
-		DD62BE8A2185038E00D730CA /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		DD8B96D2216B112E00B4CBC4 /* MyClubInfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyClubInfoTableViewController.swift; sourceTree = "<group>"; };
 		DD8B96D4216BE2E600B4CBC4 /* MyTeamTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTeamTableViewController.swift; sourceTree = "<group>"; };
 		DD8B96D6216BE35A00B4CBC4 /* MyTeamInfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTeamInfoTableViewController.swift; sourceTree = "<group>"; };
@@ -166,7 +163,6 @@
 		DDC2AF462197AD3E008D100A /* ClubModuleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubModuleViewController.swift; sourceTree = "<group>"; };
 		DDC2AF482197AD54008D100A /* ScheduleModuleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleModuleViewController.swift; sourceTree = "<group>"; };
 		DDC2AF4A2197ADE4008D100A /* EventsModuleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsModuleViewController.swift; sourceTree = "<group>"; };
-		DDC2AF582197E1E2008D100A /* Schedule+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Schedule+CoreDataProperties.swift"; path = "/Users/rickm/Desktop/BCSS/BCSS/Saved Data/Schedule+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
 		DDC2AF592197E1E2008D100A /* Schedule+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Schedule+CoreDataClass.swift"; path = "../../Schedule+CoreDataClass.swift"; sourceTree = "<group>"; };
 		DDC2AF602198C699008D100A /* Homework+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Homework+CoreDataClass.swift"; path = "../Homework+CoreDataClass.swift"; sourceTree = "<group>"; };
 		DDC2AF612198C699008D100A /* Homework+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Homework+CoreDataProperties.swift"; path = "../Homework+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -291,7 +287,6 @@
 			children = (
 				DD62BE86217C1F7700D730CA /* CalendarCell.swift */,
 				DD62BE88217C274700D730CA /* CalendarViewController.swift */,
-				DD62BE8A2185038E00D730CA /* Event.swift */,
 				DDF7262E2211F8B500C8D861 /* EventTableViewController.swift */,
 			);
 			path = Calendar;
@@ -510,7 +505,6 @@
 				DDC2AF602198C699008D100A /* Homework+CoreDataClass.swift */,
 				DDC2AF612198C699008D100A /* Homework+CoreDataProperties.swift */,
 				DDC2AF592197E1E2008D100A /* Schedule+CoreDataClass.swift */,
-				DDC2AF582197E1E2008D100A /* Schedule+CoreDataProperties.swift */,
 				DDF341D6216ACCE9007DA56A /* Organization+CoreDataClass.swift */,
 				DDF341D7216ACCE9007DA56A /* Organization+CoreDataProperties.swift */,
 				DDF341D8216ACCE9007DA56A /* Team+CoreDataClass.swift */,
@@ -750,8 +744,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDC3DB1822D70BD00009B608 /* Schedule+CoreDataProperties.swift in Sources */,
-				DDC3DB1722D70BCB0009B608 /* Event.swift in Sources */,
 				DDA244602131EF30003D63CD /* BulletinViewController.swift in Sources */,
 				DDF341E3216ACE3B007DA56A /* PersistenceManager.swift in Sources */,
 				DDA24452212D2F8A003D63CD /* Teacher.swift in Sources */,

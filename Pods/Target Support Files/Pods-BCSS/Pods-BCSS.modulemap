@@ -1,0 +1,6 @@
+framework module Pods_BCSS {
+  umbrella header "Pods-BCSS-umbrella.h"
+
+  export *
+  module * { export * }
+}
