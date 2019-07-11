@@ -17,6 +17,9 @@
 		DD62BE85217C08EC00D730CA /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD62BE84217C08EC00D730CA /* Calendar.storyboard */; };
 		DD62BE87217C1F7700D730CA /* CalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD62BE86217C1F7700D730CA /* CalendarCell.swift */; };
 		DD62BE89217C274700D730CA /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD62BE88217C274700D730CA /* CalendarViewController.swift */; };
+		DD66FC9B22D7B01F00BBC45B /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD66FC9A22D7B01F00BBC45B /* Event.swift */; };
+		DD66FC9F22D7B79100BBC45B /* Schedule+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD66FC9D22D7B79100BBC45B /* Schedule+CoreDataProperties.swift */; };
+		DD66FCA022D7B79100BBC45B /* Schedule+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD66FC9E22D7B79100BBC45B /* Schedule+CoreDataClass.swift */; };
 		DD8B96D3216B112E00B4CBC4 /* MyClubInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8B96D2216B112E00B4CBC4 /* MyClubInfoTableViewController.swift */; };
 		DD8B96D5216BE2E600B4CBC4 /* MyTeamTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8B96D4216BE2E600B4CBC4 /* MyTeamTableViewController.swift */; };
 		DD8B96D7216BE35A00B4CBC4 /* MyTeamInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8B96D6216BE35A00B4CBC4 /* MyTeamInfoTableViewController.swift */; };
@@ -56,7 +59,6 @@
 		DDC2AF472197AD3E008D100A /* ClubModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC2AF462197AD3E008D100A /* ClubModuleViewController.swift */; };
 		DDC2AF492197AD54008D100A /* ScheduleModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC2AF482197AD54008D100A /* ScheduleModuleViewController.swift */; };
 		DDC2AF4B2197ADE4008D100A /* EventsModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC2AF4A2197ADE4008D100A /* EventsModuleViewController.swift */; };
-		DDC2AF5B2197E1E2008D100A /* Schedule+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC2AF592197E1E2008D100A /* Schedule+CoreDataClass.swift */; };
 		DDC2AF622198C699008D100A /* Homework+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC2AF602198C699008D100A /* Homework+CoreDataClass.swift */; };
 		DDC2AF632198C699008D100A /* Homework+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC2AF612198C699008D100A /* Homework+CoreDataProperties.swift */; };
 		DDC2AF662198D11C008D100A /* Work+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC2AF642198D11B008D100A /* Work+CoreDataProperties.swift */; };
@@ -124,6 +126,9 @@
 		DD62BE84217C08EC00D730CA /* Calendar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Calendar.storyboard; sourceTree = "<group>"; };
 		DD62BE86217C1F7700D730CA /* CalendarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCell.swift; sourceTree = "<group>"; };
 		DD62BE88217C274700D730CA /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		DD66FC9A22D7B01F00BBC45B /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		DD66FC9D22D7B79100BBC45B /* Schedule+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Schedule+CoreDataProperties.swift"; path = "/Users/rickm/Desktop/BCSS/BCSS/Saved Data/Schedule+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
+		DD66FC9E22D7B79100BBC45B /* Schedule+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Schedule+CoreDataClass.swift"; path = "../Schedule+CoreDataClass.swift"; sourceTree = "<group>"; };
 		DD8B96D2216B112E00B4CBC4 /* MyClubInfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyClubInfoTableViewController.swift; sourceTree = "<group>"; };
 		DD8B96D4216BE2E600B4CBC4 /* MyTeamTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTeamTableViewController.swift; sourceTree = "<group>"; };
 		DD8B96D6216BE35A00B4CBC4 /* MyTeamInfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTeamInfoTableViewController.swift; sourceTree = "<group>"; };
@@ -163,7 +168,6 @@
 		DDC2AF462197AD3E008D100A /* ClubModuleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubModuleViewController.swift; sourceTree = "<group>"; };
 		DDC2AF482197AD54008D100A /* ScheduleModuleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleModuleViewController.swift; sourceTree = "<group>"; };
 		DDC2AF4A2197ADE4008D100A /* EventsModuleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsModuleViewController.swift; sourceTree = "<group>"; };
-		DDC2AF592197E1E2008D100A /* Schedule+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Schedule+CoreDataClass.swift"; path = "../../Schedule+CoreDataClass.swift"; sourceTree = "<group>"; };
 		DDC2AF602198C699008D100A /* Homework+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Homework+CoreDataClass.swift"; path = "../Homework+CoreDataClass.swift"; sourceTree = "<group>"; };
 		DDC2AF612198C699008D100A /* Homework+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Homework+CoreDataProperties.swift"; path = "../Homework+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		DDC2AF642198D11B008D100A /* Work+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Work+CoreDataProperties.swift"; path = "/Users/rickm/Desktop/BCSS/BCSS/Saved Data/Work+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
@@ -288,6 +292,7 @@
 				DD62BE86217C1F7700D730CA /* CalendarCell.swift */,
 				DD62BE88217C274700D730CA /* CalendarViewController.swift */,
 				DDF7262E2211F8B500C8D861 /* EventTableViewController.swift */,
+				DD66FC9A22D7B01F00BBC45B /* Event.swift */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
@@ -498,13 +503,14 @@
 		DDF34195216A8749007DA56A /* Saved Data */ = {
 			isa = PBXGroup;
 			children = (
+				DD66FC9E22D7B79100BBC45B /* Schedule+CoreDataClass.swift */,
+				DD66FC9D22D7B79100BBC45B /* Schedule+CoreDataProperties.swift */,
 				DDA9AAA121BCD3220044E256 /* Blocks+CoreDataClass.swift */,
 				DDA9AAA221BCD3220044E256 /* Blocks+CoreDataProperties.swift */,
 				DDC2AF652198D11B008D100A /* Work+CoreDataClass.swift */,
 				DDC2AF642198D11B008D100A /* Work+CoreDataProperties.swift */,
 				DDC2AF602198C699008D100A /* Homework+CoreDataClass.swift */,
 				DDC2AF612198C699008D100A /* Homework+CoreDataProperties.swift */,
-				DDC2AF592197E1E2008D100A /* Schedule+CoreDataClass.swift */,
 				DDF341D6216ACCE9007DA56A /* Organization+CoreDataClass.swift */,
 				DDF341D7216ACCE9007DA56A /* Organization+CoreDataProperties.swift */,
 				DDF341D8216ACCE9007DA56A /* Team+CoreDataClass.swift */,
@@ -764,6 +770,7 @@
 				DDF341DC216ACCE9007DA56A /* Organization+CoreDataClass.swift in Sources */,
 				DDA2445E2131E710003D63CD /* MenuViewController.swift in Sources */,
 				DD8B96D3216B112E00B4CBC4 /* MyClubInfoTableViewController.swift in Sources */,
+				DD66FCA022D7B79100BBC45B /* Schedule+CoreDataClass.swift in Sources */,
 				DDC2AF672198D11C008D100A /* Work+CoreDataClass.swift in Sources */,
 				DDA244642133C7E1003D63CD /* ProfileTableViewController.swift in Sources */,
 				DDEA109422C5EB7D0075093B /* OnboardingViewController.swift in Sources */,
@@ -774,6 +781,7 @@
 				DDA2446A21367C6E003D63CD /* ClassTableViewCell.swift in Sources */,
 				DDC2AF662198D11C008D100A /* Work+CoreDataProperties.swift in Sources */,
 				DDC2AF622198C699008D100A /* Homework+CoreDataClass.swift in Sources */,
+				DD66FC9F22D7B79100BBC45B /* Schedule+CoreDataProperties.swift in Sources */,
 				DDA244662133E912003D63CD /* ScheduleViewController.swift in Sources */,
 				DD62BE7E217644FC00D730CA /* Volunteer.swift in Sources */,
 				DDC2AF4B2197ADE4008D100A /* EventsModuleViewController.swift in Sources */,
@@ -786,7 +794,6 @@
 				DDA9AA9E21BC9FA40044E256 /* BlockTableViewController.swift in Sources */,
 				DDA24456212E7FFA003D63CD /* TeacherContactTableViewController.swift in Sources */,
 				DD62BE822177A27D00D730CA /* AddServiceHoursTableViewController.swift in Sources */,
-				DDC2AF5B2197E1E2008D100A /* Schedule+CoreDataClass.swift in Sources */,
 				DDC0B4CC213FA4C40098C8B3 /* AssignmentTableViewCell.swift in Sources */,
 				DDC2AF6B21A00EFD008D100A /* AssignmentModuleTableViewCell.swift in Sources */,
 				DDA9AAA621BCFEA00044E256 /* BlockInfoTableViewController.swift in Sources */,
@@ -796,6 +803,7 @@
 				DDF341DF216ACCE9007DA56A /* Team+CoreDataProperties.swift in Sources */,
 				DDA2444C212A97E8003D63CD /* Sports.swift in Sources */,
 				DDC2AF632198C699008D100A /* Homework+CoreDataProperties.swift in Sources */,
+				DD66FC9B22D7B01F00BBC45B /* Event.swift in Sources */,
 				DDC2AF492197AD54008D100A /* ScheduleModuleViewController.swift in Sources */,
 				DDA2444A212921B2003D63CD /* InfoClubTableViewController.swift in Sources */,
 				DDF7262F2211F8B500C8D861 /* EventTableViewController.swift in Sources */,

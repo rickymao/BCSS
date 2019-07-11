@@ -13,7 +13,7 @@ class EventsModuleViewController: UIViewController {
     
     
     let persistenceManager = PersistenceManager.shared
-    var events: [Event] = Event.eventsList
+    var events: [Event] = Event.events
     var filteredEvents: [Event] = []
 
     override func viewDidLoad() {

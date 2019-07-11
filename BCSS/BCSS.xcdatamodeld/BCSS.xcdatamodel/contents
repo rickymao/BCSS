@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="18C54" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14490.99" systemVersion="18D42" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Blocks" representedClassName="Blocks" syncable="YES">
         <attribute name="block" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="blockX" optional="YES" attributeType="Boolean" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
@@ -12,6 +12,7 @@
         <attribute name="semester" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
     <entity name="CalendarEvents" representedClassName="CalendarEvents" syncable="YES" codeGenerationType="class"/>
+    <entity name="Entity" representedClassName="Entity" syncable="YES" codeGenerationType="class"/>
     <entity name="Homework" representedClassName=".Homework" syncable="YES">
         <attribute name="completed" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="course" optional="YES" attributeType="String" syncable="YES"/>
@@ -56,12 +57,13 @@
     </entity>
     <elements>
         <element name="Blocks" positionX="18" positionY="126" width="128" height="180"/>
+        <element name="CalendarEvents" positionX="36" positionY="171" width="128" height="45"/>
         <element name="Homework" positionX="27" positionY="126" width="128" height="135"/>
         <element name="Organization" positionX="0" positionY="45" width="128" height="135"/>
         <element name="Schedule" positionX="18" positionY="108" width="128" height="120"/>
+        <element name="Teachers" positionX="45" positionY="180" width="128" height="90"/>
         <element name="Teams" positionX="27" positionY="72" width="128" height="135"/>
         <element name="Work" positionX="36" positionY="144" width="128" height="105"/>
-        <element name="CalendarEvents" positionX="36" positionY="171" width="128" height="45"/>
-        <element name="Teachers" positionX="45" positionY="180" width="128" height="90"/>
+        <element name="Entity" positionX="27" positionY="153" width="128" height="45"/>
     </elements>
 </model>

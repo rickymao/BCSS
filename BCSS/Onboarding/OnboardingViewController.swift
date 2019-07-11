@@ -46,7 +46,7 @@ class OnboardingViewController: UIViewController {
         UNUserNotificationCenter.current().requestAuthorization(options: [.sound, .alert, .badge]) { granted, error in }
         
         let dateFormat = DateFormatter()
-        let events = Event.eventsList
+        let events = Event.events
         
         //Flex Day notification setup
         for event in events {

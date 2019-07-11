@@ -197,7 +197,7 @@ class ScheduleModuleViewController: UIViewController {
         let dateformatter = DateFormatter()
         dateformatter.dateFormat = "yyyy MM dd"
         let today = dateformatter.string(from: Date())
-        var days = Event.eventsList
+        var days = Event.events
         
         days = days.filter({ (Event) -> Bool in
             Event.title == "Day 1"
@@ -220,7 +220,7 @@ class ScheduleModuleViewController: UIViewController {
         let dateformatter = DateFormatter()
         dateformatter.dateFormat = "yyyy MM dd"
         let today = dateformatter.string(from: Date())
-        var days = Event.eventsList
+        var days = Event.events
         
         days = days.filter({ (Event) -> Bool in
             Event.title == "Day 0"
@@ -243,7 +243,7 @@ class ScheduleModuleViewController: UIViewController {
         let dateformatter = DateFormatter()
         dateformatter.dateFormat = "yyyy MM dd"
         let today = dateformatter.string(from: Date())
-        var days = Event.eventsList
+        var days = Event.events
         
         days = days.filter({ (Event) -> Bool in
             Event.title == "Day 2"
@@ -265,7 +265,7 @@ class ScheduleModuleViewController: UIViewController {
         let dateformatter = DateFormatter()
         dateformatter.dateFormat = "yyyy MM dd"
         let today = dateformatter.string(from: Date())
-        var collabs = Event.eventsList
+        var collabs = Event.events
         
         collabs = collabs.filter { (Event) -> Bool in
             Event.title == "Collaboration Day"
