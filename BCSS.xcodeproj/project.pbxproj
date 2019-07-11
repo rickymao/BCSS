@@ -20,6 +20,8 @@
 		DD66FC9B22D7B01F00BBC45B /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD66FC9A22D7B01F00BBC45B /* Event.swift */; };
 		DD66FC9F22D7B79100BBC45B /* Schedule+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD66FC9D22D7B79100BBC45B /* Schedule+CoreDataProperties.swift */; };
 		DD66FCA022D7B79100BBC45B /* Schedule+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD66FC9E22D7B79100BBC45B /* Schedule+CoreDataClass.swift */; };
+		DD66FCA222D7B83D00BBC45B /* MyFeed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD66FCA122D7B83D00BBC45B /* MyFeed.storyboard */; };
+		DD66FCA422D7BC8900BBC45B /* onboardScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD66FCA322D7BC8900BBC45B /* onboardScreen.storyboard */; };
 		DD8B96D3216B112E00B4CBC4 /* MyClubInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8B96D2216B112E00B4CBC4 /* MyClubInfoTableViewController.swift */; };
 		DD8B96D5216BE2E600B4CBC4 /* MyTeamTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8B96D4216BE2E600B4CBC4 /* MyTeamTableViewController.swift */; };
 		DD8B96D7216BE35A00B4CBC4 /* MyTeamInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8B96D6216BE35A00B4CBC4 /* MyTeamInfoTableViewController.swift */; };
@@ -53,7 +55,6 @@
 		DDA9AAA621BCFEA00044E256 /* BlockInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA9AAA521BCFE9F0044E256 /* BlockInfoTableViewController.swift */; };
 		DDC0B4C7213F9FB50098C8B3 /* AssignmentsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC0B4C6213F9FB50098C8B3 /* AssignmentsTableViewController.swift */; };
 		DDC0B4CC213FA4C40098C8B3 /* AssignmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC0B4CB213FA4C40098C8B3 /* AssignmentTableViewCell.swift */; };
-		DDC2AF4121969EEB008D100A /* MyFeed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDC2AF4021969EEB008D100A /* MyFeed.storyboard */; };
 		DDC2AF432196ACC0008D100A /* MyFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC2AF422196ACC0008D100A /* MyFeedViewController.swift */; };
 		DDC2AF452197AA3F008D100A /* AssignmentModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC2AF442197AA3E008D100A /* AssignmentModuleViewController.swift */; };
 		DDC2AF472197AD3E008D100A /* ClubModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC2AF462197AD3E008D100A /* ClubModuleViewController.swift */; };
@@ -82,7 +83,6 @@
 		DDE2ED1A2121584E003C7E40 /* BCSSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE2ED192121584E003C7E40 /* BCSSTests.swift */; };
 		DDE2ED252121584E003C7E40 /* BCSSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE2ED242121584E003C7E40 /* BCSSUITests.swift */; };
 		DDE2ED3321256462003C7E40 /* StudentHubTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE2ED3221256462003C7E40 /* StudentHubTableViewController.swift */; };
-		DDEA109122C418F80075093B /* onboardScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDEA109022C418F80075093B /* onboardScreen.storyboard */; };
 		DDEA109422C5EB7D0075093B /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEA109322C5EB7D0075093B /* OnboardingViewController.swift */; };
 		DDF34111215B0D35007DA56A /* MyClubsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF34110215B0D35007DA56A /* MyClubsTableViewController.swift */; };
 		DDF341DC216ACCE9007DA56A /* Organization+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF341D6216ACCE9007DA56A /* Organization+CoreDataClass.swift */; };
@@ -129,6 +129,8 @@
 		DD66FC9A22D7B01F00BBC45B /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		DD66FC9D22D7B79100BBC45B /* Schedule+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Schedule+CoreDataProperties.swift"; path = "/Users/rickm/Desktop/BCSS/BCSS/Saved Data/Schedule+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
 		DD66FC9E22D7B79100BBC45B /* Schedule+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Schedule+CoreDataClass.swift"; path = "../Schedule+CoreDataClass.swift"; sourceTree = "<group>"; };
+		DD66FCA122D7B83D00BBC45B /* MyFeed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyFeed.storyboard; sourceTree = "<group>"; };
+		DD66FCA322D7BC8900BBC45B /* onboardScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = onboardScreen.storyboard; sourceTree = "<group>"; };
 		DD8B96D2216B112E00B4CBC4 /* MyClubInfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyClubInfoTableViewController.swift; sourceTree = "<group>"; };
 		DD8B96D4216BE2E600B4CBC4 /* MyTeamTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTeamTableViewController.swift; sourceTree = "<group>"; };
 		DD8B96D6216BE35A00B4CBC4 /* MyTeamInfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTeamInfoTableViewController.swift; sourceTree = "<group>"; };
@@ -162,7 +164,6 @@
 		DDA9AAA521BCFE9F0044E256 /* BlockInfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockInfoTableViewController.swift; sourceTree = "<group>"; };
 		DDC0B4C6213F9FB50098C8B3 /* AssignmentsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentsTableViewController.swift; sourceTree = "<group>"; };
 		DDC0B4CB213FA4C40098C8B3 /* AssignmentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AssignmentTableViewCell.swift; path = "BCSS/My Assignments/AssignmentTableViewCell.swift"; sourceTree = SOURCE_ROOT; };
-		DDC2AF4021969EEB008D100A /* MyFeed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyFeed.storyboard; sourceTree = "<group>"; };
 		DDC2AF422196ACC0008D100A /* MyFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFeedViewController.swift; sourceTree = "<group>"; };
 		DDC2AF442197AA3E008D100A /* AssignmentModuleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentModuleViewController.swift; sourceTree = "<group>"; };
 		DDC2AF462197AD3E008D100A /* ClubModuleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubModuleViewController.swift; sourceTree = "<group>"; };
@@ -196,7 +197,6 @@
 		DDE2ED242121584E003C7E40 /* BCSSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BCSSUITests.swift; sourceTree = "<group>"; };
 		DDE2ED262121584E003C7E40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DDE2ED3221256462003C7E40 /* StudentHubTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentHubTableViewController.swift; sourceTree = "<group>"; };
-		DDEA109022C418F80075093B /* onboardScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = onboardScreen.storyboard; sourceTree = "<group>"; };
 		DDEA109322C5EB7D0075093B /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		DDF34110215B0D35007DA56A /* MyClubsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyClubsTableViewController.swift; sourceTree = "<group>"; };
 		DDF341D6216ACCE9007DA56A /* Organization+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Organization+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -345,9 +345,9 @@
 				DDA244632133C7E1003D63CD /* ProfileTableViewController.swift */,
 				DDE2ED052121584C003C7E40 /* Main.storyboard */,
 				DDE2ED3221256462003C7E40 /* StudentHubTableViewController.swift */,
-				DDC2AF4021969EEB008D100A /* MyFeed.storyboard */,
 				DD62BE84217C08EC00D730CA /* Calendar.storyboard */,
-				DDEA109022C418F80075093B /* onboardScreen.storyboard */,
+				DD66FCA122D7B83D00BBC45B /* MyFeed.storyboard */,
+				DD66FCA322D7BC8900BBC45B /* onboardScreen.storyboard */,
 			);
 			path = "User Interface";
 			sourceTree = "<group>";
@@ -633,10 +633,10 @@
 			files = (
 				DD62BE85217C08EC00D730CA /* Calendar.storyboard in Resources */,
 				DDA9AA9321B663230044E256 /* Main.storyboard in Resources */,
+				DD66FCA222D7B83D00BBC45B /* MyFeed.storyboard in Resources */,
 				DDE2ED0F2121584E003C7E40 /* LaunchScreen.storyboard in Resources */,
+				DD66FCA422D7BC8900BBC45B /* onboardScreen.storyboard in Resources */,
 				DDE2ED0C2121584E003C7E40 /* Assets.xcassets in Resources */,
-				DDEA109122C418F80075093B /* onboardScreen.storyboard in Resources */,
-				DDC2AF4121969EEB008D100A /* MyFeed.storyboard in Resources */,
 				DDD430B9221F410100E91424 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
