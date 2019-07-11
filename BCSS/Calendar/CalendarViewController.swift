@@ -17,7 +17,7 @@ class CalendarViewController: UIViewController {
 
     let formatter = DateFormatter()
 
-    @IBOutlet weak var calendarView: JTAppleCalendarView!
+    @IBOutlet weak var calendarView: JTACMonthView!
     @IBOutlet weak var monthLabel: UILabel!
     @IBOutlet weak var eventsTable: UITableView!
     @IBOutlet weak var selectedDateLabel: UILabel!
@@ -153,7 +153,7 @@ class CalendarViewController: UIViewController {
         
     }
     
-    func setupTextColor(cell: JTAppleCell?, cellState: CellState) {
+    func setupTextColor(cell: JTACDayCell?, cellState: CellState) {
         guard let calendarCell = cell as? CalendarCell else { return }
         
         if cellState.isSelected {
@@ -170,7 +170,7 @@ class CalendarViewController: UIViewController {
         
     }
     
-    func setupSelection(cell: JTAppleCell?, cellState: CellState) {
+    func setupSelection(cell: JTACDayCell?, cellState: CellState) {
         guard let calendarCell = cell as? CalendarCell else { return }
         if cellState.isSelected {
             
@@ -191,10 +191,10 @@ class CalendarViewController: UIViewController {
 
 }
 
-extension CalendarViewController: JTAppleCalendarViewDelegate {
+extension CalendarViewController: JTACMonthViewDelegate {
     
     //Setting up calendar
-    func configureCalendar(_ calendar: JTAppleCalendarView) -> ConfigurationParameters {
+    func configureCalendar(_ calendar: JTACMonthView) -> ConfigurationParameters {
         
         //Setup Dates
         formatter.dateFormat = "MM/dd/yyyy"
@@ -244,23 +244,23 @@ extension CalendarViewController: JTAppleCalendarViewDelegate {
     
 }
 
-extension CalendarViewController: JTAppleCalendarViewDataSource {
+extension CalendarViewController: JTACMonthViewDataSource {
     
-    func calendar(_ calendar: JTAppleCalendarView, willDisplay cell: JTAppleCell, forItemAt date: Date, cellState: CellState, indexPath: IndexPath) {
+    func calendar(_ calendar: JTACMonthView, willDisplay cell: JTACDayCell, forItemAt date: Date, cellState: CellState, indexPath: IndexPath) {
         let calendarCell =  cell as! CalendarCell
         sharedConfiguration(myCustomCell: calendarCell, cellState: cellState, date: date)
     
     }
     
     
-    func calendar(_ calendar: JTAppleCalendarView, cellForItemAt date: Date, cellState: CellState, indexPath: IndexPath) -> JTAppleCell {
+    func calendar(_ calendar: JTACMonthView, cellForItemAt date: Date, cellState: CellState, indexPath: IndexPath) -> JTACDayCell {
         let calendarCell = calendar.dequeueReusableJTAppleCell(withReuseIdentifier: "CalendarCell", for: indexPath) as! CalendarCell
         sharedConfiguration(myCustomCell: calendarCell, cellState: cellState, date: date)
         
         return calendarCell
     }
     
-    func calendar(_ calendar: JTAppleCalendarView, didSelectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
+    func calendar(_ calendar: JTACMonthView, didSelectDate date: Date, cell: JTACDayCell?, cellState: CellState) {
         guard let calendarCell = cell as? CalendarCell else { return }
         calendarCell.selectedView.isHidden = false
         setupTextColor(cell: calendarCell, cellState: cellState)
@@ -275,7 +275,7 @@ extension CalendarViewController: JTAppleCalendarViewDataSource {
         
     }
     
-    func calendar(_ calendar: JTAppleCalendarView, didDeselectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
+    func calendar(_ calendar: JTACMonthView, didDeselectDate date: Date, cell: JTACDayCell?, cellState: CellState) {
         guard let calendarCell = cell as? CalendarCell else { return }
         calendarCell.selectedView.isHidden = true
         setupTextColor(cell: calendarCell, cellState: cellState)
@@ -283,7 +283,7 @@ extension CalendarViewController: JTAppleCalendarViewDataSource {
         
     }
     
-    func calendar(_ calendar: JTAppleCalendarView, didScrollToDateSegmentWith visibleDates: DateSegmentInfo) {
+    func calendar(_ calendar: JTACMonthView, didScrollToDateSegmentWith visibleDates: DateSegmentInfo) {
         setupLabels(from: visibleDates)
     }
     
