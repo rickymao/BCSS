@@ -260,7 +260,9 @@ extension CalendarViewController: JTACMonthViewDataSource {
         return calendarCell
     }
     
-    func calendar(_ calendar: JTACMonthView, didSelectDate date: Date, cell: JTACDayCell?, cellState: CellState) {
+    func calendar(_ calendar: JTACMonthView, didSelectDate date: Date, cell: JTACDayCell?, cellState: CellState, indexPath: IndexPath) {
+        
+        
         guard let calendarCell = cell as? CalendarCell else { return }
         calendarCell.selectedView.isHidden = false
         setupTextColor(cell: calendarCell, cellState: cellState)
@@ -275,14 +277,15 @@ extension CalendarViewController: JTACMonthViewDataSource {
         
     }
     
-    func calendar(_ calendar: JTACMonthView, didDeselectDate date: Date, cell: JTACDayCell?, cellState: CellState) {
+    func calendar(_ calendar: JTACMonthView, didDeselectDate date: Date, cell: JTACDayCell?, cellState: CellState, indexPath: IndexPath) {
+        
         guard let calendarCell = cell as? CalendarCell else { return }
         calendarCell.selectedView.isHidden = true
         setupTextColor(cell: calendarCell, cellState: cellState)
         
         
     }
-    
+
     func calendar(_ calendar: JTACMonthView, didScrollToDateSegmentWith visibleDates: DateSegmentInfo) {
         setupLabels(from: visibleDates)
     }

@@ -1,7 +1,64 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="82M-4O-L1S">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Onboarding View Controller-->
+        <scene sceneID="RgF-Kq-0KY">
+            <objects>
+                <viewController storyboardIdentifier="OnboardingViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="82M-4O-L1S" customClass="OnboardingViewController" customModule="BCSS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sLe-lG-XnE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wildcat" translatesAutoresizingMaskIntoConstraints="NO" id="uHj-Uf-VSz">
+                                <rect key="frame" x="87" y="370" width="240" height="166"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="166" id="2Pi-Lg-YNq"/>
+                                    <constraint firstAttribute="width" constant="240" id="iPJ-9H-e2h"/>
+                                </constraints>
+                            </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="gZc-fE-Rdg">
+                                <rect key="frame" x="189" y="687" width="37" height="37"/>
+                                <color key="color" red="0.60260367390000003" green="0.27481153609999998" blue="0.27450039980000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="uHj-Uf-VSz" firstAttribute="centerX" secondItem="zN8-01-RVu" secondAttribute="centerX" id="QoG-gS-CB0"/>
+                            <constraint firstItem="zN8-01-RVu" firstAttribute="trailing" secondItem="gZc-fE-Rdg" secondAttribute="trailing" constant="188" id="UTB-xO-62f"/>
+                            <constraint firstItem="gZc-fE-Rdg" firstAttribute="leading" secondItem="zN8-01-RVu" secondAttribute="leading" constant="189" id="lf4-sX-CAc"/>
+                            <constraint firstItem="uHj-Uf-VSz" firstAttribute="centerY" secondItem="zN8-01-RVu" secondAttribute="centerY" id="uD2-3H-L0M"/>
+                            <constraint firstItem="zN8-01-RVu" firstAttribute="bottom" secondItem="gZc-fE-Rdg" secondAttribute="bottom" constant="138" id="xNG-Y9-dBu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="zN8-01-RVu"/>
+                    </view>
+                    <connections>
+                        <outlet property="loadingIcon" destination="gZc-fE-Rdg" id="5i8-RJ-bhE"/>
+                        <segue destination="C98-KI-dey" kind="show" identifier="gotoFeed" id="ltL-PX-LIV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lUs-mx-iEf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="304" y="7"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="1Qg-IO-YNf">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="C98-KI-dey" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FYW-jz-9Kd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1085" y="73"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="wildcat" width="742" height="741"/>
+    </resources>
 </document>

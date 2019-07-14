@@ -1184,7 +1184,7 @@
         <scene sceneID="aAs-IG-aUJ">
             <objects>
                 <viewControllerPlaceholder storyboardName="MyFeed" id="lk8-o5-J1T" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="My Feed" image="My Profile" id="lVE-Jp-FkK"/>
+                    <tabBarItem key="tabBarItem" title="My Feed" image="My Feed" id="lVE-Jp-FkK"/>
                     <navigationItem key="navigationItem" id="G0P-BB-mJi"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P3z-iT-Dlf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2417,6 +2417,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="My Feed" width="25" height="25"/>
         <image name="My Profile" width="25" height="25"/>
         <image name="Student Hub" width="25" height="25"/>
         <image name="icons8-clock" width="30" height="30"/>

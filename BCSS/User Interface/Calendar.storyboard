@@ -132,7 +132,7 @@
                                     <constraint firstItem="hnC-Ui-lSW" firstAttribute="width" secondItem="iTD-pg-W2P" secondAttribute="width" id="zup-em-O0n"/>
                                 </constraints>
                             </stackView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="f7t-CX-hQ0" customClass="JTAppleCalendarView" customModule="JTAppleCalendar">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="f7t-CX-hQ0" customClass="JTACMonthView" customModule="JTAppleCalendar">
                                 <rect key="frame" x="0.0" y="119.99999999999997" width="375" height="307.33333333333326"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bdh-JU-vwr">
@@ -202,8 +202,8 @@
                                 <connections>
                                     <outlet property="dataSource" destination="uWW-Ny-wAA" id="dju-99-ezn"/>
                                     <outlet property="delegate" destination="uWW-Ny-wAA" id="4rM-bu-k65"/>
-                                    <outlet property="ibCalendarDataSource" destination="uWW-Ny-wAA" id="LCi-iT-kJK"/>
-                                    <outlet property="ibCalendarDelegate" destination="uWW-Ny-wAA" id="ET6-Ct-c5J"/>
+                                    <outlet property="ibCalendarDataSource" destination="uWW-Ny-wAA" id="Ktt-6t-oy6"/>
+                                    <outlet property="ibCalendarDelegate" destination="uWW-Ny-wAA" id="fhc-SH-Xux"/>
                                 </connections>
                             </collectionView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="SF2-6A-vPh">
