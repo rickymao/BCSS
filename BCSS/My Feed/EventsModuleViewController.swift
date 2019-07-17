@@ -26,7 +26,7 @@ class EventsModuleViewController: UIViewController {
         
         
         
-        //round corners
+        //Round corners
         self.view.layer.cornerRadius = 10
         self.view.clipsToBounds = true
 
