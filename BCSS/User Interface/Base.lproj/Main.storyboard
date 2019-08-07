@@ -1171,7 +1171,7 @@
                         <color key="selectedImageTintColor" red="0.61176470589999998" green="0.13725490200000001" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="lk8-o5-J1T" kind="relationship" relationship="viewControllers" id="n5n-E3-uh3"/>
+                        <segue destination="n70-gz-SFs" kind="relationship" relationship="viewControllers" id="TOb-Nm-8pq"/>
                         <segue destination="dFQ-RT-BuX" kind="relationship" relationship="viewControllers" id="M47-fh-D0o"/>
                         <segue destination="sQI-qO-hqL" kind="relationship" relationship="viewControllers" id="2oG-En-ibk"/>
                     </connections>
@@ -1179,6 +1179,27 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A2B-99-pOs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-750" y="-157"/>
+        </scene>
+        <!--My Feed-->
+        <scene sceneID="Wzv-3r-yAT">
+            <objects>
+                <navigationController id="n70-gz-SFs" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="My Feed" image="My Feed" selectedImage="My Feed" id="i95-BC-vIz"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="M38-f8-nfA">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.60260367390000003" green="0.27481153609999998" blue="0.27450039980000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="lk8-o5-J1T" kind="relationship" relationship="rootViewController" id="nlj-Pn-zau"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rg7-fU-ZIM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1182" y="-4293"/>
         </scene>
         <!--MyFeed-->
         <scene sceneID="aAs-IG-aUJ">
@@ -1189,7 +1210,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P3z-iT-Dlf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1770" y="-4381"/>
+            <point key="canvasLocation" x="320" y="-4293"/>
         </scene>
         <!--Student Hub-->
         <scene sceneID="Ez6-od-sF3">
@@ -1348,7 +1369,7 @@
         <!--Assignments and Tests-->
         <scene sceneID="PLr-yx-lLj">
             <objects>
-                <tableViewController storyboardIdentifier="AssignmentsVC" title="Assignments and Tests" id="1qK-FE-YVe" customClass="AssignmentsTableViewController" customModule="BCSS" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="AssignmentsVC" title="Assignments and Tests" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1qK-FE-YVe" customClass="AssignmentsTableViewController" customModule="BCSS" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="N4h-IF-dCH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1562,7 +1583,7 @@
         <!--My Clubs-->
         <scene sceneID="eeK-xq-UIC">
             <objects>
-                <tableViewController storyboardIdentifier="ClubVC" title="My Clubs" id="oFG-dP-3h2" customClass="MyClubsTableViewController" customModule="BCSS" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="ClubsVC" title="My Clubs" useStoryboardIdentifierAsRestorationIdentifier="YES" id="oFG-dP-3h2" customClass="MyClubsTableViewController" customModule="BCSS" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="RZf-VA-3dG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

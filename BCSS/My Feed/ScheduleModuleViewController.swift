@@ -13,9 +13,9 @@ class ScheduleModuleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if checkCollab() {
+        if checkFlex() {
             
-            blockSegment.insertSegment(withTitle: "Collab", at: 1, animated: true)
+            blockSegment.insertSegment(withTitle: "Flex", at: 1, animated: true)
             
             
         } else {
@@ -53,8 +53,8 @@ class ScheduleModuleViewController: UIViewController {
         
         
         //Checking Collab
-        if checkCollab() {
-            setupCollab()
+        if checkFlex() {
+            setupFlex()
             collabLabel.isHidden = false
         } else {
             setupBlocks()
@@ -72,14 +72,14 @@ class ScheduleModuleViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         
-        if checkCollab() && blockSegment.numberOfSegments != 5 {
+        if checkFlex() && blockSegment.numberOfSegments != 5 {
             
             blockSegment.insertSegment(withTitle: "Collab", at: 1, animated: true)
             
             
         }
             
-            if !(checkCollab()) && blockSegment.numberOfSegments == 5 {
+            if !(checkFlex()) && blockSegment.numberOfSegments == 5 {
                  blockSegment.selectedSegmentIndex = 0
                 blockSegment.removeSegment(at: 1, animated: false)
               
@@ -109,8 +109,8 @@ class ScheduleModuleViewController: UIViewController {
         }
         
         //Checking Collab
-        if checkCollab() {
-            setupCollab()
+        if checkFlex() {
+            setupFlex()
             collabLabel.isHidden = false
         } else {
             setupBlocks()
@@ -134,6 +134,8 @@ class ScheduleModuleViewController: UIViewController {
     let formatter = DateFormatter()
     let persistenceManager = PersistenceManager.shared
     
+    
+    //Add functionality
     func checkSemester() -> Bool {
         
         formatter.dateFormat = "MM/dd/yyyy"
@@ -152,14 +154,14 @@ class ScheduleModuleViewController: UIViewController {
     
     @objc func willEnterForeground() {
         
-        if checkCollab() && blockSegment.numberOfSegments != 5 {
+        if checkFlex() && blockSegment.numberOfSegments != 5 {
             
-            blockSegment.insertSegment(withTitle: "Collab", at: 1, animated: true)
+            blockSegment.insertSegment(withTitle: "Flex", at: 1, animated: true)
             
             
         }
         
-        if !(checkCollab()) && blockSegment.numberOfSegments == 5 {
+        if !(checkFlex()) && blockSegment.numberOfSegments == 5 {
             blockSegment.removeSegment(at: 1, animated: false)
             blockSegment.selectedSegmentIndex = 0
         }
@@ -167,8 +169,8 @@ class ScheduleModuleViewController: UIViewController {
         
  
         //Checking Collab
-        if checkCollab() {
-            setupCollab()
+        if checkFlex() {
+            setupFlex()
             collabLabel.isHidden = false
         } else {
             setupBlocks()
@@ -260,20 +262,20 @@ class ScheduleModuleViewController: UIViewController {
         
     }
     
-    func checkCollab() -> Bool {
+    func checkFlex() -> Bool {
         
         let dateformatter = DateFormatter()
         dateformatter.dateFormat = "yyyy MM dd"
         let today = dateformatter.string(from: Date())
-        var collabs = Event.events
+        var flex = Event.events
         
-        collabs = collabs.filter { (Event) -> Bool in
-            Event.title == "Collaboration Day"
+        flex = flex.filter { (Event) -> Bool in
+            Event.title == "Flex Day"
         }
         
-        for collab in collabs {
+        for flexday in flex {
             
-            if collab.date == today {
+            if flexday.date == today {
                 return true
             }
             
@@ -282,7 +284,7 @@ class ScheduleModuleViewController: UIViewController {
        
     }
     
-    func setupCollab() {
+    func setupFlex() {
         
         blocks = getBlocks()
         
@@ -333,7 +335,7 @@ class ScheduleModuleViewController: UIViewController {
                 }
                 
                 teacherLabel.text = blocks.first!.nameTeacher
-                timeLabel.text = !(checkCollab()) ? "8:40 - 10:00" : "8:40 - 9:45"
+                timeLabel.text = !(checkFlex()) ? "8:40 - 10:00" : "8:40 - 9:45"
             }
             else if checkDayTwo() {
                 if let empty = blocks.first!.nameClass2?.isEmpty {
@@ -352,12 +354,12 @@ class ScheduleModuleViewController: UIViewController {
                     
                 }
                 teacherLabel.text = blocks.first!.nameTeacher2
-                timeLabel.text = !(checkCollab()) ? "8:40 - 10:00" : "8:40 - 9:45"
+                timeLabel.text = !(checkFlex()) ? "8:40 - 10:00" : "8:40 - 9:45"
             }
             else if checkDayZero() {
                 classLabel.text = "No Class"
                 teacherLabel.text = ""
-                timeLabel.text = !(checkCollab()) ? "8:40 - 10:00" : "8:40 - 9:45"
+                timeLabel.text = !(checkFlex()) ? "8:40 - 10:00" : "8:40 - 9:45"
             } else {
                 classLabel.text = "No Class"
                 timeLabel.text = "Enjoy your break!"
@@ -365,7 +367,7 @@ class ScheduleModuleViewController: UIViewController {
             
         case 1:
             
-            classLabel.text = "Collab"
+            classLabel.text = "Flex"
             teacherLabel.text = ""
             timeLabel.text = "10:00 - 10:55"
             
@@ -394,7 +396,7 @@ class ScheduleModuleViewController: UIViewController {
                 }
                 
                 teacherLabel.text = blocks.first!.nameTeacher
-                timeLabel.text = !(checkCollab()) ? "10:15 - 11:35": "11:00 - 12:05"
+                timeLabel.text = !(checkFlex()) ? "10:15 - 11:35": "11:00 - 12:05"
             }
             else if checkDayTwo() {
                 if let empty = blocks.first!.nameClass2?.isEmpty {
@@ -413,12 +415,12 @@ class ScheduleModuleViewController: UIViewController {
                     
                 }
                 teacherLabel.text = blocks.first!.nameTeacher2
-                timeLabel.text = !(checkCollab()) ? "10:15 - 11:35": "11:00 - 12:05"
+                timeLabel.text = !(checkFlex()) ? "10:15 - 11:35": "11:00 - 12:05"
             }
             else if checkDayZero() {
                 classLabel.text = "No Class"
                 teacherLabel.text = ""
-                timeLabel.text = !(checkCollab()) ? "10:15 - 11:35": "11:00 - 12:05"
+                timeLabel.text = !(checkFlex()) ? "10:15 - 11:35": "11:00 - 12:05"
             } else {
                 classLabel.text = "No Class"
                 timeLabel.text = "Enjoy your break!"
@@ -446,7 +448,7 @@ class ScheduleModuleViewController: UIViewController {
                     
                 }
                 teacherLabel.text = blocks.first!.nameTeacher
-                timeLabel.text = !(checkCollab()) ? "12:20 - 1:40" : "12:50 – 1:55"
+                timeLabel.text = !(checkFlex()) ? "12:20 - 1:40" : "12:50 – 1:55"
             }
             else if checkDayTwo() {
                 if let empty = blocks.first!.nameClass2?.isEmpty {
@@ -465,12 +467,12 @@ class ScheduleModuleViewController: UIViewController {
                     
                 }
                 teacherLabel.text = blocks.first!.nameTeacher2
-                timeLabel.text = !(checkCollab()) ? "12:20 - 1:40" : "12:50 – 1:55"
+                timeLabel.text = !(checkFlex()) ? "12:20 - 1:40" : "12:50 – 1:55"
             }
             else if checkDayZero() {
                 classLabel.text = "No Class"
                 teacherLabel.text = ""
-                timeLabel.text = !(checkCollab()) ? "12:20 - 1:40" : "12:50 – 1:55"
+                timeLabel.text = !(checkFlex()) ? "12:20 - 1:40" : "12:50 – 1:55"
             } else {
                 classLabel.text = "No Class"
                 timeLabel.text = "Enjoy your break!"
@@ -501,7 +503,7 @@ class ScheduleModuleViewController: UIViewController {
                 }
                 
                 teacherLabel.text = blocks.first!.nameTeacher
-                timeLabel.text = !(checkCollab()) ? "1:45 - 3:01" : "2:00 - 3:01"
+                timeLabel.text = !(checkFlex()) ? "1:45 - 3:01" : "2:00 - 3:01"
             }
             else if checkDayTwo() {
                 if let empty = blocks.first!.nameClass2?.isEmpty {
@@ -520,12 +522,12 @@ class ScheduleModuleViewController: UIViewController {
                     
                 }
                 teacherLabel.text = blocks.first!.nameTeacher2
-                timeLabel.text = !(checkCollab()) ? "1:45 - 3:01" : "2:00 - 3:01"
+                timeLabel.text = !(checkFlex()) ? "1:45 - 3:01" : "2:00 - 3:01"
             }
             else if checkDayZero() {
                 classLabel.text = "No Class"
                 teacherLabel.text = ""
-                timeLabel.text = !(checkCollab()) ? "1:45 - 3:01" : "2:00 - 3:01"
+                timeLabel.text = !(checkFlex()) ? "1:45 - 3:01" : "2:00 - 3:01"
             } else {
                 classLabel.text = "No Class"
                 timeLabel.text = "Enjoy your break!"
@@ -594,7 +596,7 @@ class ScheduleModuleViewController: UIViewController {
                     }
              
                 teacherLabel.text = blocks.first!.nameTeacher
-                timeLabel.text = !(checkCollab()) ? "8:40 - 10:00" : "8:40 - 9:45"
+                timeLabel.text = !(checkFlex()) ? "8:40 - 10:00" : "8:40 - 9:45"
             }
             else if checkDayTwo() {
                 if let empty = blocks.first!.nameClass2?.isEmpty {
@@ -613,12 +615,12 @@ class ScheduleModuleViewController: UIViewController {
                     
                 }
                 teacherLabel.text = blocks.first!.nameTeacher2
-                timeLabel.text = !(checkCollab()) ? "8:40 - 10:00" : "8:40 - 9:45"
+                timeLabel.text = !(checkFlex()) ? "8:40 - 10:00" : "8:40 - 9:45"
             }
             else if checkDayZero() {
                 classLabel.text = "No Class"
                 teacherLabel.text = ""
-                timeLabel.text = !(checkCollab()) ? "8:40 - 10:00" : "8:40 - 9:45"
+                timeLabel.text = !(checkFlex()) ? "8:40 - 10:00" : "8:40 - 9:45"
             } else {
                 classLabel.text = "No Class"
                 timeLabel.text = "Enjoy your break!"
@@ -649,7 +651,7 @@ class ScheduleModuleViewController: UIViewController {
                 }
                 
                 teacherLabel.text = blocks.first!.nameTeacher
-                timeLabel.text = !(checkCollab()) ? "10:15 - 11:35": "11:00 - 12:05"
+                timeLabel.text = !(checkFlex()) ? "10:15 - 11:35": "11:00 - 12:05"
             }
             else if checkDayTwo() {
                 if let empty = blocks.first!.nameClass2?.isEmpty {
@@ -668,12 +670,12 @@ class ScheduleModuleViewController: UIViewController {
                     
                 }
                 teacherLabel.text = blocks.first!.nameTeacher2
-                timeLabel.text = !(checkCollab()) ? "10:15 - 11:35": "11:00 - 12:05"
+                timeLabel.text = !(checkFlex()) ? "10:15 - 11:35": "11:00 - 12:05"
             }
             else if checkDayZero() {
                 classLabel.text = "No Class"
                 teacherLabel.text = ""
-                timeLabel.text = !(checkCollab()) ? "10:15 - 11:35": "11:00 - 12:05"
+                timeLabel.text = !(checkFlex()) ? "10:15 - 11:35": "11:00 - 12:05"
             } else {
                 classLabel.text = "No Class"
                 timeLabel.text = "Enjoy your break!"
@@ -701,7 +703,7 @@ class ScheduleModuleViewController: UIViewController {
                     
                 }
                 teacherLabel.text = blocks.first!.nameTeacher
-                timeLabel.text = !(checkCollab()) ? "12:20 - 1:40" : "12:50 – 1:55"
+                timeLabel.text = !(checkFlex()) ? "12:20 - 1:40" : "12:50 – 1:55"
             }
             else if checkDayTwo() {
                 if let empty = blocks.first!.nameClass2?.isEmpty {
@@ -720,12 +722,12 @@ class ScheduleModuleViewController: UIViewController {
                     
                 }
                 teacherLabel.text = blocks.first!.nameTeacher2
-                timeLabel.text = !(checkCollab()) ? "12:20 - 1:40" : "12:50 – 1:55"
+                timeLabel.text = !(checkFlex()) ? "12:20 - 1:40" : "12:50 – 1:55"
             }
             else if checkDayZero() {
                 classLabel.text = "No Class"
                 teacherLabel.text = ""
-                timeLabel.text = !(checkCollab()) ? "12:20 - 1:40" : "12:50 – 1:55"
+                timeLabel.text = !(checkFlex()) ? "12:20 - 1:40" : "12:50 – 1:55"
             } else {
                 classLabel.text = "No Class"
                 timeLabel.text = "Enjoy your break!"
@@ -756,7 +758,7 @@ class ScheduleModuleViewController: UIViewController {
                 }
                 
                 teacherLabel.text = blocks.first!.nameTeacher
-                timeLabel.text = !(checkCollab()) ? "1:45 - 3:01" : "2:00 - 3:01"
+                timeLabel.text = !(checkFlex()) ? "1:45 - 3:01" : "2:00 - 3:01"
             }
             else if checkDayTwo() {
                 if let empty = blocks.first!.nameClass2?.isEmpty {
@@ -775,12 +777,12 @@ class ScheduleModuleViewController: UIViewController {
                     
                 }
                 teacherLabel.text = blocks.first!.nameTeacher2
-                timeLabel.text = !(checkCollab()) ? "1:45 - 3:01" : "2:00 - 3:01"
+                timeLabel.text = !(checkFlex()) ? "1:45 - 3:01" : "2:00 - 3:01"
             }
             else if checkDayZero() {
                 classLabel.text = "No Class"
                 teacherLabel.text = ""
-                timeLabel.text = !(checkCollab()) ? "1:45 - 3:01" : "2:00 - 3:01"
+                timeLabel.text = !(checkFlex()) ? "1:45 - 3:01" : "2:00 - 3:01"
             } else {
                 classLabel.text = "No Class"
                 timeLabel.text = "Enjoy your break!"
@@ -815,20 +817,12 @@ class ScheduleModuleViewController: UIViewController {
     }
     @IBAction func scheduleTapped(_ sender: Any) {
         
-        if checkCollab() {
-            setupCollab()
+        if checkFlex() {
+            setupFlex()
         } else {
             setupBlocks()
         }
         
     }
     
-    @IBAction func segueTapped(_ sender: Any) {
-        
-        performSegue(withIdentifier: "scheduleModuleSegue", sender: nil)
-    }
-    
-    
-
-
 }

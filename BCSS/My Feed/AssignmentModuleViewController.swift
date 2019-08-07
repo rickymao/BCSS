@@ -59,10 +59,13 @@ class AssignmentModuleViewController: UIViewController {
             print(error)
         }
         
+        //Sets empty background
         if assignmentFiltered.count == 0 {
             assignmentTable.backgroundView = background
+            assignmentTable.separatorStyle = .none
         } else {
             assignmentTable.backgroundView = nil
+            assignmentTable.separatorStyle = .singleLine
         }
         
         assignmentTable.reloadData()
@@ -73,12 +76,6 @@ class AssignmentModuleViewController: UIViewController {
     @IBOutlet weak var assignmentTable: UITableView!
     @IBOutlet var background: UIView!
     
-    @IBAction func segueTapped(_ sender: Any) {
-        
-        performSegue(withIdentifier: "assignmentsModuleSegue", sender: nil)
-        
-       
-    }
     
     @objc func willEnterForeground() {
         

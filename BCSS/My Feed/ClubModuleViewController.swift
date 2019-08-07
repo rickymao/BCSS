@@ -46,6 +46,7 @@ class ClubModuleViewController: UIViewController {
         filteredMeetings = sortTimes(meetings: meetings)
         setupTimes()
         
+        //Set empty background
         if filteredMeetings.count == 0 {
             meetingsTable.backgroundView = background
             meetingsTable.separatorStyle = .none
@@ -333,12 +334,7 @@ class ClubModuleViewController: UIViewController {
         
     }
     
-    //implement this
-    @IBAction func segueTapped(_ sender: Any) {
-        
-        performSegue(withIdentifier: "clubModuleSegue", sender: nil)
-    }
-    
+
 
 }
 
