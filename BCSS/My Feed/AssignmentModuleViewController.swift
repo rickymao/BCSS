@@ -134,11 +134,6 @@ class AssignmentModuleViewController: UIViewController {
     }
         
         
-        
-    
-  
-    
-
 
 }
 
@@ -175,6 +170,7 @@ extension AssignmentModuleViewController: UITableViewDataSource, UITableViewDele
     }
 
 extension AssignmentModuleViewController: assignmentModuleDelegate {
+    
     func finishedAssignment(homeworkID: Homework, index: Int, button: UIButton) {
         
         button.isEnabled = false
@@ -218,19 +214,5 @@ extension AssignmentModuleViewController: assignmentModuleDelegate {
     
     
 }
-
-    
-    
-    
-    
-    
-
-
-
-    
-    
-    
-    
-    
 
 }
