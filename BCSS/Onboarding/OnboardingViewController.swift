@@ -33,6 +33,7 @@ class OnboardingViewController: UIViewController {
         setupSports()
         setupSchedule()
         setupTeachers()
+        setupCalendar()
         performSegue(withIdentifier: "gotoFeed", sender: nil)
         
     }
@@ -241,6 +242,7 @@ class OnboardingViewController: UIViewController {
         
         let ref = Database.database().reference()
         
+        
         ref.child("teacherKeyed").observeSingleEvent(of: .value) { (snapshot) in
             
             //Collecting all filtered snapshots
@@ -273,6 +275,58 @@ class OnboardingViewController: UIViewController {
     }
     
     func setupCalendar() {
+        
+        let eventRef = Database.database().reference().child("calendarKeyed")
+        
+        
+        
+        eventRef.observeSingleEvent(of: .value) { (snapshots) in
+            
+            for snapshot in snapshots.children {
+                
+                if let snapshotJSON = snapshot as? DataSnapshot {
+                    
+                    var title: String
+                    var date: String
+                    var location: String
+                    var description: String
+                    var time: String
+                    
+                    title = snapshotJSON.childSnapshot(forPath: "Title").value as! String
+                    
+                    date = snapshotJSON.childSnapshot(forPath: "Date").value as! String
+                    
+                    if snapshotJSON.childSnapshot(forPath: "Location").exists() {
+                        location = snapshotJSON.childSnapshot(forPath: "Location").value as! String
+                    } else {
+                        location = "School"
+                    }
+                    
+                    if snapshotJSON.childSnapshot(forPath: "Description").exists() {
+                        description = snapshotJSON.childSnapshot(forPath: "Description").value as! String
+                    } else {
+                        description = "There is currently no extra information."
+                    }
+                    
+                    if snapshotJSON.childSnapshot(forPath: "Time").exists() {
+                        time = snapshotJSON.childSnapshot(forPath: "Time").value as! String
+                    } else {
+                        time = "N/A"
+                    }
+                    
+                    
+                     Event.events.append(Event(title: title, date: date, location: location, description: description, time: time))
+                    
+                    
+                }
+                
+                
+                
+            }
+            
+        }
+        
+        
         
         
         

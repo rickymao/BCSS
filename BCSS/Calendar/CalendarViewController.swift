@@ -23,11 +23,11 @@ class CalendarViewController: UIViewController {
     @IBOutlet weak var selectedDateLabel: UILabel!
     @IBOutlet var footerView: UIView!
     
+    let eventRef = Database.database().reference().child("calendarKeyed")
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        eventsTable.reloadData()
+        
         setupCalendar()
         eventsTable.tableFooterView = footerView
        
@@ -46,8 +46,9 @@ class CalendarViewController: UIViewController {
         calendarView.selectDates([Date()])
         
         
-        //Retrieve Data
+        //keep synced
         getDatabase()
+        eventRef.keepSynced(true)
     
         
         //setting first month
@@ -56,32 +57,39 @@ class CalendarViewController: UIViewController {
         }
     
 
-        // Do any additional setup after loading the view.
+        eventsTable.reloadData()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        guard let indexDeselect = eventsTable.indexPathForSelectedRow else {return}
+        eventsTable.deselectRow(at: indexDeselect, animated: true)
+        
+        
+    }
+    
+
     
     //Retrieving Data
     func getDatabase() {
         
-        let ref = Database.database().reference()
+        let date = Date()
         
-        
-        ref.child("calendarKeyed").observe(.value) { (snapshots) in
-            
-            
+        eventRef.observeSingleEvent(of: .value) { (snapshots) in
             
             for snapshot in snapshots.children {
                 
                 if let snapshotJSON = snapshot as? DataSnapshot {
                     
-                   var title: String
-                   var date: String
-                   var location: String
-                   var description: String
-                   var time: String
+                    var title: String
+                    var date: String
+                    var location: String
+                    var description: String
+                    var time: String
                     
-                   title = snapshotJSON.childSnapshot(forPath: "Title").value as! String
-                  
-                   date = snapshotJSON.childSnapshot(forPath: "Date").value as! String
+                    title = snapshotJSON.childSnapshot(forPath: "Title").value as! String
+                    
+                    date = snapshotJSON.childSnapshot(forPath: "Date").value as! String
                     
                     if snapshotJSON.childSnapshot(forPath: "Location").exists() {
                         location = snapshotJSON.childSnapshot(forPath: "Location").value as! String
@@ -100,15 +108,21 @@ class CalendarViewController: UIViewController {
                     } else {
                         time = "N/A"
                     }
-
+                    
                     
                     self.events.append(Event(title: title, date: date, location: location, description: description, time: time))
                     
+                    self.eventsTable.reloadData()
                     
                 }
                 
                 
+                
             }
+            
+            self.filtered = self.events.filter({ (Event) -> Bool in
+                return Event.date == self.formatter.string(from: date)
+            })
             self.eventsTable.reloadData()
         }
         
@@ -132,10 +146,7 @@ class CalendarViewController: UIViewController {
         }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        guard let indexDeselect = eventsTable.indexPathForSelectedRow else {return}
-        eventsTable.deselectRow(at: indexDeselect, animated: true)
-    }
+
     
     //UI Setup
     func setupCalendar() {
@@ -262,13 +273,11 @@ extension CalendarViewController: JTACMonthViewDataSource {
     
     func calendar(_ calendar: JTACMonthView, didSelectDate date: Date, cell: JTACDayCell?, cellState: CellState, indexPath: IndexPath) {
         
-        
         guard let calendarCell = cell as? CalendarCell else { return }
         calendarCell.selectedView.isHidden = false
         setupTextColor(cell: calendarCell, cellState: cellState)
         
         formatter.dateFormat = "yyyy MM dd"
-        
         filtered = events.filter({ (Event) -> Bool in
             return Event.date == formatter.string(from: date)
         })
@@ -293,8 +302,6 @@ extension CalendarViewController: JTACMonthViewDataSource {
 }
 
 extension CalendarViewController: UITableViewDelegate, UITableViewDataSource {
-    
-    
 
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if scrollView.contentOffset.y < 0 {

@@ -226,7 +226,7 @@
                                             <constraint firstAttribute="bottom" secondItem="W7q-8e-NPy" secondAttribute="bottom" constant="5.5" id="nx7-vH-9aA"/>
                                         </constraints>
                                     </view>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="djf-Da-2Tr">
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="djf-Da-2Tr">
                                         <rect key="frame" x="0.0" y="32" width="375" height="279"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
@@ -306,7 +306,7 @@
         <!--Event Table View Controller-->
         <scene sceneID="w1L-NP-mpa">
             <objects>
-                <tableViewController id="Nbd-DE-mYl" customClass="EventTableViewController" customModule="BCSS" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="EventTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Nbd-DE-mYl" customClass="EventTableViewController" customModule="BCSS" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="V11-1h-pFt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

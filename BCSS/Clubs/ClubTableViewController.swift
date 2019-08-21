@@ -26,8 +26,7 @@ class ClubTableViewController: UITableViewController {
 
         //Retrieve data
         getDatabase()
-        
-        
+
         //Sync data
         refClub.keepSynced(true)
 
@@ -133,11 +132,6 @@ class ClubTableViewController: UITableViewController {
         
     }
     
-    func update() {
-        
-
-        
-    }
 
     // MARK: - Table view data source
 

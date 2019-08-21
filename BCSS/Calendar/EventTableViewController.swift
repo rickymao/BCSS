@@ -23,6 +23,11 @@ class EventTableViewController: UITableViewController {
         eventDesc?.text = eventDescString
         
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+
+    }
 
     @IBOutlet weak var eventName: UILabel?
     @IBOutlet weak var eventDate: UILabel?
