@@ -71,17 +71,13 @@ class InfoClubTableViewController: UITableViewController, MFMailComposeViewContr
         
         
         }
-        
-           
-            
     
-    
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    //Outlets
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var clubOwner: UILabel!
     @IBOutlet weak var sponsorTeacher: UILabel!
@@ -90,6 +86,7 @@ class InfoClubTableViewController: UITableViewController, MFMailComposeViewContr
     @IBOutlet weak var desc: UITextView!
     @IBOutlet weak var joinButton: UIButton!
     
+    //Variables
     var nameTable: String = ""
     var ownerTable: String = ""
     var teacherTable: String = ""
@@ -99,6 +96,7 @@ class InfoClubTableViewController: UITableViewController, MFMailComposeViewContr
     var emailTable: [String]?
     
 
+    //Sent email
     @IBAction func contactTapped(_ sender: Any) {
         
         //Email
@@ -147,7 +145,7 @@ class InfoClubTableViewController: UITableViewController, MFMailComposeViewContr
 
         
     
-    
+    //Join club on tap
     @IBAction func joinTapped(_ sender: Any) {
         
         

@@ -448,19 +448,19 @@
                                     <action selector="segmentTapped:" destination="Q1M-e8-Gk9" eventType="valueChanged" id="OJV-uI-dEz"/>
                                 </connections>
                             </segmentedControl>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="G0K-pU-Nak">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" delaysContentTouches="NO" canCancelContentTouches="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="G0K-pU-Nak">
                                 <rect key="frame" x="0.0" y="66" width="361" height="114"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="meetingCells" textLabel="u80-Sj-oq1" style="IBUITableViewCellStyleDefault" id="Hh8-Ld-GOb">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="meetingCells" textLabel="u80-Sj-oq1" style="IBUITableViewCellStyleDefault" id="Hh8-Ld-GOb">
                                         <rect key="frame" x="0.0" y="28" width="361" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Hh8-Ld-GOb" id="ke4-Ie-ZAP">
-                                            <rect key="frame" x="0.0" y="0.0" width="361" height="43.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="328" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="u80-Sj-oq1">
-                                                    <rect key="frame" x="15" y="0.0" width="331" height="43.666666666666664"/>
+                                                    <rect key="frame" x="15" y="0.0" width="311" height="43.666666666666664"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -468,6 +468,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="rdR-9P-7Cq" kind="show" identifier="clubInfoSegue" id="b21-ak-pju"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -531,10 +534,18 @@
             </objects>
             <point key="canvasLocation" x="3779" y="133"/>
         </scene>
+        <!--InfoClubTableViewController-->
+        <scene sceneID="wdk-4H-kdA">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="InfoClubTableViewController" id="rdR-9P-7Cq" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FGW-Xe-qia" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3770" y="172"/>
+        </scene>
         <!--Events Module View Controller-->
         <scene sceneID="7bk-TJ-Xlg">
             <objects>
-                <viewController id="00d-Bb-gYr" customClass="EventsModuleViewController" customModule="BCSS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EventsModuleViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="00d-Bb-gYr" customClass="EventsModuleViewController" customModule="BCSS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QeH-Hu-oOZ">
                         <rect key="frame" x="0.0" y="0.0" width="361" height="180"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -73,7 +73,7 @@ class ClubTableViewController: UITableViewController {
     
     func createDate(hours: Int, minutes: Int, dayOfTheWeek: Int) -> Date {
         
-        //Reminder - The week starts at 1 to 7 (Sunday to Saturday)
+        //Reminder - The week starts at 1 and goes to 7 (Sunday to Saturday)
         let calendar = Calendar(identifier: Calendar.Identifier.gregorian)
         var date = DateComponents()
         date.weekday = dayOfTheWeek
