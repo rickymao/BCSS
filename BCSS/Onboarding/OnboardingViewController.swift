@@ -11,92 +11,215 @@ import CoreData
 import UserNotifications
 import Firebase
 import FirebaseDatabase
+import SystemConfiguration
 
 class OnboardingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
 
         // Do any additional setup after loading the view.
-        loadingIcon.startAnimating()
-
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        loadingIcon.startAnimating()
         
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
         
-        //setup
-        setupNotifications()
-        setupClubs()
-        setupSports()
-        setupSchedule()
-        setupTeachers()
-        setupCalendar()
-        performSegue(withIdentifier: "gotoFeed", sender: nil)
+        //Check wifi
+        if !isReachable() {
+            
+            let internetAlert = UIAlertController(title: "No Connection", message: "WiFi is needed for first-time setup", preferredStyle: UIAlertController.Style.alert)
+            
+            let findNetworkAction = UIAlertAction(title: "Network Settings", style: UIAlertAction.Style.default) { (action) in
+                
+                self.openSettings()
+                
+            }
+            
+            internetAlert.addAction(findNetworkAction)
+            
+            present(internetAlert, animated: true, completion: nil)
+            
+            
+        } else {
+            
+            //Setup
+            setupNotifications()
+            setupClubs()
+            setupSports()
+            setupSchedule()
+            setupTeachers()
+            setupCalendar()
+            
+            unowned let userdefaults = UserDefaults.standard
+            userdefaults.set(true, forKey: "isFirstLaunch")
+            
+            performSegue(withIdentifier: "gotoFeed", sender: nil)
+        }
         
     }
     
+    //Networks
+    let reachability = SCNetworkReachabilityCreateWithName(nil, "https://www.youtube.com")
+    
+    func openSettings() {
+        
+        let shared = UIApplication.shared
+        if let url = URL(string: UIApplication.openSettingsURLString) {
+            
+            shared.open(url, options: [:]) { (success) in
+                
+            }
+        }
+        
+        
+    }
+    func isReachable() -> Bool {
+        
+        var flags = SCNetworkReachabilityFlags()
+        SCNetworkReachabilityGetFlags(self.reachability!, &flags)
+        
+        if (canConnect(with: flags)) {
+            
+            print(flags)
+            if flags.contains(.isWWAN){
+                return true
+            }
+            print("wifi")
+            return true
+        }
+        else if (!canConnect(with: flags)) {
+            
+            print("no connection")
+            print(flags)
+            return false
+        } else {
+            return false
+        }
+        
+    }
+    
+    func canConnect(with flags: SCNetworkReachabilityFlags) -> Bool {
+        
+        let isReachable = flags.contains(.reachable)
+        let needConnection = flags.contains(.connectionRequired)
+        let canConnectAuto = flags.contains(.connectionOnDemand) || flags.contains(.connectionOnTraffic)
+        let canConnectWithoutUser = canConnectAuto && !flags.contains(.interventionRequired)
+        
+        return isReachable && (!needConnection || canConnectWithoutUser)
+        
+        
+    }
 
     
     @IBOutlet weak var loadingIcon: UIActivityIndicatorView!
     
     func setupNotifications() {
         
-        UNUserNotificationCenter.current().requestAuthorization(options: [.sound, .alert, .badge]) { granted, error in }
-        
+        var events: [Event] = []
         let dateFormat = DateFormatter()
-        let events = Event.events
         
-        //Flex Day notification setup
-        for event in events {
-            if event.title == "Flex Day" {
+        Database.database().reference().child("calendarKeyed").observeSingleEvent(of: .value) { (snapshot) in
+            
+            for snapshot in snapshot.children {
                 
-                //Content
-                let notification = UNMutableNotificationContent()
-                notification.title = "Flex Day Tomorrow"
-                notification.body = "Make sure to bring some assignments to work on!"
-                notification.badge = 0
-                notification.sound = UNNotificationSound.default
+                var title: String
+                var date: String
+                var location: String
+                var description: String
+                var time: String
                 
-                //Day before notification
-                let calendar = Calendar.current
-                dateFormat.dateFormat = "yyyy/MM/dd"
                 
-                if let date = dateFormat.date(from: event.date) {
-                    let collab = calendar.date(byAdding: .day, value: -1, to: date)
-                    var dateComponent = calendar.dateComponents([.year,.month,.day,.hour,.minute], from: collab!)
-                    dateComponent.hour = 20
+                if let snapshotJSON = snapshot as? DataSnapshot {
                     
-                    //trigger
-                    let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponent, repeats: false)
+                    title = snapshotJSON.childSnapshot(forPath: "Title").value as! String
                     
-                    //Request notifications
-                    let request = UNNotificationRequest(identifier: UUID().uuidString, content: notification, trigger: trigger)
+                    date = snapshotJSON.childSnapshot(forPath: "Date").value as! String
                     
-                    UNUserNotificationCenter.current().add(request) { (Error) in
-                        
-                        if let error = Error {
-                            print(error)
-                        }
-                        
+                    if snapshotJSON.childSnapshot(forPath: "Location").exists() {
+                        location = snapshotJSON.childSnapshot(forPath: "Location").value as! String
+                    } else {
+                        location = "School"
                     }
                     
+                    if snapshotJSON.childSnapshot(forPath: "Description").exists() {
+                        description = snapshotJSON.childSnapshot(forPath: "Description").value as! String
+                    } else {
+                        description = "There is currently no extra information."
+                    }
+                    
+                    if snapshotJSON.childSnapshot(forPath: "Time").exists() {
+                        time = snapshotJSON.childSnapshot(forPath: "Time").value as! String
+                    } else {
+                        time = "N/A"
+                    }
+                    
+                    events.append(Event(title: title, date: date, location: location, description: description, time: time))
+                    
                 }
-                
+            
                 
             }
             
             
-            
+            //Flex Day notification setup
+            for event in events {
+                
+                if event.title == "Flex Time" {
+                    
+                    //Content
+                    let notification = UNMutableNotificationContent()
+                    notification.title = "Flex Time Tomorrow"
+                    notification.body = "Make sure to bring some assignments to work on!"
+                    notification.badge = 0
+                    notification.sound = UNNotificationSound.default
+                    
+                    //Day before notification
+                    let calendar = Calendar.current
+                    dateFormat.dateFormat = "yyyy/MM/dd"
+                    
+                    if let date = dateFormat.date(from: event.date) {
+                        let collab = calendar.date(byAdding: .day, value: -1, to: date)
+                        var dateComponent = calendar.dateComponents([.year,.month,.day,.hour,.minute], from: collab!)
+                        dateComponent.hour = 20
+                        
+                        //trigger
+                        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponent, repeats: false)
+                        
+                        //Request notifications
+                        let request = UNNotificationRequest(identifier: UUID().uuidString, content: notification, trigger: trigger)
+                        
+                        UNUserNotificationCenter.current().add(request) { (Error) in
+                            print("added")
+                            if let error = Error {
+                                print(error)
+                            }
+                            
+                        }
+                        
+                    }
+                    
+                    
+                }
+                
+                
+                
+            }
         }
         
+        UNUserNotificationCenter.current().requestAuthorization(options: [.sound, .alert, .badge]) { granted, error in }
         
         
         
         
-
+      
+        
         print("First Launch")
         
 

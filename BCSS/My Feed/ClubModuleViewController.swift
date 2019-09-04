@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class ClubModuleViewController: UIViewController {
     
@@ -16,6 +17,7 @@ class ClubModuleViewController: UIViewController {
     var meetings: [Organization] = []
     var filteredMeetings: [Organization] = []
     var currentMeetings: [Organization] = []
+    var val: Bool = false
 
     
 
@@ -48,6 +50,8 @@ class ClubModuleViewController: UIViewController {
         
     }
     
+    
+    
     //Outlets
     @IBOutlet weak var timeSegment: UISegmentedControl!
     @IBOutlet weak var meetingsTable: UITableView!
@@ -57,8 +61,7 @@ class ClubModuleViewController: UIViewController {
     @IBAction func segmentTapped(_ sender: Any) {
         
         //Finds today's meetings and checks if view needs to be set to empty
-        filteredMeetings = sortTimes(meetings: meetings)
-        setupTimes()
+        dataSetup()
         
         if filteredMeetings.count == 0 {
             meetingsTable.backgroundView = background
@@ -82,9 +85,7 @@ class ClubModuleViewController: UIViewController {
     
     func setupTimes() {
         
-        
-         filteredMeetings = sortTimes(meetings: meetings)
-        
+        filteredMeetings = sortTimes(meetings: meetings)
 
         let calendar = Calendar(identifier: Calendar.Identifier.gregorian)
         var components = DateComponents()
@@ -108,13 +109,15 @@ class ClubModuleViewController: UIViewController {
                     
                     
                     let componentTime = getClubMeetingTime(date: date as Date)
+                    
                     let componentDateMeet = reformattedMeetDate(date: date as Date)
-                
+                    
                     //Today's weekday component
                     let component2 = calendar.dateComponents([Calendar.Component.weekday], from: Date())
                 
+                    
                     //Checking for morning meetings on matching weekdays
-                    if componentTime < dateNoon! && calendar.date(componentDateMeet, matchesComponents: component2) && checkSchoolDay() {
+                    if componentTime < dateNoon! && calendar.date(componentDateMeet, matchesComponents: component2) && val {
                         isCurrent = true
                         break dateLoop
                         
@@ -126,6 +129,7 @@ class ClubModuleViewController: UIViewController {
                 return isCurrent
             })
             
+            self.getBackground()
             
             meetingsTable.reloadData()
             
@@ -148,7 +152,7 @@ class ClubModuleViewController: UIViewController {
        
                  
 
-                    if componentTime == dateNoon! && calendar.date(componentDateMeet, matchesComponents: component2) && checkSchoolDay() {
+                    if componentTime == dateNoon! && calendar.date(componentDateMeet, matchesComponents: component2) && val {
                         isCurrent = true
                         break dateLoop
                         
@@ -160,6 +164,7 @@ class ClubModuleViewController: UIViewController {
                 return isCurrent
             })
             
+            self.getBackground()
            
             meetingsTable.reloadData()
             
@@ -185,7 +190,7 @@ class ClubModuleViewController: UIViewController {
                     
                     
                     
-                    if componentTime > dateNoon! && calendar.date(componentDateMeet, matchesComponents: component2) && checkSchoolDay() {
+                    if componentTime > dateNoon! && calendar.date(componentDateMeet, matchesComponents: component2) && val {
                         isCurrent = true
                         break dateLoop
                         
@@ -197,6 +202,7 @@ class ClubModuleViewController: UIViewController {
                 return isCurrent
             })
             
+            self.getBackground()
             
             meetingsTable.reloadData()
             
@@ -293,18 +299,11 @@ class ClubModuleViewController: UIViewController {
             print(error)
         }
         
-        //Finds today
-        filteredMeetings = sortTimes(meetings: meetings)
-        setupTimes()
+        //Setup the data
+        dataSetup()
         
-        //Set empty background
-        if filteredMeetings.count == 0 {
-            meetingsTable.backgroundView = background
-            meetingsTable.separatorStyle = .none
-        } else {
-            meetingsTable.backgroundView = nil
-            meetingsTable.separatorStyle = .singleLine
-        }
+        
+        
         
         
     }
@@ -333,30 +332,121 @@ class ClubModuleViewController: UIViewController {
         }
     }
     
-    func checkSchoolDay() -> Bool {
+    func getBackground() {
         
-        let vc = UIStoryboard(name: "MyFeed", bundle: nil).instantiateViewController(withIdentifier: "EventsModuleViewController") as? EventsModuleViewController
+        //Set empty background
+        if filteredMeetings.count == 0 {
+            meetingsTable.backgroundView = background
+            meetingsTable.separatorStyle = .none
+        } else {
+            meetingsTable.backgroundView = nil
+            meetingsTable.separatorStyle = .singleLine
+        }
+    }
+    
+    func dataSetup() {
         
-        var val: Bool = false
+        var events: [Event] = []
         
-        guard let events = vc?.filteredEvents else {return false}
+        Database.database().reference().child("calendarKeyed").observeSingleEvent(of: .value) { (snapshot) in
 
-        for event in events  {
+            for snapshot in snapshot.children {
+
+                var title: String
+                var date: String
+                var location: String
+                var description: String
+                var time: String
+
+
+                if let snapshotJSON = snapshot as? DataSnapshot {
+
+                    title = snapshotJSON.childSnapshot(forPath: "Title").value as! String
+
+                    date = snapshotJSON.childSnapshot(forPath: "Date").value as! String
+
+                    if snapshotJSON.childSnapshot(forPath: "Location").exists() {
+                        location = snapshotJSON.childSnapshot(forPath: "Location").value as! String
+                    } else {
+                        location = "School"
+                    }
+
+                    if snapshotJSON.childSnapshot(forPath: "Description").exists() {
+                        description = snapshotJSON.childSnapshot(forPath: "Description").value as! String
+                    } else {
+                        description = "There is currently no extra information."
+                    }
+
+                    if snapshotJSON.childSnapshot(forPath: "Time").exists() {
+                        time = snapshotJSON.childSnapshot(forPath: "Time").value as! String
+                    } else {
+                        time = "N/A"
+                    }
+                    
+                    self.formatter.dateFormat = "yyyy MM dd"
+                    let today = self.standardizeDate(dateInput: Date())
+                    if let eventDate = self.formatter.date(from: date) {
+                        
+                        if today == eventDate {
+                            
+                            events.append(Event(title: title, date: date, location: location, description: description, time: time))
+
+                        }
+                        
+                    }
+                    
+                    
+
+
+                }
+            }
             
-            if event.title == "Day 1" || event.title == "Day 2" {
-                val = true
-                break
-            } else {
-                val = false
+            
+            
+            for event in events  {
+                
+                if event.title == "Day 1" || event.title == "Day 2" {
+                    self.val = true
+                    break
+                } else {
+                    self.val = false
+                    
+                }
                 
             }
             
+            //Complete other setup
+            
+            self.setupTimes()
+            
+            
         }
-        return val
+        
+       
+    }
+    
+    //return dates that can be compared for boolean expression
+    func standardizeDate(dateInput: Date) -> Date {
+        
+        
+        let componentDate = Calendar.current.dateComponents([.year, .month, .day], from: dateInput)
+        
+        let actualDate = Calendar.current.date(from: componentDate)
+        
+        if let unwrappedDate = actualDate {
+            return unwrappedDate
+        } else {
+            return Date()
+        }
+        
+        
+        
     }
     
 
 }
+
+
 
 extension ClubModuleViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

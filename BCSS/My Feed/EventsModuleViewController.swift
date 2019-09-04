@@ -113,7 +113,7 @@ class EventsModuleViewController: UIViewController {
                 self.eventsTable.backgroundView = self.background
                 self.eventsTable.separatorStyle = .none
             } else {
-                self.eventsTable.backgroundView = nil
+            self.eventsTable.backgroundView = nil
                 self.eventsTable.separatorStyle = .singleLine
             }
             

@@ -18,6 +18,7 @@ class MyFeedViewController: UIViewController {
         navigationController?.navigationBar.barTintColor = UIColor.init(red:  0.612, green: 0.137, blue: 0.157, alpha: 100)
         
         
+        
         navigationController?.navigationBar.tintColor = UIColor.init(red:  0.612, green: 0.137, blue: 0.157, alpha: 100)
         
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.init(red:  1, green: 1, blue: 1, alpha: 100)]
@@ -30,7 +31,8 @@ class MyFeedViewController: UIViewController {
         self.navigationItem.backBarButtonItem = UIBarButtonItem.init(title: "", style: UIBarButtonItem.Style.plain, target: nil, action: nil)
         
         // Do any additional setup after loading the view.
-        
+        let updateHelper = ClubUpdateController()
+        updateHelper.getUpdates()
     }
   
   
@@ -47,6 +49,11 @@ class MyFeedViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         
         navigationController?.navigationBar.barTintColor = UIColor.init(red:   0.612, green: 0.137, blue: 0.157, alpha: 100)
+        
+        //Club updates
+        let updateHelper = ClubUpdateController()
+        updateHelper.getUpdates()
+
         
         
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.init(red:   1, green: 1, blue: 1, alpha: 100)]

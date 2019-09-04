@@ -211,8 +211,8 @@ extension CalendarViewController: JTACMonthViewDelegate {
         formatter.dateFormat = "MM/dd/yyyy"
         formatter.timeZone = Calendar.current.timeZone
         formatter.locale = Calendar.current.locale
-        let startDate = formatter.date(from: "09/04/2018")
-        let endDate = formatter.date(from: "09/30/2019")
+        let startDate = formatter.date(from: "09/01/2019")
+        let endDate = formatter.date(from: "09/01/2030")
         
         if let start = startDate, let end = endDate {
             let parameter = ConfigurationParameters(startDate: start, endDate: end)

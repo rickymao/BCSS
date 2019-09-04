@@ -50,6 +50,7 @@ class AddAssignmentTableViewController: UITableViewController {
         
     }
     
+    //Outlets
     @IBOutlet weak var dateLabel: UITextField!
     @IBOutlet weak var notesLabel: UITextView!
     @IBOutlet weak var titleLabel: UITextField!

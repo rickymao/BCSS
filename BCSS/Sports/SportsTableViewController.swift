@@ -11,6 +11,8 @@ import FirebaseDatabase
 
 class SportsTableViewController: UITableViewController {
 
+    @IBOutlet var background: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -39,6 +41,8 @@ class SportsTableViewController: UITableViewController {
         //Retrieve data
         sports = []
         getDatabase()
+        
+        
         
     }
 
@@ -77,6 +81,14 @@ class SportsTableViewController: UITableViewController {
                 
                 
             }
+            
+            //Checks for empty content and replaces background
+            if self.sports.isEmpty {
+                self.tableView.backgroundView = self.background
+            } else {
+                self.tableView.backgroundView = nil
+            }
+            
             self.tableView.reloadData()
             
         }

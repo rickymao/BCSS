@@ -13,7 +13,8 @@ import FirebaseDatabase
 class ClubTableViewController: UITableViewController {
     
     
-
+    @IBOutlet var background: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -32,10 +33,16 @@ class ClubTableViewController: UITableViewController {
 
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         //Retrieve Data
         clubs = []
         getDatabase()
+        
+        
     }
     
 
@@ -126,6 +133,14 @@ class ClubTableViewController: UITableViewController {
                 
                 
             }
+            
+            //Checks for empty content and replaces background
+            if self.clubs.isEmpty {
+                self.tableView.backgroundView = self.background
+            } else {
+                self.tableView.backgroundView = nil
+            }
+            
             self.tableView.reloadData()
         }
         

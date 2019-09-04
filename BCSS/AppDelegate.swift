@@ -45,7 +45,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
           
              print("First Launch")
             
-            userdefaults.set(true, forKey: "isFirstLaunch")
+            
  
         }
         
@@ -79,10 +79,60 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //Temporary feature
         UIApplication.shared.applicationIconBadgeNumber = 0
+        
+        unowned let userdefaults = UserDefaults.standard
+         let storyboardOnboard = UIStoryboard(name: "onboardScreen", bundle: nil)
+        
+        if userdefaults.value(forKey: "isFirstLaunch") == nil {
+            
+            if let vc = storyboardOnboard.instantiateViewController(withIdentifier: "OnboardingViewController") as? OnboardingViewController  {
+                
+                if !vc.isReachable() {
+                    
+                    let internetAlert = UIAlertController(title: "No Connection", message: "WiFi is needed for first-time setup", preferredStyle: UIAlertController.Style.alert)
+                    
+                    let findNetworkAction = UIAlertAction(title: "Network Settings", style: UIAlertAction.Style.default) { (action) in
+                        
+                        vc.openSettings()
+                        
+                    }
+                    
+                    internetAlert.addAction(findNetworkAction)
+                    
+                    UIApplication.shared.keyWindow?.rootViewController?.present(internetAlert, animated: true, completion: nil)
+                   
+                    
+                    
+                    
+                } else {
+                    
+                    //Setup
+                    vc.setupNotifications()
+                    vc.setupClubs()
+                    vc.setupSports()
+                    vc.setupSchedule()
+                    vc.setupTeachers()
+                    vc.setupCalendar()
+                    
+                    unowned let userdefaults = UserDefaults.standard
+                    userdefaults.set(true, forKey: "isFirstLaunch")
+                    
+                    vc.performSegue(withIdentifier: "gotoFeed", sender: nil)
+                }
+                
+            }
+            
+     
+        }
+
+        
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        
+
+        
     }
 
     func applicationWillTerminate(_ application: UIApplication) {

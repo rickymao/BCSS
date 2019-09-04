@@ -65,6 +65,8 @@ class MyClubsTableViewController: UITableViewController {
         super.viewWillAppear(true)
         
         //Retrieve data
+        let helper = ClubUpdateController()
+        helper.getUpdates()
         do {
             myClubs = try persistenceManager.context.fetch(Organization.fetchRequest())
             

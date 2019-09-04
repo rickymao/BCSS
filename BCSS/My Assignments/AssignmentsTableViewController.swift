@@ -208,7 +208,7 @@ extension AssignmentsTableViewController: addAssignmentDelegate {
         dateFormat.dateFormat = "MM/dd/yyyy HH:mm"
       
         if let date = dateFormat.date(from: dueDate) {
-            print(dateFormat.string(from: date))
+
             setupNotification(name: title, dateOfNotification: date, id: homework.uuid)
             
        

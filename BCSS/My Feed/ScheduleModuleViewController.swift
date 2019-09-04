@@ -159,8 +159,8 @@ class ScheduleModuleViewController: UIViewController {
             
 
             //Semester for user
-                let today = Date()
-                
+                let today = self.standardizeDate(dateInput: Date())
+
                 //Semester 1
                 if today >= semesterOneStart && today <= semesterOneEnd {
                     
@@ -1099,9 +1099,7 @@ class ScheduleModuleViewController: UIViewController {
     
     //Add segment for flex day
    func updateFlex() {
-    
-    print(checkFlex())
-    print(blockSegment.numberOfSegments)
+
 
         //Setup segments
         if checkFlex() && blockSegment.numberOfSegments < 5 {
