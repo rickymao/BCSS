@@ -405,7 +405,7 @@ class ClubModuleViewController: UIViewController {
             
             for event in events  {
                 
-                if event.title == "Day 1" || event.title == "Day 2" {
+                if event.title == "DAY 1" || event.title == "DAY 2" {
                     self.val = true
                     break
                 } else {
