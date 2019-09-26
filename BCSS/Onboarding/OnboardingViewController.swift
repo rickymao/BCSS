@@ -171,7 +171,7 @@ class OnboardingViewController: UIViewController {
             //Flex Day notification setup
             for event in events {
                 
-                if event.title == "FlEX TIME" {
+                if event.title == "Flex Time" {
                     
                     //Content
                     let notification = UNMutableNotificationContent()

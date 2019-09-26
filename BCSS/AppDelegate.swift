@@ -102,8 +102,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     UIApplication.shared.keyWindow?.rootViewController?.present(internetAlert, animated: true, completion: nil)
                    
                     
-                    
-                    
                 } else {
                     
                     //Setup
@@ -117,7 +115,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     unowned let userdefaults = UserDefaults.standard
                     userdefaults.set(true, forKey: "isFirstLaunch")
                     
-                    vc.performSegue(withIdentifier: "gotoFeed", sender: nil)
+                self.window?.rootViewController!.performSegue(withIdentifier: "gotoFeed", sender: nil)
+
                 }
                 
             }

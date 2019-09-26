@@ -15,6 +15,21 @@ class MenuViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
         super.viewDidLoad()
         
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.init(red: 0.612, green: 0.137, blue: 0.157, alpha: 100)]
+        
+//        let wifiChecker = Network();
+//
+//        if !wifiChecker.checkWiFi() {
+//
+//            let internetAlert = UIAlertController(title: "No Connection", message: "Please connect to WiFi to update the menu", preferredStyle: UIAlertController.Style.alert)
+//
+//            let findNetworkAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default)
+//
+//            internetAlert.addAction(findNetworkAction)
+//
+//            present(internetAlert, animated: true, completion: nil)
+//
+//
+//        }
 
         // Do any additional setup after loading the view.
         let url = URL.init(string: "https://drive.google.com/file/d/1IRaX06h6-rAC8CpVU2W2WnILxAAg-Qh7/view")
@@ -31,7 +46,6 @@ class MenuViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
     
     override func viewWillDisappear(_ animated: Bool) {
         
-        pdfLoad.stopLoading()
     }
     
     deinit {

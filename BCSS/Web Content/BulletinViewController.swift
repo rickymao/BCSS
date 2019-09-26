@@ -19,6 +19,21 @@ class BulletinViewController: UIViewController, WKUIDelegate, WKNavigationDelega
         let url = URL.init(string: "https://drive.google.com/file/d/1TjV_YIf7Ee3f1wruCAbPqjHpIebMoYZb/view")
         let bulletinRequest = URLRequest.init(url: url!)
         
+        let wifiChecker = Network();
+        
+        if !wifiChecker.checkWiFi() {
+            
+            let internetAlert = UIAlertController(title: "No Connection", message: "Please connect to WiFi to update the bulletin", preferredStyle: UIAlertController.Style.alert)
+            
+            let findNetworkAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default)
+            
+            internetAlert.addAction(findNetworkAction)
+            
+            present(internetAlert, animated: true, completion: nil)
+            
+            
+        }
+        
         
         bulletinLoad.navigationDelegate = self
         bulletinLoad.load(bulletinRequest)
@@ -46,4 +61,6 @@ class BulletinViewController: UIViewController, WKUIDelegate, WKNavigationDelega
         loadingIcon.stopAnimating()
         loadingIcon.isHidden = true
     }
+    
+    
 }

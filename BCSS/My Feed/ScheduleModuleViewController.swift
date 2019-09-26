@@ -127,25 +127,25 @@ class ScheduleModuleViewController: UIViewController {
                 self.formatter.dateFormat = "yyyy MM dd"
                 
                 //Semester 1
-                if event.title == "1st Day of School" {
+                if event.title == "1st Day Of School" {
 
                     if let formattedDate = self.formatter.date(from: event.date) {
                        semesterOneStart = self.standardizeDate(dateInput: formattedDate)
                         
                     }
 
-                } else if event.title == "Term 2 ENDS" {
+                } else if event.title == "Term 2 Ends" {
                     
                     if let formattedDate = self.formatter.date(from: event.date) {
                         semesterOneEnd = self.standardizeDate(dateInput: formattedDate)
                     }
                     
-                } else if event.title == "Term 3 STARTS" {
+                } else if event.title == "Term 3 Starts" {
                     
                     if let formattedDate = self.formatter.date(from: event.date) {
                         semesterTwoStart = self.standardizeDate(dateInput: formattedDate)
                     }
-                } else if event.title == "Term 4 ENDS" {
+                } else if event.title == "Term 4 Ends" {
                     
                     if let formattedDate = self.formatter.date(from: event.date) {
                         semesterTwoEnd = self.standardizeDate(dateInput: formattedDate)
@@ -249,7 +249,7 @@ class ScheduleModuleViewController: UIViewController {
         var days = events
         
         days = days.filter({ (Event) -> Bool in
-            Event.title == "DAY 1"
+            Event.title == "Day 1"
         })
         
         for day in days {
@@ -272,7 +272,7 @@ class ScheduleModuleViewController: UIViewController {
         var days = events
         
         days = days.filter({ (Event) -> Bool in
-            Event.title == "DAY 0"
+            Event.title == "Day 0"
         })
         
         for day in days {
@@ -295,7 +295,7 @@ class ScheduleModuleViewController: UIViewController {
         var days = events
         
         days = days.filter({ (Event) -> Bool in
-            Event.title == "DAY 2"
+            Event.title == "Day 2"
         })
         
         for day in days {
@@ -318,7 +318,7 @@ class ScheduleModuleViewController: UIViewController {
         var flex = events
         
         flex = flex.filter { (Event) -> Bool in
-            Event.title == "FlEX TIME"
+            Event.title == "Flex Time"
         }
         
         for flexday in flex {

@@ -83,6 +83,7 @@
 		DDE2ED1A2121584E003C7E40 /* BCSSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE2ED192121584E003C7E40 /* BCSSTests.swift */; };
 		DDE2ED252121584E003C7E40 /* BCSSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE2ED242121584E003C7E40 /* BCSSUITests.swift */; };
 		DDE2ED3321256462003C7E40 /* StudentHubTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE2ED3221256462003C7E40 /* StudentHubTableViewController.swift */; };
+		DDE9C3602335B1DF00FDD83A /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE9C35F2335B1DF00FDD83A /* NetworkController.swift */; };
 		DDEA109422C5EB7D0075093B /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEA109322C5EB7D0075093B /* OnboardingViewController.swift */; };
 		DDEA5B1B231234CF000501C4 /* ClubUpdateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEA5B1A231234CF000501C4 /* ClubUpdateController.swift */; };
 		DDF34111215B0D35007DA56A /* MyClubsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF34110215B0D35007DA56A /* MyClubsTableViewController.swift */; };
@@ -198,6 +199,7 @@
 		DDE2ED242121584E003C7E40 /* BCSSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BCSSUITests.swift; sourceTree = "<group>"; };
 		DDE2ED262121584E003C7E40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DDE2ED3221256462003C7E40 /* StudentHubTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentHubTableViewController.swift; sourceTree = "<group>"; };
+		DDE9C35F2335B1DF00FDD83A /* NetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
 		DDEA109322C5EB7D0075093B /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		DDEA5B1A231234CF000501C4 /* ClubUpdateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubUpdateController.swift; sourceTree = "<group>"; };
 		DDF34110215B0D35007DA56A /* MyClubsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyClubsTableViewController.swift; sourceTree = "<group>"; };
@@ -498,6 +500,7 @@
 			isa = PBXGroup;
 			children = (
 				DDEA5B1A231234CF000501C4 /* ClubUpdateController.swift */,
+				DDE9C35F2335B1DF00FDD83A /* NetworkController.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -761,6 +764,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDE9C3602335B1DF00FDD83A /* NetworkController.swift in Sources */,
 				DDA244602131EF30003D63CD /* BulletinViewController.swift in Sources */,
 				DDF341E3216ACE3B007DA56A /* PersistenceManager.swift in Sources */,
 				DDA24452212D2F8A003D63CD /* Teacher.swift in Sources */,
@@ -1002,6 +1006,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.3;
 				DEVELOPMENT_TEAM = GFMAPRX493;
 				INFOPLIST_FILE = BCSS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -1009,6 +1014,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = Treeline.BCSS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1024,6 +1030,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.3;
 				DEVELOPMENT_TEAM = GFMAPRX493;
 				INFOPLIST_FILE = BCSS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -1031,6 +1038,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = Treeline.BCSS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
