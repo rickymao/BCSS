@@ -58,7 +58,7 @@ class OnboardingViewController: UIViewController {
             setupCalendar()
             
             unowned let userdefaults = UserDefaults.standard
-            userdefaults.set(true, forKey: "isFirstLaunch")
+            userdefaults.set(true, forKey: "FirstLaunch")
             
             performSegue(withIdentifier: "gotoFeed", sender: nil)
         }

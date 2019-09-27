@@ -34,7 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let notificationDelegate = NotificationDelegate()
         
         
-        if userdefaults.value(forKey: "isFirstLaunch") != nil {
+        if userdefaults.value(forKey: "FirstLaunch") != nil {
             
             vc = storyboardMain.instantiateInitialViewController()!
             print("Not First Launch")

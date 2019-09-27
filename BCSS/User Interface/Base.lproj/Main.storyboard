@@ -563,13 +563,13 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="There are currently no sport teams More will soon be added!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sh9-aQ-8ia">
-                            <rect key="frame" x="54.666666666666657" y="365" width="266" height="82"/>
+                            <rect key="frame" x="42" y="365" width="291" height="82"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="82" id="Svm-WZ-RUV"/>
-                                <constraint firstAttribute="width" constant="266" id="vDy-sE-RCO"/>
+                                <constraint firstAttribute="width" constant="291" id="vDy-sE-RCO"/>
                             </constraints>
-                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
-                            <color key="textColor" red="0.43529412150000002" green="0.4431372583" blue="0.47450980539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
@@ -993,20 +993,20 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="There are currently no clubs More will be added soon!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gzI-JM-caC">
-                            <rect key="frame" x="66" y="365" width="243" height="82"/>
+                            <rect key="frame" x="51" y="365" width="272" height="82"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="82" id="WEu-Vo-1dU"/>
-                                <constraint firstAttribute="width" constant="243" id="h6T-C3-Q7J"/>
+                                <constraint firstAttribute="width" constant="272" id="h6T-C3-Q7J"/>
                             </constraints>
-                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
-                            <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
                     <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     <constraints>
                         <constraint firstItem="gzI-JM-caC" firstAttribute="centerY" secondItem="8c3-1q-jN6" secondAttribute="centerY" id="Vk1-8S-NGJ"/>
-                        <constraint firstItem="gzI-JM-caC" firstAttribute="centerX" secondItem="8c3-1q-jN6" secondAttribute="centerX" id="mBf-Wl-1yE"/>
+                        <constraint firstItem="gzI-JM-caC" firstAttribute="centerX" secondItem="8c3-1q-jN6" secondAttribute="centerX" constant="-0.5" id="mBf-Wl-1yE"/>
                     </constraints>
                     <viewLayoutGuide key="safeArea" id="HtA-O4-GfN"/>
                 </view>
