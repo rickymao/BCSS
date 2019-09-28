@@ -562,7 +562,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="There are currently no sport teams More will soon be added!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sh9-aQ-8ia">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stay tuned, more sports teams will be added soon! " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sh9-aQ-8ia">
                             <rect key="frame" x="42" y="365" width="291" height="82"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="82" id="Svm-WZ-RUV"/>
@@ -992,7 +992,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="There are currently no clubs More will be added soon!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gzI-JM-caC">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stay tuned, more clubs will be added soon!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gzI-JM-caC">
                             <rect key="frame" x="51" y="365" width="272" height="82"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="82" id="WEu-Vo-1dU"/>
@@ -1947,7 +1947,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="YZN-yA-4ut">
-                                                    <rect key="frame" x="63" y="30.666666666666671" width="123" height="36"/>
+                                                    <rect key="frame" x="63" y="28.666666666666671" width="123" height="38"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Class" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EGI-x3-B6Z">
                                                             <rect key="frame" x="0.0" y="0.0" width="123" height="21"/>
@@ -1960,9 +1960,9 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hyi-vf-ZSe">
-                                                            <rect key="frame" x="0.0" y="22.999999999999996" width="123" height="13.000000000000004"/>
+                                                            <rect key="frame" x="0.0" y="22.999999999999996" width="123" height="15.000000000000004"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="13" id="aX9-70-U35"/>
+                                                                <constraint firstAttribute="height" constant="15" id="aX9-70-U35"/>
                                                                 <constraint firstAttribute="width" relation="lessThanOrEqual" constant="123" id="qTf-Tk-fOE"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
@@ -1972,7 +1972,7 @@
                                                     </subviews>
                                                 </stackView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="ww3-e2-tfz">
-                                                    <rect key="frame" x="195" y="30" width="123" height="35"/>
+                                                    <rect key="frame" x="195" y="30" width="123" height="37"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Class" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xg1-FR-Lvg">
                                                             <rect key="frame" x="0.0" y="0.0" width="123" height="21"/>
@@ -1985,9 +1985,9 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gQD-cY-mDy">
-                                                            <rect key="frame" x="0.0" y="22" width="123" height="13"/>
+                                                            <rect key="frame" x="0.0" y="22" width="123" height="15"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="13" id="EnS-D5-Lbv"/>
+                                                                <constraint firstAttribute="height" constant="15" id="EnS-D5-Lbv"/>
                                                                 <constraint firstAttribute="width" constant="123" id="dfp-rQ-NVP"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>

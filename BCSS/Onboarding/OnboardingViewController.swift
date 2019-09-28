@@ -242,6 +242,8 @@ class OnboardingViewController: UIViewController {
         
         unowned let persistenceManager = PersistenceManager.shared
         
+        
+                
         //Setup schedule
         let blockXsem1 = Blocks(context: persistenceManager.context)
         blockXsem1.blockX = true

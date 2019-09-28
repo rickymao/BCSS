@@ -34,6 +34,145 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let notificationDelegate = NotificationDelegate()
         
         
+        
+        //Remove duplicate blocks bug
+            
+            let persistenceManager = PersistenceManager.shared
+        
+        
+        
+
+            do {
+
+                let context = try persistenceManager.context.fetch(Blocks.fetchRequest()) as! [Blocks]
+
+
+                           var blocks: [Blocks] = context
+                           blocks = context.filter { (b) -> Bool in
+                            b.block == Int16(1) && b.semester == Int16(1)
+                           }
+
+
+
+                if blocks.count > 1 {
+
+                    persistenceManager.context.delete(blocks.last!)
+
+                }
+
+
+
+                           blocks = context.filter { (b) -> Bool in
+                               b.block == Int16(2) && b.semester == Int16(1)
+                           }
+
+                if blocks.count > 1 {
+
+                    persistenceManager.context.delete(blocks.last!)
+
+                }
+
+
+                           blocks = context.filter { (b) -> Bool in
+                               b.block == Int16(3) && b.semester == Int16(1)
+                           }
+
+                if blocks.count > 1 {
+
+                    persistenceManager.context.delete(blocks.last!)
+
+                }
+
+
+                           blocks = context.filter { (b) -> Bool in
+                               b.block == Int16(4) && b.semester == Int16(1)
+                           }
+
+                if blocks.count > 1 {
+
+                    persistenceManager.context.delete(blocks.last!)
+
+                }
+
+
+                           blocks = context.filter { (b) -> Bool in
+                               b.blockX == true && b.semester == Int16(1)
+                           }
+
+                if blocks.count > 1 {
+
+                    persistenceManager.context.delete(blocks.last!)
+
+                }
+
+                blocks = context.filter { (b) -> Bool in
+                              b.block == Int16(1) && b.semester == Int16(2)
+                             }
+
+
+
+                  if blocks.count > 1 {
+
+                      persistenceManager.context.delete(blocks.last!)
+
+                  }
+
+
+
+                             blocks = context.filter { (b) -> Bool in
+                                 b.block == Int16(2) && b.semester == Int16(2)
+                             }
+
+                  if blocks.count > 1 {
+
+                      persistenceManager.context.delete(blocks.last!)
+
+                  }
+
+
+                             blocks = context.filter { (b) -> Bool in
+                                 b.block == Int16(3) && b.semester == Int16(2)
+                             }
+
+                  if blocks.count > 1 {
+
+                      persistenceManager.context.delete(blocks.last!)
+
+                  }
+
+
+                             blocks = context.filter { (b) -> Bool in
+                                 b.block == Int16(4) && b.semester == Int16(2)
+                             }
+
+                  if blocks.count > 1 {
+
+                      persistenceManager.context.delete(blocks.last!)
+
+                  }
+
+
+                             blocks = context.filter { (b) -> Bool in
+                                 b.blockX == true && b.semester == Int16(2)
+                             }
+
+                  if blocks.count > 1 {
+
+                      persistenceManager.context.delete(blocks.last!)
+
+                  }
+
+
+
+                           persistenceManager.save()
+
+                       } catch {
+                           print(error)
+                       }
+
+
+        
+        
         if userdefaults.value(forKey: "FirstLaunch") != nil {
             
             vc = storyboardMain.instantiateInitialViewController()!
