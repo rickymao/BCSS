@@ -33,9 +33,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         unowned let userdefaults = UserDefaults.standard
         let notificationDelegate = NotificationDelegate()
         
+        if userdefaults.value(forKey: "FirstLaunch") != nil {
+                   
+                   vc = storyboardMain.instantiateInitialViewController()!
+                   print("Not First Launch")
+                   
+               } else {
+                   
+                   vc = storyboardOnboard.instantiateViewController(withIdentifier: "OnboardingViewController")
+                 
+                    print("First Launch")
+                   
+                   
+        
+               }
         
         
         //Remove duplicate blocks bug
+        
+        
             
             let persistenceManager = PersistenceManager.shared
         
@@ -173,20 +189,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         
         
-        if userdefaults.value(forKey: "FirstLaunch") != nil {
-            
-            vc = storyboardMain.instantiateInitialViewController()!
-            print("Not First Launch")
-            
-        } else {
-            
-            vc = storyboardOnboard.instantiateViewController(withIdentifier: "OnboardingViewController")
-          
-             print("First Launch")
-            
-            
- 
-        }
+       
         
         self.window?.rootViewController = vc
         self.window?.makeKeyAndVisible()
