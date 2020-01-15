@@ -3,7 +3,7 @@
 //  BCSSTests
 //
 //  Created by Ricky Mao on 2018-08-12.
-//  Copyright © 2018 Treeline. All rights reserved.
+//  Copyright © 2018 Ricky Mao. All rights reserved.
 //
 
 import XCTest

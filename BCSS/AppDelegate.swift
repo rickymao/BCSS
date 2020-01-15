@@ -3,7 +3,7 @@
 //  BCSS
 //
 //  Created by Ricky Mao on 2018-08-12.
-//  Copyright © 2018 Treeline. All rights reserved.
+//  Copyright © 2018 Ricky Mao. All rights reserved.
 //
 
 import UIKit
@@ -15,31 +15,34 @@ import Firebase
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    let persistenceManager = PersistenceManager.shared
     
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
         // Override point for customization after application launch.
         
+        //Setting configurations
         FirebaseApp.configure()
-        
+        Database.database().isPersistenceEnabled = true
         self.window = UIWindow(frame: UIScreen.main.bounds)
         let storyboardMain = UIStoryboard(name: "Main", bundle: nil)
         let storyboardOnboard = UIStoryboard(name: "onboardScreen", bundle: nil)
         var vc: UIViewController
         
-        
-        Database.database().isPersistenceEnabled = true
-   
         unowned let userdefaults = UserDefaults.standard
         let notificationDelegate = NotificationDelegate()
         
+        //Checking if it is first launch. If so it will start onboarding
         if userdefaults.value(forKey: "FirstLaunch") != nil {
                    
+                   //Goes to user's feed
                    vc = storyboardMain.instantiateInitialViewController()!
                    print("Not First Launch")
                    
                } else {
                    
+                   //Starts onboarding
                    vc = storyboardOnboard.instantiateViewController(withIdentifier: "OnboardingViewController")
                  
                     print("First Launch")
@@ -48,155 +51,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
                }
         
+    
+      
         
-        //Remove duplicate blocks bug
-        
-        
-            
-            let persistenceManager = PersistenceManager.shared
-        
-        
-        
-
-            do {
-
-                let context = try persistenceManager.context.fetch(Blocks.fetchRequest()) as! [Blocks]
-
-
-                           var blocks: [Blocks] = context
-                           blocks = context.filter { (b) -> Bool in
-                            b.block == Int16(1) && b.semester == Int16(1)
-                           }
-
-
-
-                if blocks.count > 1 {
-
-                    persistenceManager.context.delete(blocks.last!)
-
-                }
-
-
-
-                           blocks = context.filter { (b) -> Bool in
-                               b.block == Int16(2) && b.semester == Int16(1)
-                           }
-
-                if blocks.count > 1 {
-
-                    persistenceManager.context.delete(blocks.last!)
-
-                }
-
-
-                           blocks = context.filter { (b) -> Bool in
-                               b.block == Int16(3) && b.semester == Int16(1)
-                           }
-
-                if blocks.count > 1 {
-
-                    persistenceManager.context.delete(blocks.last!)
-
-                }
-
-
-                           blocks = context.filter { (b) -> Bool in
-                               b.block == Int16(4) && b.semester == Int16(1)
-                           }
-
-                if blocks.count > 1 {
-
-                    persistenceManager.context.delete(blocks.last!)
-
-                }
-
-
-                           blocks = context.filter { (b) -> Bool in
-                               b.blockX == true && b.semester == Int16(1)
-                           }
-
-                if blocks.count > 1 {
-
-                    persistenceManager.context.delete(blocks.last!)
-
-                }
-
-                blocks = context.filter { (b) -> Bool in
-                              b.block == Int16(1) && b.semester == Int16(2)
-                             }
-
-
-
-                  if blocks.count > 1 {
-
-                      persistenceManager.context.delete(blocks.last!)
-
-                  }
-
-
-
-                             blocks = context.filter { (b) -> Bool in
-                                 b.block == Int16(2) && b.semester == Int16(2)
-                             }
-
-                  if blocks.count > 1 {
-
-                      persistenceManager.context.delete(blocks.last!)
-
-                  }
-
-
-                             blocks = context.filter { (b) -> Bool in
-                                 b.block == Int16(3) && b.semester == Int16(2)
-                             }
-
-                  if blocks.count > 1 {
-
-                      persistenceManager.context.delete(blocks.last!)
-
-                  }
-
-
-                             blocks = context.filter { (b) -> Bool in
-                                 b.block == Int16(4) && b.semester == Int16(2)
-                             }
-
-                  if blocks.count > 1 {
-
-                      persistenceManager.context.delete(blocks.last!)
-
-                  }
-
-
-                             blocks = context.filter { (b) -> Bool in
-                                 b.blockX == true && b.semester == Int16(2)
-                             }
-
-                  if blocks.count > 1 {
-
-                      persistenceManager.context.delete(blocks.last!)
-
-                  }
-
-
-
-                           persistenceManager.save()
-
-                       } catch {
-                           print(error)
-                       }
-
-
-        
-        
-       
-        
+        //Set up the initial view depending on launch
         self.window?.rootViewController = vc
         self.window?.makeKeyAndVisible()
         
         
         
-        //Temporary feature
+        //Omitting notification badges and setting up notifications
         UIApplication.shared.applicationIconBadgeNumber = 0
         
         UNUserNotificationCenter.current().removeAllDeliveredNotifications()
@@ -219,7 +83,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillEnterForeground(_ application: UIApplication) {
         // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
         
-        //Temporary feature
+        //Continues onboarding after user has turned on wifi
         UIApplication.shared.applicationIconBadgeNumber = 0
         
         unowned let userdefaults = UserDefaults.standard
@@ -229,7 +93,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             if let vc = storyboardOnboard.instantiateViewController(withIdentifier: "OnboardingViewController") as? OnboardingViewController  {
                 
-                if !vc.isReachable() {
+                //Checking network status
+                let networkController = NetworkController()
+                
+                if !networkController.checkWiFi() {
                     
                     let internetAlert = UIAlertController(title: "No Connection", message: "WiFi is needed for first-time setup", preferredStyle: UIAlertController.Style.alert)
                     
@@ -241,22 +108,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     
                     internetAlert.addAction(findNetworkAction)
                     
-                    UIApplication.shared.keyWindow?.rootViewController?.present(internetAlert, animated: true, completion: nil)
+                    //Shows network error
+                  UIApplication.shared.keyWindow?.rootViewController?.present(internetAlert, animated: true, completion: nil)
                    
                     
                 } else {
                     
                     //Setup
-                    vc.setupNotifications()
-                    vc.setupClubs()
-                    vc.setupSports()
-                    vc.setupSchedule()
-                    vc.setupTeachers()
-                    vc.setupCalendar()
+                    vc.setup()
                     
+                    //Turns off onboarding for future launches
                     unowned let userdefaults = UserDefaults.standard
                     userdefaults.set(true, forKey: "isFirstLaunch")
                     
+                    //Segues to user's feed after onboarding
                 self.window?.rootViewController!.performSegue(withIdentifier: "gotoFeed", sender: nil)
 
                 }

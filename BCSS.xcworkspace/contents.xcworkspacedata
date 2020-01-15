@@ -2,12 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:BCSS/Schedule+CoreDataClass.swift">
-   </FileRef>
-   <FileRef
-      location = "group:/Users/rickm/Desktop/BCSS/BCSS/Saved Data/Schedule+CoreDataProperties.swift">
-   </FileRef>
-   <FileRef
       location = "group:BCSS.xcodeproj">
    </FileRef>
    <FileRef

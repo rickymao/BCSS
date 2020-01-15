@@ -1,69 +1,69 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14490.99" systemVersion="18D42" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="18G87" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Assignment" representedClassName=".Assignment" syncable="YES">
+        <attribute name="completed" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="course" optional="YES" attributeType="String"/>
+        <attribute name="dueDate" optional="YES" attributeType="String"/>
+        <attribute name="notes" optional="YES" attributeType="String"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <attribute name="uuid" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+    </entity>
     <entity name="Blocks" representedClassName="Blocks" syncable="YES">
-        <attribute name="block" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="blockX" optional="YES" attributeType="Boolean" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="nameClass" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="nameClass2" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="nameTeacher" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="nameTeacher2" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="roomNumber" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="roomNumber2" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="semester" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="block" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="blockX" optional="YES" attributeType="Boolean" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="nameClass" optional="YES" attributeType="String"/>
+        <attribute name="nameClass2" optional="YES" attributeType="String"/>
+        <attribute name="nameTeacher" optional="YES" attributeType="String"/>
+        <attribute name="nameTeacher2" optional="YES" attributeType="String"/>
+        <attribute name="roomNumber" optional="YES" attributeType="String"/>
+        <attribute name="roomNumber2" optional="YES" attributeType="String"/>
+        <attribute name="semester" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>
     <entity name="CalendarEvents" representedClassName="CalendarEvents" syncable="YES" codeGenerationType="class"/>
+    <entity name="CoreClub" representedClassName=".CoreClub" syncable="YES">
+        <attribute name="descriptionClub" optional="YES" attributeType="String"/>
+        <attribute name="leader" optional="YES" attributeType="String"/>
+        <attribute name="meeting" optional="YES" attributeType="Transformable"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="room" optional="YES" attributeType="String"/>
+        <attribute name="sponsor" optional="YES" attributeType="String"/>
+    </entity>
     <entity name="Entity" representedClassName="Entity" syncable="YES" codeGenerationType="class"/>
-    <entity name="Homework" representedClassName=".Homework" syncable="YES">
-        <attribute name="completed" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="course" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="dueDate" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="notes" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="uuid" optional="YES" attributeType="UUID" usesScalarValueType="NO" syncable="YES"/>
-    </entity>
-    <entity name="Organization" representedClassName=".Organization" syncable="YES">
-        <attribute name="descriptionClub" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="leader" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="meeting" optional="YES" attributeType="Transformable" syncable="YES"/>
-        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="room" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="sponsor" optional="YES" attributeType="String" syncable="YES"/>
-    </entity>
     <entity name="Schedule" representedClassName=".Schedule" syncable="YES">
-        <attribute name="block" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="roomNumber" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="semester" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="teacherName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="block" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="roomNumber" optional="YES" attributeType="String"/>
+        <attribute name="semester" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="teacherName" optional="YES" attributeType="String"/>
     </entity>
     <entity name="Teachers" representedClassName="Teachers" syncable="YES" codeGenerationType="class">
-        <attribute name="department" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="department" optional="YES" attributeType="String"/>
+        <attribute name="email" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
     </entity>
     <entity name="Teams" representedClassName=".Team" syncable="YES">
-        <attribute name="coach" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="grade" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="practiceTime" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
-        <attribute name="season" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="sport" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="teacher" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="coach" optional="YES" attributeType="String"/>
+        <attribute name="grade" optional="YES" attributeType="String"/>
+        <attribute name="practiceTime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="season" optional="YES" attributeType="String"/>
+        <attribute name="sport" optional="YES" attributeType="String"/>
+        <attribute name="teacher" optional="YES" attributeType="String"/>
     </entity>
     <entity name="Work" representedClassName=".Work" syncable="YES">
-        <attribute name="date" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="extra" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="hours" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="date" optional="YES" attributeType="String"/>
+        <attribute name="extra" optional="YES" attributeType="String"/>
+        <attribute name="hours" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
     </entity>
     <elements>
         <element name="Blocks" positionX="18" positionY="126" width="128" height="180"/>
         <element name="CalendarEvents" positionX="36" positionY="171" width="128" height="45"/>
-        <element name="Homework" positionX="27" positionY="126" width="128" height="135"/>
-        <element name="Organization" positionX="0" positionY="45" width="128" height="135"/>
+        <element name="Entity" positionX="27" positionY="153" width="128" height="45"/>
+        <element name="Assignment" positionX="27" positionY="126" width="128" height="133"/>
+        <element name="CoreClub" positionX="0" positionY="45" width="128" height="133"/>
         <element name="Schedule" positionX="18" positionY="108" width="128" height="120"/>
         <element name="Teachers" positionX="45" positionY="180" width="128" height="90"/>
         <element name="Teams" positionX="27" positionY="72" width="128" height="135"/>
         <element name="Work" positionX="36" positionY="144" width="128" height="105"/>
-        <element name="Entity" positionX="27" positionY="153" width="128" height="45"/>
     </elements>
 </model>

@@ -11,25 +11,45 @@
 		B6DE96680B5C53A844C74E02 /* Pods_BCSS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C72054C55781973C1E939C73 /* Pods_BCSS.framework */; };
 		CCFDBFF0F21A2789F16C602F /* Pods_BCSSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 919DF9EEC71C767577F26B23 /* Pods_BCSSUITests.framework */; };
 		DD62BE7C2176444800D730CA /* MyServiceHoursTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD62BE7B2176444800D730CA /* MyServiceHoursTableViewController.swift */; };
-		DD62BE7E217644FC00D730CA /* Volunteer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD62BE7D217644FC00D730CA /* Volunteer.swift */; };
+		DD62BE7E217644FC00D730CA /* WorkHours.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD62BE7D217644FC00D730CA /* WorkHours.swift */; };
 		DD62BE802177A26A00D730CA /* ServiceHoursInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD62BE7F2177A26A00D730CA /* ServiceHoursInfoTableViewController.swift */; };
 		DD62BE822177A27D00D730CA /* AddServiceHoursTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD62BE812177A27D00D730CA /* AddServiceHoursTableViewController.swift */; };
 		DD62BE85217C08EC00D730CA /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD62BE84217C08EC00D730CA /* Calendar.storyboard */; };
 		DD62BE87217C1F7700D730CA /* CalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD62BE86217C1F7700D730CA /* CalendarCell.swift */; };
 		DD62BE89217C274700D730CA /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD62BE88217C274700D730CA /* CalendarViewController.swift */; };
 		DD66FC9B22D7B01F00BBC45B /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD66FC9A22D7B01F00BBC45B /* Event.swift */; };
-		DD66FC9F22D7B79100BBC45B /* Schedule+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD66FC9D22D7B79100BBC45B /* Schedule+CoreDataProperties.swift */; };
-		DD66FCA022D7B79100BBC45B /* Schedule+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD66FC9E22D7B79100BBC45B /* Schedule+CoreDataClass.swift */; };
 		DD66FCA222D7B83D00BBC45B /* MyFeed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD66FCA122D7B83D00BBC45B /* MyFeed.storyboard */; };
 		DD66FCA422D7BC8900BBC45B /* onboardScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD66FCA322D7BC8900BBC45B /* onboardScreen.storyboard */; };
 		DD8B96D3216B112E00B4CBC4 /* MyClubInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8B96D2216B112E00B4CBC4 /* MyClubInfoTableViewController.swift */; };
 		DD8B96D5216BE2E600B4CBC4 /* MyTeamTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8B96D4216BE2E600B4CBC4 /* MyTeamTableViewController.swift */; };
 		DD8B96D7216BE35A00B4CBC4 /* MyTeamInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8B96D6216BE35A00B4CBC4 /* MyTeamInfoTableViewController.swift */; };
+		DD9F5F3B23C6941500140859 /* Work+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9F5F2E23C6941400140859 /* Work+CoreDataProperties.swift */; };
+		DD9F5F3C23C6941500140859 /* Team+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9F5F2F23C6941400140859 /* Team+CoreDataClass.swift */; };
+		DD9F5F3D23C6941500140859 /* Team+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9F5F3023C6941400140859 /* Team+CoreDataProperties.swift */; };
+		DD9F5F3E23C6941500140859 /* Schedule+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9F5F3123C6941500140859 /* Schedule+CoreDataProperties.swift */; };
+		DD9F5F3F23C6941500140859 /* Assignment+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9F5F3223C6941500140859 /* Assignment+CoreDataProperties.swift */; };
+		DD9F5F4023C6941500140859 /* CoreClub+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9F5F3323C6941500140859 /* CoreClub+CoreDataClass.swift */; };
+		DD9F5F4123C6941500140859 /* Blocks+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9F5F3423C6941500140859 /* Blocks+CoreDataClass.swift */; };
+		DD9F5F4223C6941500140859 /* Assignment+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9F5F3523C6941500140859 /* Assignment+CoreDataClass.swift */; };
+		DD9F5F4323C6941500140859 /* Schedule+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9F5F3623C6941500140859 /* Schedule+CoreDataClass.swift */; };
+		DD9F5F4423C6941500140859 /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9F5F3723C6941500140859 /* PersistenceManager.swift */; };
+		DD9F5F4523C6941500140859 /* Blocks+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9F5F3823C6941500140859 /* Blocks+CoreDataProperties.swift */; };
+		DD9F5F4623C6941500140859 /* CoreClub+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9F5F3923C6941500140859 /* CoreClub+CoreDataProperties.swift */; };
+		DD9F5F4723C6941500140859 /* Work+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9F5F3A23C6941500140859 /* Work+CoreDataClass.swift */; };
+		DD9F5F4E23CA5DD100140859 /* EventModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9F5F4D23CA5DD100140859 /* EventModelController.swift */; };
+		DD9F5F5123CA799900140859 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9F5F5023CA799900140859 /* NotificationController.swift */; };
+		DD9F5F5323CA845700140859 /* ScheduleModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9F5F5223CA845700140859 /* ScheduleModelController.swift */; };
+		DD9F5F5523CA859D00140859 /* ClubModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9F5F5423CA859D00140859 /* ClubModelController.swift */; };
+		DD9F5F5723CA88A500140859 /* SportModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9F5F5623CA88A500140859 /* SportModelController.swift */; };
+		DD9F5F5923CA8B4D00140859 /* TeacherModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9F5F5823CA8B4D00140859 /* TeacherModelController.swift */; };
+		DD9F5F5B23CABC2800140859 /* AssignmentModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9F5F5A23CABC2800140859 /* AssignmentModelController.swift */; };
+		DD9F5F5D23CACC5D00140859 /* DateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9F5F5C23CACC5D00140859 /* DateController.swift */; };
+		DD9F5F6023CAFF3F00140859 /* WorkModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9F5F5F23CAFF3F00140859 /* WorkModelController.swift */; };
+		DD9F5F6823CBB18300140859 /* AssignmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9F5F6723CBB18300140859 /* AssignmentTableViewCell.swift */; };
 		DDA00D1821460C1300FD9B6F /* InfoAssignmentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA00D1721460C1300FD9B6F /* InfoAssignmentTableViewController.swift */; };
 		DDA244462128B702003D63CD /* ClubTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA244452128B702003D63CD /* ClubTableViewController.swift */; };
 		DDA244482128BCDE003D63CD /* Clubs.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA244472128BCDE003D63CD /* Clubs.swift */; };
 		DDA2444A212921B2003D63CD /* InfoClubTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA24449212921B2003D63CD /* InfoClubTableViewController.swift */; };
-		DDA2444C212A97E8003D63CD /* Sports.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA2444B212A97E8003D63CD /* Sports.swift */; };
 		DDA2444E212A9959003D63CD /* SportsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA2444D212A9959003D63CD /* SportsTableViewController.swift */; };
 		DDA24450212BD2EA003D63CD /* InfoSportsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA2444F212BD2EA003D63CD /* InfoSportsTableViewController.swift */; };
 		DDA24452212D2F8A003D63CD /* Teacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA24451212D2F8A003D63CD /* Teacher.swift */; };
@@ -39,31 +59,19 @@
 		DDA2445C21307F0E003D63CD /* GradeCourses.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA2445B21307F0E003D63CD /* GradeCourses.swift */; };
 		DDA2445E2131E710003D63CD /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA2445D2131E710003D63CD /* MenuViewController.swift */; };
 		DDA244602131EF30003D63CD /* BulletinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA2445F2131EF30003D63CD /* BulletinViewController.swift */; };
-		DDA244642133C7E1003D63CD /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA244632133C7E1003D63CD /* ProfileTableViewController.swift */; };
-		DDA244662133E912003D63CD /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA244652133E912003D63CD /* ScheduleViewController.swift */; };
 		DDA2446821366637003D63CD /* Classes.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA2446721366637003D63CD /* Classes.swift */; };
-		DDA2446A21367C6E003D63CD /* ClassTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA2446921367C6E003D63CD /* ClassTableViewCell.swift */; };
-		DDA2446C2137BA00003D63CD /* AddClassesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA2446B2137B9FF003D63CD /* AddClassesTableViewController.swift */; };
 		DDA6C3162143A3D900F421A0 /* AddAssignmentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA6C3152143A3D900F421A0 /* AddAssignmentTableViewController.swift */; };
 		DDA9AA9321B663230044E256 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDE2ED052121584C003C7E40 /* Main.storyboard */; };
 		DDA9AA9821B7C7D20044E256 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA9AA9721B7C7D20044E256 /* Notifications.swift */; };
 		DDA9AA9A21BC83D60044E256 /* BlockTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA9AA9921BC83D50044E256 /* BlockTableViewCell.swift */; };
-		DDA9AA9C21BC9F340044E256 /* Schedule2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA9AA9B21BC9F340044E256 /* Schedule2ViewController.swift */; };
 		DDA9AA9E21BC9FA40044E256 /* BlockTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA9AA9D21BC9FA40044E256 /* BlockTableViewController.swift */; };
-		DDA9AAA321BCD3220044E256 /* Blocks+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA9AAA121BCD3220044E256 /* Blocks+CoreDataClass.swift */; };
-		DDA9AAA421BCD3220044E256 /* Blocks+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA9AAA221BCD3220044E256 /* Blocks+CoreDataProperties.swift */; };
 		DDA9AAA621BCFEA00044E256 /* BlockInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA9AAA521BCFE9F0044E256 /* BlockInfoTableViewController.swift */; };
-		DDC0B4C7213F9FB50098C8B3 /* AssignmentsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC0B4C6213F9FB50098C8B3 /* AssignmentsTableViewController.swift */; };
-		DDC0B4CC213FA4C40098C8B3 /* AssignmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC0B4CB213FA4C40098C8B3 /* AssignmentTableViewCell.swift */; };
+		DDC0B4C7213F9FB50098C8B3 /* AssignmentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC0B4C6213F9FB50098C8B3 /* AssignmentTableViewController.swift */; };
 		DDC2AF432196ACC0008D100A /* MyFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC2AF422196ACC0008D100A /* MyFeedViewController.swift */; };
 		DDC2AF452197AA3F008D100A /* AssignmentModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC2AF442197AA3E008D100A /* AssignmentModuleViewController.swift */; };
 		DDC2AF472197AD3E008D100A /* ClubModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC2AF462197AD3E008D100A /* ClubModuleViewController.swift */; };
 		DDC2AF492197AD54008D100A /* ScheduleModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC2AF482197AD54008D100A /* ScheduleModuleViewController.swift */; };
 		DDC2AF4B2197ADE4008D100A /* EventsModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC2AF4A2197ADE4008D100A /* EventsModuleViewController.swift */; };
-		DDC2AF622198C699008D100A /* Homework+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC2AF602198C699008D100A /* Homework+CoreDataClass.swift */; };
-		DDC2AF632198C699008D100A /* Homework+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC2AF612198C699008D100A /* Homework+CoreDataProperties.swift */; };
-		DDC2AF662198D11C008D100A /* Work+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC2AF642198D11B008D100A /* Work+CoreDataProperties.swift */; };
-		DDC2AF672198D11C008D100A /* Work+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC2AF652198D11B008D100A /* Work+CoreDataClass.swift */; };
 		DDC2AF6B21A00EFD008D100A /* AssignmentModuleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC2AF6A21A00EFD008D100A /* AssignmentModuleTableViewCell.swift */; };
 		DDC3DB0822D704C00009B608 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDC3DB0722D704C00009B608 /* MobileCoreServices.framework */; };
 		DDC3DB0A22D704C90009B608 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDC3DB0922D704C90009B608 /* Security.framework */; };
@@ -76,23 +84,28 @@
 		DDD430B9221F410100E91424 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DDD430B8221F410100E91424 /* GoogleService-Info.plist */; };
 		DDD430BA221F410100E91424 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DDD430B8221F410100E91424 /* GoogleService-Info.plist */; };
 		DDD430BB221F410100E91424 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DDD430B8221F410100E91424 /* GoogleService-Info.plist */; };
+		DDD7569C23CBBA8A00750F8D /* StudentHubNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD7569B23CBBA8A00750F8D /* StudentHubNavigationViewController.swift */; };
+		DDDBA1C92360E4C100EE9D01 /* FlexSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDBA1C82360E4C100EE9D01 /* FlexSignUpViewController.swift */; };
 		DDE2ED022121584B003C7E40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE2ED012121584B003C7E40 /* AppDelegate.swift */; };
 		DDE2ED0A2121584C003C7E40 /* BCSS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DDE2ED082121584C003C7E40 /* BCSS.xcdatamodeld */; };
 		DDE2ED0C2121584E003C7E40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDE2ED0B2121584E003C7E40 /* Assets.xcassets */; };
 		DDE2ED0F2121584E003C7E40 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDE2ED0D2121584E003C7E40 /* LaunchScreen.storyboard */; };
 		DDE2ED1A2121584E003C7E40 /* BCSSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE2ED192121584E003C7E40 /* BCSSTests.swift */; };
 		DDE2ED252121584E003C7E40 /* BCSSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE2ED242121584E003C7E40 /* BCSSUITests.swift */; };
-		DDE2ED3321256462003C7E40 /* StudentHubTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE2ED3221256462003C7E40 /* StudentHubTableViewController.swift */; };
 		DDE9C3602335B1DF00FDD83A /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE9C35F2335B1DF00FDD83A /* NetworkController.swift */; };
 		DDEA109422C5EB7D0075093B /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEA109322C5EB7D0075093B /* OnboardingViewController.swift */; };
 		DDEA5B1B231234CF000501C4 /* ClubUpdateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEA5B1A231234CF000501C4 /* ClubUpdateController.swift */; };
 		DDF34111215B0D35007DA56A /* MyClubsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF34110215B0D35007DA56A /* MyClubsTableViewController.swift */; };
-		DDF341DC216ACCE9007DA56A /* Organization+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF341D6216ACCE9007DA56A /* Organization+CoreDataClass.swift */; };
-		DDF341DD216ACCE9007DA56A /* Organization+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF341D7216ACCE9007DA56A /* Organization+CoreDataProperties.swift */; };
-		DDF341DE216ACCE9007DA56A /* Team+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF341D8216ACCE9007DA56A /* Team+CoreDataClass.swift */; };
-		DDF341DF216ACCE9007DA56A /* Team+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF341D9216ACCE9007DA56A /* Team+CoreDataProperties.swift */; };
-		DDF341E3216ACE3B007DA56A /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF341E2216ACE3B007DA56A /* PersistenceManager.swift */; };
 		DDF7262F2211F8B500C8D861 /* EventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF7262E2211F8B500C8D861 /* EventTableViewController.swift */; };
+		DDF8416023CBBF09008F310C /* CentralUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF8415B23CBBF09008F310C /* CentralUIViewController.swift */; };
+		DDF8416123CBBF09008F310C /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF8415C23CBBF09008F310C /* ProfileTableViewController.swift */; };
+		DDF8416223CBBF09008F310C /* StudentHubTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF8415D23CBBF09008F310C /* StudentHubTableViewController.swift */; };
+		DDF8416323CBBF09008F310C /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF8415E23CBBF09008F310C /* SettingsTableViewController.swift */; };
+		DDF8416623CBCE4E008F310C /* Sports.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF8416523CBCE4E008F310C /* Sports.swift */; };
+		DDF8416723CBD257008F310C /* Sports.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF8416523CBCE4E008F310C /* Sports.swift */; };
+		DDF8416823CBD258008F310C /* Sports.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF8416523CBCE4E008F310C /* Sports.swift */; };
+		DDF8416923CBD72D008F310C /* SportModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9F5F5623CA88A500140859 /* SportModelController.swift */; };
+		DDF8416A23CBD72D008F310C /* SportModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9F5F5623CA88A500140859 /* SportModelController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,25 +135,45 @@
 		919DF9EEC71C767577F26B23 /* Pods_BCSSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BCSSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C72054C55781973C1E939C73 /* Pods_BCSS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BCSS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD62BE7B2176444800D730CA /* MyServiceHoursTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyServiceHoursTableViewController.swift; sourceTree = "<group>"; };
-		DD62BE7D217644FC00D730CA /* Volunteer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Volunteer.swift; sourceTree = "<group>"; };
+		DD62BE7D217644FC00D730CA /* WorkHours.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkHours.swift; sourceTree = "<group>"; };
 		DD62BE7F2177A26A00D730CA /* ServiceHoursInfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceHoursInfoTableViewController.swift; sourceTree = "<group>"; };
 		DD62BE812177A27D00D730CA /* AddServiceHoursTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddServiceHoursTableViewController.swift; sourceTree = "<group>"; };
 		DD62BE84217C08EC00D730CA /* Calendar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Calendar.storyboard; sourceTree = "<group>"; };
 		DD62BE86217C1F7700D730CA /* CalendarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCell.swift; sourceTree = "<group>"; };
 		DD62BE88217C274700D730CA /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		DD66FC9A22D7B01F00BBC45B /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
-		DD66FC9D22D7B79100BBC45B /* Schedule+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Schedule+CoreDataProperties.swift"; path = "/Users/rickm/Desktop/BCSS/BCSS/Saved Data/Schedule+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
-		DD66FC9E22D7B79100BBC45B /* Schedule+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Schedule+CoreDataClass.swift"; path = "../Schedule+CoreDataClass.swift"; sourceTree = "<group>"; };
 		DD66FCA122D7B83D00BBC45B /* MyFeed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyFeed.storyboard; sourceTree = "<group>"; };
 		DD66FCA322D7BC8900BBC45B /* onboardScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = onboardScreen.storyboard; sourceTree = "<group>"; };
 		DD8B96D2216B112E00B4CBC4 /* MyClubInfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyClubInfoTableViewController.swift; sourceTree = "<group>"; };
 		DD8B96D4216BE2E600B4CBC4 /* MyTeamTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTeamTableViewController.swift; sourceTree = "<group>"; };
 		DD8B96D6216BE35A00B4CBC4 /* MyTeamInfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTeamInfoTableViewController.swift; sourceTree = "<group>"; };
+		DD9F5F2E23C6941400140859 /* Work+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Work+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		DD9F5F2F23C6941400140859 /* Team+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Team+CoreDataClass.swift"; sourceTree = "<group>"; };
+		DD9F5F3023C6941400140859 /* Team+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Team+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		DD9F5F3123C6941500140859 /* Schedule+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Schedule+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		DD9F5F3223C6941500140859 /* Assignment+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Assignment+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		DD9F5F3323C6941500140859 /* CoreClub+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreClub+CoreDataClass.swift"; sourceTree = "<group>"; };
+		DD9F5F3423C6941500140859 /* Blocks+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Blocks+CoreDataClass.swift"; sourceTree = "<group>"; };
+		DD9F5F3523C6941500140859 /* Assignment+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Assignment+CoreDataClass.swift"; sourceTree = "<group>"; };
+		DD9F5F3623C6941500140859 /* Schedule+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Schedule+CoreDataClass.swift"; sourceTree = "<group>"; };
+		DD9F5F3723C6941500140859 /* PersistenceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
+		DD9F5F3823C6941500140859 /* Blocks+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Blocks+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		DD9F5F3923C6941500140859 /* CoreClub+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreClub+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		DD9F5F3A23C6941500140859 /* Work+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Work+CoreDataClass.swift"; sourceTree = "<group>"; };
+		DD9F5F4D23CA5DD100140859 /* EventModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventModelController.swift; sourceTree = "<group>"; };
+		DD9F5F5023CA799900140859 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		DD9F5F5223CA845700140859 /* ScheduleModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleModelController.swift; sourceTree = "<group>"; };
+		DD9F5F5423CA859D00140859 /* ClubModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubModelController.swift; sourceTree = "<group>"; };
+		DD9F5F5623CA88A500140859 /* SportModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportModelController.swift; sourceTree = "<group>"; };
+		DD9F5F5823CA8B4D00140859 /* TeacherModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherModelController.swift; sourceTree = "<group>"; };
+		DD9F5F5A23CABC2800140859 /* AssignmentModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentModelController.swift; sourceTree = "<group>"; };
+		DD9F5F5C23CACC5D00140859 /* DateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateController.swift; sourceTree = "<group>"; };
+		DD9F5F5F23CAFF3F00140859 /* WorkModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkModelController.swift; sourceTree = "<group>"; };
+		DD9F5F6723CBB18300140859 /* AssignmentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentTableViewCell.swift; sourceTree = "<group>"; };
 		DDA00D1721460C1300FD9B6F /* InfoAssignmentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoAssignmentTableViewController.swift; sourceTree = "<group>"; };
 		DDA244452128B702003D63CD /* ClubTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubTableViewController.swift; sourceTree = "<group>"; };
 		DDA244472128BCDE003D63CD /* Clubs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clubs.swift; sourceTree = "<group>"; };
 		DDA24449212921B2003D63CD /* InfoClubTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoClubTableViewController.swift; sourceTree = "<group>"; };
-		DDA2444B212A97E8003D63CD /* Sports.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sports.swift; sourceTree = "<group>"; };
 		DDA2444D212A9959003D63CD /* SportsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsTableViewController.swift; sourceTree = "<group>"; };
 		DDA2444F212BD2EA003D63CD /* InfoSportsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoSportsTableViewController.swift; sourceTree = "<group>"; };
 		DDA24451212D2F8A003D63CD /* Teacher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Teacher.swift; sourceTree = "<group>"; };
@@ -150,31 +183,19 @@
 		DDA2445B21307F0E003D63CD /* GradeCourses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeCourses.swift; sourceTree = "<group>"; };
 		DDA2445D2131E710003D63CD /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		DDA2445F2131EF30003D63CD /* BulletinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletinViewController.swift; sourceTree = "<group>"; };
-		DDA244632133C7E1003D63CD /* ProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
-		DDA244652133E912003D63CD /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
 		DDA2446721366637003D63CD /* Classes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Classes.swift; sourceTree = "<group>"; };
-		DDA2446921367C6E003D63CD /* ClassTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassTableViewCell.swift; sourceTree = "<group>"; };
-		DDA2446B2137B9FF003D63CD /* AddClassesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddClassesTableViewController.swift; sourceTree = "<group>"; };
 		DDA6C3152143A3D900F421A0 /* AddAssignmentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAssignmentTableViewController.swift; sourceTree = "<group>"; };
 		DDA9AA9521B6632B0044E256 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		DDA9AA9721B7C7D20044E256 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		DDA9AA9921BC83D50044E256 /* BlockTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockTableViewCell.swift; sourceTree = "<group>"; };
-		DDA9AA9B21BC9F340044E256 /* Schedule2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule2ViewController.swift; sourceTree = "<group>"; };
 		DDA9AA9D21BC9FA40044E256 /* BlockTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockTableViewController.swift; sourceTree = "<group>"; };
-		DDA9AAA121BCD3220044E256 /* Blocks+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Blocks+CoreDataClass.swift"; path = "/Users/rickm/Desktop/BCSS/BCSS/Saved Data/Blocks+CoreDataClass.swift"; sourceTree = "<absolute>"; };
-		DDA9AAA221BCD3220044E256 /* Blocks+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Blocks+CoreDataProperties.swift"; path = "/Users/rickm/Desktop/BCSS/BCSS/Saved Data/Blocks+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
 		DDA9AAA521BCFE9F0044E256 /* BlockInfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockInfoTableViewController.swift; sourceTree = "<group>"; };
-		DDC0B4C6213F9FB50098C8B3 /* AssignmentsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentsTableViewController.swift; sourceTree = "<group>"; };
-		DDC0B4CB213FA4C40098C8B3 /* AssignmentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AssignmentTableViewCell.swift; path = "BCSS/My Assignments/AssignmentTableViewCell.swift"; sourceTree = SOURCE_ROOT; };
+		DDC0B4C6213F9FB50098C8B3 /* AssignmentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentTableViewController.swift; sourceTree = "<group>"; };
 		DDC2AF422196ACC0008D100A /* MyFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFeedViewController.swift; sourceTree = "<group>"; };
 		DDC2AF442197AA3E008D100A /* AssignmentModuleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentModuleViewController.swift; sourceTree = "<group>"; };
 		DDC2AF462197AD3E008D100A /* ClubModuleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubModuleViewController.swift; sourceTree = "<group>"; };
 		DDC2AF482197AD54008D100A /* ScheduleModuleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleModuleViewController.swift; sourceTree = "<group>"; };
 		DDC2AF4A2197ADE4008D100A /* EventsModuleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsModuleViewController.swift; sourceTree = "<group>"; };
-		DDC2AF602198C699008D100A /* Homework+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Homework+CoreDataClass.swift"; path = "../Homework+CoreDataClass.swift"; sourceTree = "<group>"; };
-		DDC2AF612198C699008D100A /* Homework+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Homework+CoreDataProperties.swift"; path = "../Homework+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		DDC2AF642198D11B008D100A /* Work+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Work+CoreDataProperties.swift"; path = "/Users/rickm/Desktop/BCSS/BCSS/Saved Data/Work+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
-		DDC2AF652198D11B008D100A /* Work+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Work+CoreDataClass.swift"; path = "/Users/rickm/Desktop/BCSS/BCSS/Saved Data/Work+CoreDataClass.swift"; sourceTree = "<absolute>"; };
 		DDC2AF6A21A00EFD008D100A /* AssignmentModuleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentModuleTableViewCell.swift; sourceTree = "<group>"; };
 		DDC3DB0722D704C00009B608 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		DDC3DB0922D704C90009B608 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -185,6 +206,8 @@
 		DDC3DB1322D704F90009B608 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DDC3DB1522D705030009B608 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		DDD430B8221F410100E91424 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DDD7569B23CBBA8A00750F8D /* StudentHubNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentHubNavigationViewController.swift; sourceTree = "<group>"; };
+		DDDBA1C82360E4C100EE9D01 /* FlexSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexSignUpViewController.swift; sourceTree = "<group>"; };
 		DDE2ECFE2121584B003C7E40 /* BCSS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BCSS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDE2ED012121584B003C7E40 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DDE2ED062121584C003C7E40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -198,17 +221,16 @@
 		DDE2ED202121584E003C7E40 /* BCSSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BCSSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDE2ED242121584E003C7E40 /* BCSSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BCSSUITests.swift; sourceTree = "<group>"; };
 		DDE2ED262121584E003C7E40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DDE2ED3221256462003C7E40 /* StudentHubTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentHubTableViewController.swift; sourceTree = "<group>"; };
 		DDE9C35F2335B1DF00FDD83A /* NetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
 		DDEA109322C5EB7D0075093B /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		DDEA5B1A231234CF000501C4 /* ClubUpdateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubUpdateController.swift; sourceTree = "<group>"; };
 		DDF34110215B0D35007DA56A /* MyClubsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyClubsTableViewController.swift; sourceTree = "<group>"; };
-		DDF341D6216ACCE9007DA56A /* Organization+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Organization+CoreDataClass.swift"; sourceTree = "<group>"; };
-		DDF341D7216ACCE9007DA56A /* Organization+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Organization+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		DDF341D8216ACCE9007DA56A /* Team+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Team+CoreDataClass.swift"; sourceTree = "<group>"; };
-		DDF341D9216ACCE9007DA56A /* Team+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Team+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		DDF341E2216ACE3B007DA56A /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
 		DDF7262E2211F8B500C8D861 /* EventTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewController.swift; sourceTree = "<group>"; };
+		DDF8415B23CBBF09008F310C /* CentralUIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CentralUIViewController.swift; path = "BCSS/ViewControllers/User Interface/CentralUIViewController.swift"; sourceTree = SOURCE_ROOT; };
+		DDF8415C23CBBF09008F310C /* ProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileTableViewController.swift; path = "BCSS/ViewControllers/User Interface/ProfileTableViewController.swift"; sourceTree = SOURCE_ROOT; };
+		DDF8415D23CBBF09008F310C /* StudentHubTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StudentHubTableViewController.swift; path = "BCSS/ViewControllers/User Interface/StudentHubTableViewController.swift"; sourceTree = SOURCE_ROOT; };
+		DDF8415E23CBBF09008F310C /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsTableViewController.swift; path = "BCSS/ViewControllers/User Interface/SettingsTableViewController.swift"; sourceTree = SOURCE_ROOT; };
+		DDF8416523CBCE4E008F310C /* Sports.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sports.swift; sourceTree = "<group>"; };
 		E0DB0BCE113CFC26F91C4003 /* Pods-BCSSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BCSSUITests.release.xcconfig"; path = "Target Support Files/Pods-BCSSUITests/Pods-BCSSUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -283,7 +305,6 @@
 			isa = PBXGroup;
 			children = (
 				DD62BE7B2176444800D730CA /* MyServiceHoursTableViewController.swift */,
-				DD62BE7D217644FC00D730CA /* Volunteer.swift */,
 				DD62BE7F2177A26A00D730CA /* ServiceHoursInfoTableViewController.swift */,
 				DD62BE812177A27D00D730CA /* AddServiceHoursTableViewController.swift */,
 			);
@@ -293,10 +314,8 @@
 		DD62BE83217BF9EB00D730CA /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
-				DD62BE86217C1F7700D730CA /* CalendarCell.swift */,
 				DD62BE88217C274700D730CA /* CalendarViewController.swift */,
 				DDF7262E2211F8B500C8D861 /* EventTableViewController.swift */,
-				DD66FC9A22D7B01F00BBC45B /* Event.swift */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
@@ -310,23 +329,108 @@
 			path = "My Teams";
 			sourceTree = "<group>";
 		};
-		DDA9AA9621B7BBA60044E256 /* Notification */ = {
+		DD9F5EF423C66C4F00140859 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DDA244472128BCDE003D63CD /* Clubs.swift */,
+				DDA2446721366637003D63CD /* Classes.swift */,
+				DDF8416523CBCE4E008F310C /* Sports.swift */,
+				DD62BE7D217644FC00D730CA /* WorkHours.swift */,
+				DD66FC9A22D7B01F00BBC45B /* Event.swift */,
+				DDA2445B21307F0E003D63CD /* GradeCourses.swift */,
 				DDA9AA9721B7C7D20044E256 /* Notifications.swift */,
+				DD9F5F1C23C67E6700140859 /* Saved Data */,
 			);
-			path = Notification;
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DD9F5EF523C66C5700140859 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				DDC0B4BF213E64860098C8B3 /* My Schedule */,
+				DDC0B4C0213E64A70098C8B3 /* Teacher Contact */,
+				DDC0B4C2213E650C0098C8B3 /* Clubs */,
+				DDC0B4C3213E654A0098C8B3 /* Sports */,
+				DDF8415A23CBBEDE008F310C /* UI */,
+				DDC0B4C4213E657A0098C8B3 /* Courses Available */,
+				DDC0B4C5213E65970098C8B3 /* Web Content */,
+				DDC0B4C8213F9FC10098C8B3 /* My Assignments */,
+				DDF3410F215B0C84007DA56A /* My Clubs */,
+				DD8B96CF216AFDD100B4CBC4 /* My Teams */,
+				DD62BE7A217643AB00D730CA /* Service Hours */,
+				DD9F5F5E23CAFDE300140859 /* Onboarding */,
+				DD62BE83217BF9EB00D730CA /* Calendar */,
+				DDC2AF3F21969778008D100A /* My Feed */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		DD9F5EF623C66DB100140859 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				DD62BE84217C08EC00D730CA /* Calendar.storyboard */,
+				DDE2ED052121584C003C7E40 /* Main.storyboard */,
+				DD66FCA122D7B83D00BBC45B /* MyFeed.storyboard */,
+				DD66FCA322D7BC8900BBC45B /* onboardScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		DD9F5F1C23C67E6700140859 /* Saved Data */ = {
+			isa = PBXGroup;
+			children = (
+				DD9F5F3423C6941500140859 /* Blocks+CoreDataClass.swift */,
+				DD9F5F3823C6941500140859 /* Blocks+CoreDataProperties.swift */,
+				DD9F5F3523C6941500140859 /* Assignment+CoreDataClass.swift */,
+				DD9F5F3223C6941500140859 /* Assignment+CoreDataProperties.swift */,
+				DD9F5F3323C6941500140859 /* CoreClub+CoreDataClass.swift */,
+				DD9F5F3923C6941500140859 /* CoreClub+CoreDataProperties.swift */,
+				DD9F5F3723C6941500140859 /* PersistenceManager.swift */,
+				DD9F5F3623C6941500140859 /* Schedule+CoreDataClass.swift */,
+				DD9F5F3123C6941500140859 /* Schedule+CoreDataProperties.swift */,
+				DD9F5F2F23C6941400140859 /* Team+CoreDataClass.swift */,
+				DD9F5F3023C6941400140859 /* Team+CoreDataProperties.swift */,
+				DD9F5F3A23C6941500140859 /* Work+CoreDataClass.swift */,
+				DD9F5F2E23C6941400140859 /* Work+CoreDataProperties.swift */,
+			);
+			path = "Saved Data";
+			sourceTree = "<group>";
+		};
+		DD9F5F4C23CA5D2300140859 /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DD9F5F4D23CA5DD100140859 /* EventModelController.swift */,
+				DD9F5F5223CA845700140859 /* ScheduleModelController.swift */,
+				DD9F5F5423CA859D00140859 /* ClubModelController.swift */,
+				DD9F5F5823CA8B4D00140859 /* TeacherModelController.swift */,
+				DD9F5F5A23CABC2800140859 /* AssignmentModelController.swift */,
+				DD9F5F5623CA88A500140859 /* SportModelController.swift */,
+				DD9F5F5F23CAFF3F00140859 /* WorkModelController.swift */,
+			);
+			path = "Model Controllers";
+			sourceTree = "<group>";
+		};
+		DD9F5F4F23CA5E9C00140859 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DDA9AA9921BC83D50044E256 /* BlockTableViewCell.swift */,
+				DD62BE86217C1F7700D730CA /* CalendarCell.swift */,
+				DDC2AF6A21A00EFD008D100A /* AssignmentModuleTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DD9F5F5E23CAFDE300140859 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				DDEA109322C5EB7D0075093B /* OnboardingViewController.swift */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 		DDC0B4BF213E64860098C8B3 /* My Schedule */ = {
 			isa = PBXGroup;
 			children = (
-				DDA2446921367C6E003D63CD /* ClassTableViewCell.swift */,
-				DDA244652133E912003D63CD /* ScheduleViewController.swift */,
-				DDA2446B2137B9FF003D63CD /* AddClassesTableViewController.swift */,
-				DDA2446721366637003D63CD /* Classes.swift */,
-				DDA9AA9921BC83D50044E256 /* BlockTableViewCell.swift */,
-				DDA9AA9B21BC9F340044E256 /* Schedule2ViewController.swift */,
 				DDA9AA9D21BC9FA40044E256 /* BlockTableViewController.swift */,
 				DDA9AAA521BCFE9F0044E256 /* BlockInfoTableViewController.swift */,
 			);
@@ -343,23 +447,9 @@
 			path = "Teacher Contact";
 			sourceTree = "<group>";
 		};
-		DDC0B4C1213E64DF0098C8B3 /* User Interface */ = {
-			isa = PBXGroup;
-			children = (
-				DDA244632133C7E1003D63CD /* ProfileTableViewController.swift */,
-				DDE2ED052121584C003C7E40 /* Main.storyboard */,
-				DDE2ED3221256462003C7E40 /* StudentHubTableViewController.swift */,
-				DD62BE84217C08EC00D730CA /* Calendar.storyboard */,
-				DD66FCA122D7B83D00BBC45B /* MyFeed.storyboard */,
-				DD66FCA322D7BC8900BBC45B /* onboardScreen.storyboard */,
-			);
-			path = "User Interface";
-			sourceTree = "<group>";
-		};
 		DDC0B4C2213E650C0098C8B3 /* Clubs */ = {
 			isa = PBXGroup;
 			children = (
-				DDA244472128BCDE003D63CD /* Clubs.swift */,
 				DDA244452128B702003D63CD /* ClubTableViewController.swift */,
 				DDA24449212921B2003D63CD /* InfoClubTableViewController.swift */,
 			);
@@ -369,7 +459,6 @@
 		DDC0B4C3213E654A0098C8B3 /* Sports */ = {
 			isa = PBXGroup;
 			children = (
-				DDA2444B212A97E8003D63CD /* Sports.swift */,
 				DDA2444D212A9959003D63CD /* SportsTableViewController.swift */,
 				DDA2444F212BD2EA003D63CD /* InfoSportsTableViewController.swift */,
 			);
@@ -380,7 +469,6 @@
 			isa = PBXGroup;
 			children = (
 				DDA24459212FEB92003D63CD /* CourseTableViewController.swift */,
-				DDA2445B21307F0E003D63CD /* GradeCourses.swift */,
 			);
 			path = "Courses Available";
 			sourceTree = "<group>";
@@ -390,6 +478,7 @@
 			children = (
 				DDA2445D2131E710003D63CD /* MenuViewController.swift */,
 				DDA2445F2131EF30003D63CD /* BulletinViewController.swift */,
+				DDDBA1C82360E4C100EE9D01 /* FlexSignUpViewController.swift */,
 			);
 			path = "Web Content";
 			sourceTree = "<group>";
@@ -397,10 +486,10 @@
 		DDC0B4C8213F9FC10098C8B3 /* My Assignments */ = {
 			isa = PBXGroup;
 			children = (
-				DDC0B4C6213F9FB50098C8B3 /* AssignmentsTableViewController.swift */,
+				DDC0B4C6213F9FB50098C8B3 /* AssignmentTableViewController.swift */,
 				DDA00D1721460C1300FD9B6F /* InfoAssignmentTableViewController.swift */,
 				DDA6C3152143A3D900F421A0 /* AddAssignmentTableViewController.swift */,
-				DDC0B4CB213FA4C40098C8B3 /* AssignmentTableViewCell.swift */,
+				DD9F5F6723CBB18300140859 /* AssignmentTableViewCell.swift */,
 			);
 			path = "My Assignments";
 			sourceTree = "<group>";
@@ -408,7 +497,6 @@
 		DDC2AF3F21969778008D100A /* My Feed */ = {
 			isa = PBXGroup;
 			children = (
-				DDC2AF6A21A00EFD008D100A /* AssignmentModuleTableViewCell.swift */,
 				DDC2AF422196ACC0008D100A /* MyFeedViewController.swift */,
 				DDC2AF442197AA3E008D100A /* AssignmentModuleViewController.swift */,
 				DDC2AF462197AD3E008D100A /* ClubModuleViewController.swift */,
@@ -421,7 +509,6 @@
 		DDE2ECF52121584B003C7E40 = {
 			isa = PBXGroup;
 			children = (
-				DDEA5B1C231612B8000501C4 /* Helper */,
 				DDE2ED002121584B003C7E40 /* BCSS */,
 				DDE2ED182121584E003C7E40 /* BCSSTests */,
 				DDE2ED232121584E003C7E40 /* BCSSUITests */,
@@ -445,22 +532,12 @@
 			isa = PBXGroup;
 			children = (
 				DDE2ED012121584B003C7E40 /* AppDelegate.swift */,
-				DDEA109222C5E53F0075093B /* Onboarding */,
-				DDA9AA9621B7BBA60044E256 /* Notification */,
-				DDC2AF3F21969778008D100A /* My Feed */,
-				DD62BE83217BF9EB00D730CA /* Calendar */,
-				DD62BE7A217643AB00D730CA /* Service Hours */,
-				DD8B96CF216AFDD100B4CBC4 /* My Teams */,
-				DDF34195216A8749007DA56A /* Saved Data */,
-				DDF3410F215B0C84007DA56A /* My Clubs */,
-				DDC0B4C8213F9FC10098C8B3 /* My Assignments */,
-				DDC0B4C5213E65970098C8B3 /* Web Content */,
-				DDC0B4C4213E657A0098C8B3 /* Courses Available */,
-				DDC0B4C3213E654A0098C8B3 /* Sports */,
-				DDC0B4C2213E650C0098C8B3 /* Clubs */,
-				DDC0B4C1213E64DF0098C8B3 /* User Interface */,
-				DDC0B4C0213E64A70098C8B3 /* Teacher Contact */,
-				DDC0B4BF213E64860098C8B3 /* My Schedule */,
+				DD9F5F4F23CA5E9C00140859 /* View */,
+				DD9F5F4C23CA5D2300140859 /* Model Controllers */,
+				DD9F5EF623C66DB100140859 /* Storyboards */,
+				DD9F5EF423C66C4F00140859 /* Model */,
+				DD9F5EF523C66C5700140859 /* ViewControllers */,
+				DDEA5B1C231612B8000501C4 /* Helper */,
 				DDE2ED0B2121584E003C7E40 /* Assets.xcassets */,
 				DDE2ED0D2121584E003C7E40 /* LaunchScreen.storyboard */,
 				DDD430B8221F410100E91424 /* GoogleService-Info.plist */,
@@ -488,19 +565,13 @@
 			path = BCSSUITests;
 			sourceTree = "<group>";
 		};
-		DDEA109222C5E53F0075093B /* Onboarding */ = {
-			isa = PBXGroup;
-			children = (
-				DDEA109322C5EB7D0075093B /* OnboardingViewController.swift */,
-			);
-			path = Onboarding;
-			sourceTree = "<group>";
-		};
 		DDEA5B1C231612B8000501C4 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
 				DDEA5B1A231234CF000501C4 /* ClubUpdateController.swift */,
 				DDE9C35F2335B1DF00FDD83A /* NetworkController.swift */,
+				DD9F5F5023CA799900140859 /* NotificationController.swift */,
+				DD9F5F5C23CACC5D00140859 /* DateController.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -514,24 +585,16 @@
 			path = "My Clubs";
 			sourceTree = "<group>";
 		};
-		DDF34195216A8749007DA56A /* Saved Data */ = {
+		DDF8415A23CBBEDE008F310C /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				DD66FC9E22D7B79100BBC45B /* Schedule+CoreDataClass.swift */,
-				DD66FC9D22D7B79100BBC45B /* Schedule+CoreDataProperties.swift */,
-				DDA9AAA121BCD3220044E256 /* Blocks+CoreDataClass.swift */,
-				DDA9AAA221BCD3220044E256 /* Blocks+CoreDataProperties.swift */,
-				DDC2AF652198D11B008D100A /* Work+CoreDataClass.swift */,
-				DDC2AF642198D11B008D100A /* Work+CoreDataProperties.swift */,
-				DDC2AF602198C699008D100A /* Homework+CoreDataClass.swift */,
-				DDC2AF612198C699008D100A /* Homework+CoreDataProperties.swift */,
-				DDF341D6216ACCE9007DA56A /* Organization+CoreDataClass.swift */,
-				DDF341D7216ACCE9007DA56A /* Organization+CoreDataProperties.swift */,
-				DDF341D8216ACCE9007DA56A /* Team+CoreDataClass.swift */,
-				DDF341D9216ACCE9007DA56A /* Team+CoreDataProperties.swift */,
-				DDF341E2216ACE3B007DA56A /* PersistenceManager.swift */,
+				DDD7569B23CBBA8A00750F8D /* StudentHubNavigationViewController.swift */,
+				DDF8415B23CBBF09008F310C /* CentralUIViewController.swift */,
+				DDF8415C23CBBF09008F310C /* ProfileTableViewController.swift */,
+				DDF8415E23CBBF09008F310C /* SettingsTableViewController.swift */,
+				DDF8415D23CBBF09008F310C /* StudentHubTableViewController.swift */,
 			);
-			path = "Saved Data";
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -602,7 +665,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0940;
 				LastUpgradeCheck = 0940;
-				ORGANIZATIONNAME = Treeline;
+				ORGANIZATIONNAME = "Ricky Mao";
 				TargetAttributes = {
 					DDE2ECFD2121584B003C7E40 = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -764,69 +827,78 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD9F5F4223C6941500140859 /* Assignment+CoreDataClass.swift in Sources */,
 				DDE9C3602335B1DF00FDD83A /* NetworkController.swift in Sources */,
 				DDA244602131EF30003D63CD /* BulletinViewController.swift in Sources */,
-				DDF341E3216ACE3B007DA56A /* PersistenceManager.swift in Sources */,
+				DDF8416223CBBF09008F310C /* StudentHubTableViewController.swift in Sources */,
 				DDA24452212D2F8A003D63CD /* Teacher.swift in Sources */,
 				DDA6C3162143A3D900F421A0 /* AddAssignmentTableViewController.swift in Sources */,
-				DDF341DE216ACCE9007DA56A /* Team+CoreDataClass.swift in Sources */,
 				DDEA5B1B231234CF000501C4 /* ClubUpdateController.swift in Sources */,
 				DDA24450212BD2EA003D63CD /* InfoSportsTableViewController.swift in Sources */,
 				DD8B96D5216BE2E600B4CBC4 /* MyTeamTableViewController.swift in Sources */,
-				DDF341DD216ACCE9007DA56A /* Organization+CoreDataProperties.swift in Sources */,
+				DD9F5F3C23C6941500140859 /* Team+CoreDataClass.swift in Sources */,
 				DDA9AA9A21BC83D60044E256 /* BlockTableViewCell.swift in Sources */,
+				DD9F5F6023CAFF3F00140859 /* WorkModelController.swift in Sources */,
+				DD9F5F6823CBB18300140859 /* AssignmentTableViewCell.swift in Sources */,
 				DDA00D1821460C1300FD9B6F /* InfoAssignmentTableViewController.swift in Sources */,
+				DD9F5F3B23C6941500140859 /* Work+CoreDataProperties.swift in Sources */,
 				DDA2445A212FEB92003D63CD /* CourseTableViewController.swift in Sources */,
+				DD9F5F4723C6941500140859 /* Work+CoreDataClass.swift in Sources */,
+				DD9F5F5D23CACC5D00140859 /* DateController.swift in Sources */,
 				DDE2ED0A2121584C003C7E40 /* BCSS.xcdatamodeld in Sources */,
 				DDA2445C21307F0E003D63CD /* GradeCourses.swift in Sources */,
-				DDA9AAA421BCD3220044E256 /* Blocks+CoreDataProperties.swift in Sources */,
 				DD62BE89217C274700D730CA /* CalendarViewController.swift in Sources */,
 				DD62BE87217C1F7700D730CA /* CalendarCell.swift in Sources */,
 				DDE2ED022121584B003C7E40 /* AppDelegate.swift in Sources */,
-				DDF341DC216ACCE9007DA56A /* Organization+CoreDataClass.swift in Sources */,
 				DDA2445E2131E710003D63CD /* MenuViewController.swift in Sources */,
 				DD8B96D3216B112E00B4CBC4 /* MyClubInfoTableViewController.swift in Sources */,
-				DD66FCA022D7B79100BBC45B /* Schedule+CoreDataClass.swift in Sources */,
-				DDC2AF672198D11C008D100A /* Work+CoreDataClass.swift in Sources */,
-				DDA244642133C7E1003D63CD /* ProfileTableViewController.swift in Sources */,
 				DDEA109422C5EB7D0075093B /* OnboardingViewController.swift in Sources */,
 				DD62BE7C2176444800D730CA /* MyServiceHoursTableViewController.swift in Sources */,
 				DD8B96D7216BE35A00B4CBC4 /* MyTeamInfoTableViewController.swift in Sources */,
 				DD62BE802177A26A00D730CA /* ServiceHoursInfoTableViewController.swift in Sources */,
+				DD9F5F4E23CA5DD100140859 /* EventModelController.swift in Sources */,
+				DD9F5F5923CA8B4D00140859 /* TeacherModelController.swift in Sources */,
 				DDA2444E212A9959003D63CD /* SportsTableViewController.swift in Sources */,
-				DDA2446A21367C6E003D63CD /* ClassTableViewCell.swift in Sources */,
-				DDC2AF662198D11C008D100A /* Work+CoreDataProperties.swift in Sources */,
-				DDC2AF622198C699008D100A /* Homework+CoreDataClass.swift in Sources */,
-				DD66FC9F22D7B79100BBC45B /* Schedule+CoreDataProperties.swift in Sources */,
-				DDA244662133E912003D63CD /* ScheduleViewController.swift in Sources */,
-				DD62BE7E217644FC00D730CA /* Volunteer.swift in Sources */,
+				DD62BE7E217644FC00D730CA /* WorkHours.swift in Sources */,
+				DD9F5F5123CA799900140859 /* NotificationController.swift in Sources */,
+				DD9F5F5723CA88A500140859 /* SportModelController.swift in Sources */,
 				DDC2AF4B2197ADE4008D100A /* EventsModuleViewController.swift in Sources */,
 				DDA244482128BCDE003D63CD /* Clubs.swift in Sources */,
+				DD9F5F3F23C6941500140859 /* Assignment+CoreDataProperties.swift in Sources */,
 				DDC2AF472197AD3E008D100A /* ClubModuleViewController.swift in Sources */,
 				DDA9AA9821B7C7D20044E256 /* Notifications.swift in Sources */,
-				DDE2ED3321256462003C7E40 /* StudentHubTableViewController.swift in Sources */,
-				DDA9AAA321BCD3220044E256 /* Blocks+CoreDataClass.swift in Sources */,
-				DDA9AA9C21BC9F340044E256 /* Schedule2ViewController.swift in Sources */,
+				DD9F5F4523C6941500140859 /* Blocks+CoreDataProperties.swift in Sources */,
+				DD9F5F5B23CABC2800140859 /* AssignmentModelController.swift in Sources */,
+				DD9F5F5323CA845700140859 /* ScheduleModelController.swift in Sources */,
+				DDF8416023CBBF09008F310C /* CentralUIViewController.swift in Sources */,
 				DDA9AA9E21BC9FA40044E256 /* BlockTableViewController.swift in Sources */,
 				DDA24456212E7FFA003D63CD /* TeacherContactTableViewController.swift in Sources */,
+				DDF8416623CBCE4E008F310C /* Sports.swift in Sources */,
+				DD9F5F3D23C6941500140859 /* Team+CoreDataProperties.swift in Sources */,
 				DD62BE822177A27D00D730CA /* AddServiceHoursTableViewController.swift in Sources */,
-				DDC0B4CC213FA4C40098C8B3 /* AssignmentTableViewCell.swift in Sources */,
+				DD9F5F5523CA859D00140859 /* ClubModelController.swift in Sources */,
+				DDF8416123CBBF09008F310C /* ProfileTableViewController.swift in Sources */,
+				DD9F5F3E23C6941500140859 /* Schedule+CoreDataProperties.swift in Sources */,
+				DD9F5F4423C6941500140859 /* PersistenceManager.swift in Sources */,
+				DD9F5F4623C6941500140859 /* CoreClub+CoreDataProperties.swift in Sources */,
+				DD9F5F4323C6941500140859 /* Schedule+CoreDataClass.swift in Sources */,
 				DDC2AF6B21A00EFD008D100A /* AssignmentModuleTableViewCell.swift in Sources */,
 				DDA9AAA621BCFEA00044E256 /* BlockInfoTableViewController.swift in Sources */,
 				DDA244462128B702003D63CD /* ClubTableViewController.swift in Sources */,
-				DDC0B4C7213F9FB50098C8B3 /* AssignmentsTableViewController.swift in Sources */,
+				DDC0B4C7213F9FB50098C8B3 /* AssignmentTableViewController.swift in Sources */,
 				DDF34111215B0D35007DA56A /* MyClubsTableViewController.swift in Sources */,
-				DDF341DF216ACCE9007DA56A /* Team+CoreDataProperties.swift in Sources */,
-				DDA2444C212A97E8003D63CD /* Sports.swift in Sources */,
-				DDC2AF632198C699008D100A /* Homework+CoreDataProperties.swift in Sources */,
 				DD66FC9B22D7B01F00BBC45B /* Event.swift in Sources */,
 				DDC2AF492197AD54008D100A /* ScheduleModuleViewController.swift in Sources */,
 				DDA2444A212921B2003D63CD /* InfoClubTableViewController.swift in Sources */,
 				DDF7262F2211F8B500C8D861 /* EventTableViewController.swift in Sources */,
+				DD9F5F4123C6941500140859 /* Blocks+CoreDataClass.swift in Sources */,
+				DD9F5F4023C6941500140859 /* CoreClub+CoreDataClass.swift in Sources */,
+				DDF8416323CBBF09008F310C /* SettingsTableViewController.swift in Sources */,
+				DDD7569C23CBBA8A00750F8D /* StudentHubNavigationViewController.swift in Sources */,
 				DDA2446821366637003D63CD /* Classes.swift in Sources */,
-				DDA2446C2137BA00003D63CD /* AddClassesTableViewController.swift in Sources */,
 				DDC2AF452197AA3F008D100A /* AssignmentModuleViewController.swift in Sources */,
 				DDC2AF432196ACC0008D100A /* MyFeedViewController.swift in Sources */,
+				DDDBA1C92360E4C100EE9D01 /* FlexSignUpViewController.swift in Sources */,
 				DDA24454212E6BF6003D63CD /* DepartmentTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -835,6 +907,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDF8416723CBD257008F310C /* Sports.swift in Sources */,
+				DDF8416923CBD72D008F310C /* SportModelController.swift in Sources */,
 				DDE2ED1A2121584E003C7E40 /* BCSSTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -843,6 +917,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDF8416823CBD258008F310C /* Sports.swift in Sources */,
+				DDF8416A23CBD72D008F310C /* SportModelController.swift in Sources */,
 				DDE2ED252121584E003C7E40 /* BCSSUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1006,7 +1082,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.3.4;
+				CURRENT_PROJECT_VERSION = 1.3.8;
 				DEVELOPMENT_TEAM = GFMAPRX493;
 				INFOPLIST_FILE = BCSS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -1014,8 +1090,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3.4;
-				PRODUCT_BUNDLE_IDENTIFIER = Treeline.BCSS;
+				MARKETING_VERSION = 1.3.8;
+				PRODUCT_BUNDLE_IDENTIFIER = RickyMao.BCSS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -1030,7 +1106,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.3.4;
+				CURRENT_PROJECT_VERSION = 1.3.8;
 				DEVELOPMENT_TEAM = GFMAPRX493;
 				INFOPLIST_FILE = BCSS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -1038,8 +1114,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3.4;
-				PRODUCT_BUNDLE_IDENTIFIER = Treeline.BCSS;
+				MARKETING_VERSION = 1.3.8;
+				PRODUCT_BUNDLE_IDENTIFIER = RickyMao.BCSS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
