@@ -2,7 +2,7 @@
 
 ![BCSS Wildcats Logo](/images/120pt.png)
 
-The iOS application for Burnaby Central Secondary School, currently used by over 450 students.
+The iOS application for Burnaby Central Secondary School, currently used by over 500 students.
 You can download the app at: https://apps.apple.com/ca/app/bcss-wildcats/id1444820091
 
 # About
